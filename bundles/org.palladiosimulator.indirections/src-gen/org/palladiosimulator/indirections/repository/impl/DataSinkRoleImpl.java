@@ -6,7 +6,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.palladiosimulator.indirections.repository.DataSinkRole;
 import org.palladiosimulator.indirections.repository.RepositoryPackage;
 import org.palladiosimulator.pcm.repository.EventGroup;
-import org.palladiosimulator.pcm.repository.Signature;
 import org.palladiosimulator.pcm.repository.impl.ProvidedRoleImpl;
 
 /**
@@ -18,8 +17,6 @@ import org.palladiosimulator.pcm.repository.impl.ProvidedRoleImpl;
  * <ul>
  * <li>{@link org.palladiosimulator.indirections.repository.impl.DataSinkRoleImpl#getEventGroup
  * <em>Event Group</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.repository.impl.DataSinkRoleImpl#getPushesTo
- * <em>Pushes To</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.repository.impl.DataSinkRoleImpl#isPushing
  * <em>Pushing</em>}</li>
  * </ul>
@@ -39,7 +36,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected DataSinkRoleImpl() {
@@ -48,7 +45,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -58,7 +55,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -69,7 +66,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public EventGroup basicGetEventGroup() {
@@ -79,7 +76,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -90,49 +87,29 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public Signature getPushesTo() {
-        return (Signature) this.eDynamicGet(RepositoryPackage.DATA_SINK_ROLE__PUSHES_TO,
-                RepositoryPackage.Literals.DATA_SINK_ROLE__PUSHES_TO, true, true);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    public Signature basicGetPushesTo() {
-        return (Signature) this.eDynamicGet(RepositoryPackage.DATA_SINK_ROLE__PUSHES_TO,
-                RepositoryPackage.Literals.DATA_SINK_ROLE__PUSHES_TO, false, true);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public void setPushesTo(final Signature newPushesTo) {
-        this.eDynamicSet(RepositoryPackage.DATA_SINK_ROLE__PUSHES_TO,
-                RepositoryPackage.Literals.DATA_SINK_ROLE__PUSHES_TO, newPushesTo);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public boolean isPushing() {
-        return (this.getPushesTo() != null);
+        return (Boolean) this.eDynamicGet(RepositoryPackage.DATA_SINK_ROLE__PUSHING,
+                RepositoryPackage.Literals.DATA_SINK_ROLE__PUSHING, true, true);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
+     * @generated
+     */
+    @Override
+    public void setPushing(final boolean newPushing) {
+        this.eDynamicSet(RepositoryPackage.DATA_SINK_ROLE__PUSHING, RepositoryPackage.Literals.DATA_SINK_ROLE__PUSHING,
+                newPushing);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -143,11 +120,6 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
                 return this.getEventGroup();
             }
             return this.basicGetEventGroup();
-        case RepositoryPackage.DATA_SINK_ROLE__PUSHES_TO:
-            if (resolve) {
-                return this.getPushesTo();
-            }
-            return this.basicGetPushesTo();
         case RepositoryPackage.DATA_SINK_ROLE__PUSHING:
             return this.isPushing();
         }
@@ -156,7 +128,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -165,8 +137,8 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
         case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
             this.setEventGroup((EventGroup) newValue);
             return;
-        case RepositoryPackage.DATA_SINK_ROLE__PUSHES_TO:
-            this.setPushesTo((Signature) newValue);
+        case RepositoryPackage.DATA_SINK_ROLE__PUSHING:
+            this.setPushing((Boolean) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -174,7 +146,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -183,8 +155,8 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
         case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
             this.setEventGroup((EventGroup) null);
             return;
-        case RepositoryPackage.DATA_SINK_ROLE__PUSHES_TO:
-            this.setPushesTo((Signature) null);
+        case RepositoryPackage.DATA_SINK_ROLE__PUSHING:
+            this.setPushing(PUSHING_EDEFAULT);
             return;
         }
         super.eUnset(featureID);
@@ -192,7 +164,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -200,8 +172,6 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
         switch (featureID) {
         case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
             return this.basicGetEventGroup() != null;
-        case RepositoryPackage.DATA_SINK_ROLE__PUSHES_TO:
-            return this.basicGetPushesTo() != null;
         case RepositoryPackage.DATA_SINK_ROLE__PUSHING:
             return this.isPushing() != PUSHING_EDEFAULT;
         }

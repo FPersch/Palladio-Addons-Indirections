@@ -38,7 +38,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
     /**
      * The default value of the '{@link #getKey() <em>Key</em>}' attribute. <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     *
+     * 
      * @see #getKey()
      * @generated
      * @ordered
@@ -48,7 +48,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
     /**
      * The default value of the '{@link #getPartitionDataName() <em>Partition Data Name</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getPartitionDataName()
      * @generated
      * @ordered
@@ -57,7 +57,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     protected CollectWithHoldbackImpl() {
@@ -66,7 +66,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -76,7 +76,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -86,7 +86,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -97,7 +97,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -108,7 +108,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -119,7 +119,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -130,7 +130,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -141,7 +141,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -152,7 +152,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -170,7 +170,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -191,7 +191,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -212,7 +212,7 @@ public class CollectWithHoldbackImpl extends CDOObjectImpl implements CollectWit
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override

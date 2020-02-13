@@ -19,6 +19,12 @@
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="householdId"/>
         </variableUsages>
+        <variableUsages>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="_DCID.VALUE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="_DCID"/>
+        </variableUsages>
       </steps_Behaviour>
       <steps_Behaviour xsi:type="org.palladiosimulator.indirections.actions:EmitDataAction" id="acceptPlugReading.emitReading.ID" entityName="acceptPlugReading.emitReading" predecessor_AbstractAction="acceptPlugReading.createPlugReadingDate.ID" successor_AbstractAction="acceptPlugReading.stop.ID" eventType="_UsrWEPZCEem6zKzgHWGcEw" dataSourceRole="Ingress.provides.PlugReading.ID">
         <variableReference referenceName="plugReading"/>

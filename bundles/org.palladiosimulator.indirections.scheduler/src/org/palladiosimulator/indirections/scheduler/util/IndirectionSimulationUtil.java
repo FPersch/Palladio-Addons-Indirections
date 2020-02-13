@@ -13,6 +13,7 @@ import org.palladiosimulator.indirections.scheduler.data.ConcreteIndirectionDate
 import org.palladiosimulator.indirections.scheduler.data.GroupingIndirectionDate;
 import org.palladiosimulator.indirections.util.IterableUtil;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
+import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.parameter.VariableCharacterisation;
 import org.palladiosimulator.pcm.parameter.VariableUsage;
 import org.palladiosimulator.pcm.repository.EventGroup;
@@ -21,6 +22,7 @@ import org.palladiosimulator.simulizar.exceptions.PCMModelInterpreterException;
 import org.palladiosimulator.simulizar.simulationevents.PeriodicallyTriggeredSimulationEntity;
 import org.palladiosimulator.simulizar.utils.SimulatedStackHelper;
 
+import de.uka.ipd.sdq.identifier.Identifier;
 import de.uka.ipd.sdq.simucomframework.model.SimuComModel;
 import de.uka.ipd.sdq.simucomframework.variables.EvaluationProxy;
 import de.uka.ipd.sdq.simucomframework.variables.StackContext;
@@ -169,8 +171,7 @@ public final class IndirectionSimulationUtil {
 
     // TODO: it is not very good to do exception handling checks here. This should be functionality
     // of the StackFrame, if it is really needed. Additionally, it is unclear, whether this should
-    // just
-    // shadow the variable.
+    // just shadow the variable.
     public static void createNewDataOnStack(SimulatedStack<Object> stack, String id, IndirectionDate date) {
         Object value = null;
         try {
@@ -188,6 +189,8 @@ public final class IndirectionSimulationUtil {
 
     public static IndirectionDate createData(SimulatedStack<Object> contextStack,
             Iterable<VariableUsage> variableUsages, Double time) {
+
+        // temporary stack to reuse evaluation logic
         SimulatedStackframe<Object> newStackFrame = new SimulatedStackframe<Object>();
         SimulatedStackHelper.addParameterToStackFrame(contextStack.currentStackFrame(),
                 IterableUtil.toEList(variableUsages), newStackFrame);
@@ -216,5 +219,17 @@ public final class IndirectionSimulationUtil {
             measurements.add(data.getTime());
         }
         return measurements;
+    }
+
+    public static <T extends Entity> T initName(T entity, String name) {
+        entity.setEntityName(name);
+        entity.setId(name + ".ID");
+
+        return entity;
+    }
+
+    public static <T extends Identifier> T initName(T identifier, String name) {
+        identifier.setId(name + ".ID");
+        return identifier;
     }
 }

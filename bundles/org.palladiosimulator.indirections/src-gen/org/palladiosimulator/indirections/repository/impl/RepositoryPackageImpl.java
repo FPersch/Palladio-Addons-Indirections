@@ -30,20 +30,20 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!-- end-user-doc -->
- *
+ * 
  * @generated
  */
 public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPackage {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass dataSinkRoleEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private EClass dataSourceRoleEClass = null;
@@ -56,7 +56,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
      * Note: the correct way to create the package is via the static factory method {@link #init
      * init()}, which also performs initialization of the package, or returns the registered
      * package, if one already exists. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see org.eclipse.emf.ecore.EPackage.Registry
      * @see org.palladiosimulator.indirections.repository.RepositoryPackage#eNS_URI
      * @see #init()
@@ -68,7 +68,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private static boolean isInited = false;
@@ -81,7 +81,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
      * This method is used to initialize {@link RepositoryPackage#eINSTANCE} when that field is
      * accessed. Clients should not invoke it directly. Instead, they should simply access that
      * field to obtain the package. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #eNS_URI
      * @see #createPackageContents()
      * @see #initializePackageContents()
@@ -155,7 +155,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -165,7 +165,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -175,27 +175,17 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     */
-    @Override
-    public EReference getDataSinkRole_PushesTo() {
-        return (EReference) this.dataSinkRoleEClass.getEStructuralFeatures().get(1);
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
     public EAttribute getDataSinkRole_Pushing() {
-        return (EAttribute) this.dataSinkRoleEClass.getEStructuralFeatures().get(2);
+        return (EAttribute) this.dataSinkRoleEClass.getEStructuralFeatures().get(1);
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -205,7 +195,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -215,7 +205,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     @Override
@@ -225,7 +215,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private boolean isCreated = false;
@@ -233,7 +223,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
     /**
      * Creates the meta-model objects for the package. This method is guarded to have no affect on
      * any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public void createPackageContents() {
@@ -245,7 +235,6 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
         // Create classes and their features
         this.dataSinkRoleEClass = this.createEClass(DATA_SINK_ROLE);
         this.createEReference(this.dataSinkRoleEClass, DATA_SINK_ROLE__EVENT_GROUP);
-        this.createEReference(this.dataSinkRoleEClass, DATA_SINK_ROLE__PUSHES_TO);
         this.createEAttribute(this.dataSinkRoleEClass, DATA_SINK_ROLE__PUSHING);
 
         this.dataSourceRoleEClass = this.createEClass(DATA_SOURCE_ROLE);
@@ -254,7 +243,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     private boolean isInitialized = false;
@@ -262,7 +251,7 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
     /**
      * Complete the initialization of the package and its meta-model. This method is guarded to have
      * no affect on any invocation but its first. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      */
     public void initializePackageContents() {
@@ -294,12 +283,9 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
         this.initEReference(this.getDataSinkRole_EventGroup(), theRepositoryPackage_1.getEventGroup(), null,
                 "eventGroup", null, 0, 1, DataSinkRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataSinkRole_PushesTo(), theRepositoryPackage_1.getSignature(), null, "pushesTo",
-                null, 0, 1, DataSinkRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getDataSinkRole_Pushing(), this.ecorePackage.getEBoolean(), "pushing", null, 0, 1,
-                DataSinkRole.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getDataSinkRole_Pushing(), this.ecorePackage.getEBoolean(), "pushing", null, 1, 1,
+                DataSinkRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+                !IS_DERIVED, IS_ORDERED);
 
         this.initEClass(this.dataSourceRoleEClass, DataSourceRole.class, "DataSourceRole", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);

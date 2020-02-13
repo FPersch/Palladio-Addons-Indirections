@@ -26,7 +26,7 @@ public interface CollectWithHoldback extends TimeGrouping {
     /**
      * Returns the value of the '<em><b>Holdback</b></em>' attribute. The default value is
      * <code>"1"</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Holdback</em>' attribute.
      * @see #setHoldback(int)
      * @see org.palladiosimulator.indirections.partitioning.PartitioningPackage#getCollectWithHoldback_Holdback()
@@ -39,7 +39,7 @@ public interface CollectWithHoldback extends TimeGrouping {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.partitioning.CollectWithHoldback#getHoldback
      * <em>Holdback</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Holdback</em>' attribute.
      * @see #getHoldback()
@@ -50,7 +50,7 @@ public interface CollectWithHoldback extends TimeGrouping {
     /**
      * Returns the value of the '<em><b>Key</b></em>' attribute. <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Key</em>' attribute.
      * @see #setKey(String)
      * @see org.palladiosimulator.indirections.partitioning.PartitioningPackage#getCollectWithHoldback_Key()
@@ -63,7 +63,7 @@ public interface CollectWithHoldback extends TimeGrouping {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.partitioning.CollectWithHoldback#getKey
      * <em>Key</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Key</em>' attribute.
      * @see #getKey()
@@ -74,7 +74,7 @@ public interface CollectWithHoldback extends TimeGrouping {
     /**
      * Returns the value of the '<em><b>Partition Data Name</b></em>' attribute. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Partition Data Name</em>' attribute.
      * @see #setPartitionDataName(String)
      * @see org.palladiosimulator.indirections.partitioning.PartitioningPackage#getCollectWithHoldback_PartitionDataName()
@@ -87,7 +87,7 @@ public interface CollectWithHoldback extends TimeGrouping {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.partitioning.CollectWithHoldback#getPartitionDataName
      * <em>Partition Data Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Partition Data Name</em>' attribute.
      * @see #getPartitionDataName()

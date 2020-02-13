@@ -9,6 +9,7 @@ import org.palladiosimulator.indirections.composition.DataChannelSourceConnector
 import org.palladiosimulator.indirections.datatypes.Scheduling;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.monitoring.IndirectionsMetricDescriptionConstants;
+import org.palladiosimulator.indirections.scheduler.calculators.TriggerableTimeSpanCalculator;
 import org.palladiosimulator.indirections.scheduler.util.IndirectionSimulationUtil;
 import org.palladiosimulator.indirections.system.DataChannel;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
@@ -71,13 +72,14 @@ public class SimBasicDataChannelResource extends AbstractSimDataChannelResource 
 
     private void setupCalculators() {
         this.holdingTimeCalculator = new TriggerableTimeSpanCalculator("Holding time for " + name,
-                MetricDescriptionConstants.HOLDING_TIME_METRIC, MetricDescriptionConstants.HOLDING_TIME_METRIC_TUPLE);
+                MetricDescriptionConstants.HOLDING_TIME_METRIC, MetricDescriptionConstants.HOLDING_TIME_METRIC_TUPLE,
+                context);
         this.dataAgeAfterPuttingCalculator = new TriggerableTimeSpanCalculator("Data age after putting into " + name,
                 IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC,
-                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE);
+                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE, context);
         this.dataAgeBeforeGettingCalculator = new TriggerableTimeSpanCalculator("Data age before getting from " + name,
                 IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC,
-                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE);
+                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE, context);
     }
 
     @Override

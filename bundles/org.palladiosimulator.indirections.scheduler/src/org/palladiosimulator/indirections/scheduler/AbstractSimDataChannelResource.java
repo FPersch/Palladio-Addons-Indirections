@@ -1,41 +1,28 @@
 package org.palladiosimulator.indirections.scheduler;
 
 import java.util.ArrayDeque;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import javax.measure.Measure;
-import javax.measure.quantity.Duration;
-import javax.measure.quantity.Quantity;
-import javax.measure.unit.SI;
-
-import org.palladiosimulator.edp2.models.measuringpoint.StringMeasuringPoint;
 import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
 import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
 import org.palladiosimulator.indirections.interfaces.IDataChannelResource;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.monitoring.IndirectionsMetricDescriptionConstants;
-import org.palladiosimulator.indirections.monitoring.simulizar.IndirectionMeasuringPointRegistry;
-import org.palladiosimulator.indirections.monitoring.simulizar.MeasuringUtil;
-import org.palladiosimulator.indirections.monitoring.simulizar.TriggeredCombiningProbe;
-import org.palladiosimulator.indirections.monitoring.simulizar.TriggeredProxyProbe;
+import org.palladiosimulator.indirections.scheduler.OpenWorkloadUserWithStackFactory.OpenWorkloadUserWithStack;
+import org.palladiosimulator.indirections.scheduler.calculators.ContextAwareTimeSpanCalculator;
+import org.palladiosimulator.indirections.scheduler.calculators.TriggerableTimeSpanCalculator;
 import org.palladiosimulator.indirections.scheduler.scheduling.ProcessWaitingToConsume;
 import org.palladiosimulator.indirections.scheduler.scheduling.ProcessWaitingToEmit;
 import org.palladiosimulator.indirections.scheduler.scheduling.SuspendableSchedulerEntity;
 import org.palladiosimulator.indirections.scheduler.util.IndirectionSimulationUtil;
 import org.palladiosimulator.indirections.system.DataChannel;
-import org.palladiosimulator.metricspec.BaseMetricDescription;
-import org.palladiosimulator.metricspec.MetricSetDescription;
+import org.palladiosimulator.indirections.util.MapUtils;
 import org.palladiosimulator.metricspec.constants.MetricDescriptionConstants;
-import org.palladiosimulator.probeframework.calculator.ICalculatorFactory;
-import org.palladiosimulator.simulizar.exceptions.PCMModelInterpreterException;
 import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
 
 import de.uka.ipd.sdq.scheduler.ISchedulableProcess;
@@ -92,7 +79,7 @@ public abstract class AbstractSimDataChannelResource implements IDataChannelReso
         this.context = context;
 
         this.initializeQueues();
-
+        this.createPushingUserFactories();
         this.setupCalculators();
     }
 
@@ -103,84 +90,17 @@ public abstract class AbstractSimDataChannelResource implements IDataChannelReso
 
     private void setupCalculators() {
         this.waitingToGetTimeCalculator = new ContextAwareTimeSpanCalculator<>("Waiting time to get from " + name,
-                MetricDescriptionConstants.WAITING_TIME_METRIC, MetricDescriptionConstants.WAITING_TIME_METRIC_TUPLE);
+                MetricDescriptionConstants.WAITING_TIME_METRIC, MetricDescriptionConstants.WAITING_TIME_METRIC_TUPLE,
+                context);
         this.waitingToPutTimeCalculator = new ContextAwareTimeSpanCalculator<>("Waiting time to put to " + name,
-                MetricDescriptionConstants.WAITING_TIME_METRIC, MetricDescriptionConstants.WAITING_TIME_METRIC_TUPLE);
+                MetricDescriptionConstants.WAITING_TIME_METRIC, MetricDescriptionConstants.WAITING_TIME_METRIC_TUPLE,
+                context);
         this.afterAcceptingAgeCalculator = new TriggerableTimeSpanCalculator(
                 "Data age after accepting date (" + name + ")", IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC,
-                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE);
+                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE, context);
         this.beforeEmittingAgeCalculator = new TriggerableTimeSpanCalculator("Data age before emitting (" + name + ")",
                 IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC,
-                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE);
-    }
-
-    public class TriggerableCalculator<V, Q extends Quantity> {
-        protected final TriggeredProxyProbe<V, Q> proxyProbe;
-        protected final TriggeredCombiningProbe<V, Q> probeList;
-        protected final IndirectionMeasuringPointRegistry registry;
-
-        public TriggerableCalculator(String name, BaseMetricDescription baseMetric, MetricSetDescription metricSet) {
-
-            registry = IndirectionMeasuringPointRegistry.getInstanceFor(context);
-
-            StringMeasuringPoint measuringPoint = MeasuringUtil
-                    .createStringMeasuringPoint(IndirectionMeasuringPointRegistry.MEASURING_POINT_REPOSITORY, name);
-
-            proxyProbe = new TriggeredProxyProbe<V, Q>(baseMetric);
-            probeList = new TriggeredCombiningProbe<V, Q>(metricSet, List.of(registry.timeProbe, proxyProbe),
-                    proxyProbe);
-
-            ICalculatorFactory calculatorFactory = model.getProbeFrameworkContext().getCalculatorFactory();
-            calculatorFactory.buildExecutionResultCalculator(measuringPoint, probeList);
-        }
-
-        public void doMeasure(Measure<V, Q> measure) {
-            proxyProbe.doMeasure(measure);
-        }
-    }
-
-    public class TriggerableTimeSpanCalculator extends TriggerableCalculator<Double, Duration> {
-        public TriggerableTimeSpanCalculator(String name, BaseMetricDescription baseMetric,
-                MetricSetDescription metricSet) {
-            super(name, baseMetric, metricSet);
-        }
-
-        public void doMeasure(double timeSpan) {
-            super.doMeasure(Measure.valueOf(timeSpan, SI.SECOND));
-        }
-
-        public void doMeasureUntilNow(double time) {
-            doMeasure(model.getSimulationControl().getCurrentSimulationTime() - time);
-        }
-    }
-
-    public class ContextAwareTimeSpanCalculator<C> extends TriggerableTimeSpanCalculator {
-
-        public ContextAwareTimeSpanCalculator(String name, BaseMetricDescription baseMetric,
-                MetricSetDescription metricSet) {
-            super(name, baseMetric, metricSet);
-        }
-
-        private Map<C, Double> activeMeasurements = new HashMap<>();
-
-        public void startMeasurement(C c) {
-            if (activeMeasurements.containsKey(c)) {
-                throw new PCMModelInterpreterException("Cannot start measurement for " + c.toString()
-                        + ", already started at " + activeMeasurements.get(c));
-            }
-
-            activeMeasurements.put(c, model.getSimulationControl().getCurrentSimulationTime());
-        }
-
-        public void endMeasurement(C c) {
-            if (!activeMeasurements.containsKey(c)) {
-                throw new PCMModelInterpreterException(
-                        "Cannot end measurement for " + c.toString() + ", no measurement start present");
-            }
-
-            double timeSpan = model.getSimulationControl().getCurrentSimulationTime() - activeMeasurements.get(c);
-            doMeasure(timeSpan);
-        }
+                IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE, context);
     }
 
     private void initializeQueues() {
@@ -202,39 +122,51 @@ public abstract class AbstractSimDataChannelResource implements IDataChannelReso
         }
     }
 
+    private Map<DataChannelSinkConnector, OpenWorkloadUserWithStackFactory> sinkConnectorToUserFactory;
+
+    private void createPushingUserFactories() {
+        if (sinkConnectorToUserFactory != null) {
+            throw new IllegalStateException(
+                    "User factories already populated (" + sinkConnectorToUserFactory.values().size() + " present).");
+        }
+
+        sinkConnectorToUserFactory = this.dataChannel.getDataChannelSinkConnector().stream().collect(Collectors.toMap(
+                Function.identity(), it -> OpenWorkloadUserWithStackFactory.createPushingUserFactory(it, model)));
+    }
+
     private void spawnNewProcessThatTakesFromConnector(DataChannelSinkConnector sinkConnector) {
-        throw new UnsupportedOperationException();
-//        DataChannelConsumerUser dataChannelConsumerUser = dataChannelUserFactory.createPassivatedUser(sinkConnector);
+        OpenWorkloadUserWithStack user = MapUtils.claim(sinkConnectorToUserFactory, sinkConnector).createUser();
 
-//        ProcessWaitingToConsume consumerProcess = new ProcessWaitingToConsume(model, dataChannelConsumerUser,
-//                sinkConnector, dataChannelConsumerUser::setData);
+        // creates a new process. the data is set to the new process when the process is activated
+        // in the next step.
+        ProcessWaitingToConsume consumerProcess = new ProcessWaitingToConsume(model, user, sinkConnector, date -> {
+            user.setDataAndStartUserLife(IndirectionSimulationUtil
+                    .getOneParameter(sinkConnector.getDataSinkRole().getEventGroup()).getParameterName(), date,
+                    context);
+        });
 
-//        allowToGetAndActivate(consumerProcess);
+        allowToGetAndActivate(consumerProcess);
     }
 
     private void notifyProcessesWaitingToGetFromQueue(IndirectionQueue<ProcessWaitingToConsume> queue) {
-        this.notifyProcesses(queue.processes, p -> p.schedulableProcess, this::canProceedToGet,
-                this::allowToGetAndActivate, this::notifyProcessesWaitingToPut);
+        ProcessWaitingToConsume waitingProcess = queue.processes.peek();
+        while (waitingProcess != null && canProceedToGet(waitingProcess)) {
+            allowToGetAndActivate(waitingProcess);
+            notifyProcessesWaitingToPut();
+            queue.processes.remove();
+            waitingProcess = queue.processes.peek();
+        }
     }
 
     protected void notifyProcessesWaitingToPut() {
         for (final IndirectionQueue<ProcessWaitingToEmit> queue : this.incomingQueues.values()) {
-            this.notifyProcesses(queue.processes, p -> p.schedulableProcess, this::canProceedToPut,
-                    this::allowToPutAndActivate, this::processDataAvailableToGet);
-        }
-    }
-
-    // TODO: should remove unnecessary complexity introduced with this kind of reuse and just inline
-    // into two methods above
-    private <T> void notifyProcesses(final Queue<T> processes, final Function<T, ISchedulableProcess> processExtractor,
-            final Predicate<T> canProceed, final Consumer<T> allow, final Runnable callAfterAllowing) {
-
-        T waitingProcess = processes.peek();
-        while (waitingProcess != null && canProceed.test(waitingProcess)) {
-            allow.accept(waitingProcess);
-            callAfterAllowing.run();
-            processes.remove();
-            waitingProcess = processes.peek();
+            ProcessWaitingToEmit waitingProcess = queue.processes.peek();
+            while (waitingProcess != null && canProceedToPut(waitingProcess)) {
+                allowToPutAndActivate(waitingProcess);
+                processDataAvailableToGet();
+                queue.processes.remove();
+                waitingProcess = queue.processes.peek();
+            }
         }
     }
 

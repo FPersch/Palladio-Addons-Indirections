@@ -28,6 +28,7 @@ import org.palladiosimulator.indirections.partitioning.Joining;
 import org.palladiosimulator.indirections.partitioning.Partitioning;
 import org.palladiosimulator.indirections.partitioning.TimeGrouping;
 import org.palladiosimulator.indirections.partitioning.Windowing;
+import org.palladiosimulator.indirections.scheduler.calculators.TriggerableCalculator;
 import org.palladiosimulator.indirections.scheduler.data.ConcreteGroupingIndirectionDate;
 import org.palladiosimulator.indirections.scheduler.data.DataWithSource;
 import org.palladiosimulator.indirections.scheduler.data.GroupingIndirectionDate;
@@ -172,17 +173,17 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
         if (windowingOperator != null) {
             this.windowSizeCalculator = new TriggerableCalculator<>("Window size for " + name,
                     IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC,
-                    IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC_TUPLE);
+                    IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC_TUPLE, context);
         }
         if (holdbackOperator != null) {
             this.holdbackGroupSizeCalculator = new TriggerableCalculator<>("Holdback window size for " + name,
                     IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC,
-                    IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC_TUPLE);
+                    IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC_TUPLE, context);
         }
         if (partitioningOperator != null) {
             this.partitionNumberCalculator = new TriggerableCalculator<>("Partition numbers for " + name,
                     IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC,
-                    IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC_TUPLE);
+                    IndirectionsMetricDescriptionConstants.SIZE_OF_GROUPED_DATE_METRIC_TUPLE, context);
         }
     }
 

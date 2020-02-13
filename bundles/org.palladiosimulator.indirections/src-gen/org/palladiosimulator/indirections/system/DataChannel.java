@@ -53,7 +53,7 @@ public interface DataChannel extends EventChannel {
     /**
      * Returns the value of the '<em><b>Capacity</b></em>' attribute. The default value is
      * <code>"-1"</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Capacity</em>' attribute.
      * @see #setCapacity(int)
      * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_Capacity()
@@ -66,7 +66,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getCapacity <em>Capacity</em>}'
      * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Capacity</em>' attribute.
      * @see #getCapacity()
@@ -77,7 +77,7 @@ public interface DataChannel extends EventChannel {
     /**
      * Returns the value of the '<em><b>Source Event Group</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Source Event Group</em>' reference.
      * @see #setSourceEventGroup(EventGroup)
      * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_SourceEventGroup()
@@ -90,7 +90,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getSourceEventGroup <em>Source
      * Event Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Source Event Group</em>' reference.
      * @see #getSourceEventGroup()
@@ -101,7 +101,7 @@ public interface DataChannel extends EventChannel {
     /**
      * Returns the value of the '<em><b>Sink Event Group</b></em>' reference. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Sink Event Group</em>' reference.
      * @see #setSinkEventGroup(EventGroup)
      * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_SinkEventGroup()
@@ -114,7 +114,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getSinkEventGroup <em>Sink
      * Event Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Sink Event Group</em>' reference.
      * @see #getSinkEventGroup()
@@ -129,7 +129,7 @@ public interface DataChannel extends EventChannel {
      * bidirectional and its opposite is
      * '{@link org.palladiosimulator.indirections.composition.DataChannelSourceConnector#getDataChannel
      * <em>Data Channel</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Data Channel Source Connector</em>' reference list.
      * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_DataChannelSourceConnector()
      * @see org.palladiosimulator.indirections.composition.DataChannelSourceConnector#getDataChannel
@@ -145,7 +145,7 @@ public interface DataChannel extends EventChannel {
      * bidirectional and its opposite is
      * '{@link org.palladiosimulator.indirections.composition.DataChannelSinkConnector#getDataChannel
      * <em>Data Channel</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Data Channel Sink Connector</em>' reference list.
      * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_DataChannelSinkConnector()
      * @see org.palladiosimulator.indirections.composition.DataChannelSinkConnector#getDataChannel
@@ -170,7 +170,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getPartitioning
      * <em>Partitioning</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Partitioning</em>' containment reference.
      * @see #getPartitioning()
@@ -194,7 +194,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getTimeGrouping <em>Time
      * Grouping</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Time Grouping</em>' containment reference.
      * @see #getTimeGrouping()
@@ -233,7 +233,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getOutgoingDistribution
      * <em>Outgoing Distribution</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Outgoing Distribution</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.OutgoingDistribution
@@ -260,7 +260,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getScheduling
      * <em>Scheduling</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Scheduling</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.Scheduling
@@ -287,7 +287,7 @@ public interface DataChannel extends EventChannel {
      * Sets the value of the
      * '{@link org.palladiosimulator.indirections.system.DataChannel#getPutPolicy <em>Put
      * Policy</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Put Policy</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.PutPolicy
