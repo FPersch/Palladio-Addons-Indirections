@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
 import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.pcm.core.composition.Connector;
 import org.palladiosimulator.pcm.core.entity.Entity;
@@ -108,20 +108,20 @@ public class CompositionSwitch<T> extends Switch<T> {
             }
             return result;
         }
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR: {
-            final DataChannelConnector dataChannelConnector = (DataChannelConnector) theEObject;
-            T result = this.caseDataChannelConnector(dataChannelConnector);
+        case CompositionPackage.QUEUE_CONNECTOR: {
+            final QueueConnector queueConnector = (QueueConnector) theEObject;
+            T result = this.caseQueueConnector(queueConnector);
             if (result == null) {
-                result = this.caseConnector(dataChannelConnector);
+                result = this.caseConnector(queueConnector);
             }
             if (result == null) {
-                result = this.caseEntity(dataChannelConnector);
+                result = this.caseEntity(queueConnector);
             }
             if (result == null) {
-                result = this.caseIdentifier(dataChannelConnector);
+                result = this.caseIdentifier(queueConnector);
             }
             if (result == null) {
-                result = this.caseNamedElement(dataChannelConnector);
+                result = this.caseNamedElement(queueConnector);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -166,18 +166,17 @@ public class CompositionSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Data Channel
-     * Connector</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
-     * non-null result will terminate the switch. <!-- end-user-doc -->
+     * Returns the result of interpreting the object as an instance of '<em>Queue Connector</em>'.
+     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Data Channel
-     *         Connector</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Queue Connector</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDataChannelConnector(final DataChannelConnector object) {
+    public T caseQueueConnector(final QueueConnector object) {
         return null;
     }
 
@@ -185,7 +184,7 @@ public class CompositionSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
@@ -215,7 +214,7 @@ public class CompositionSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Entity</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
@@ -230,7 +229,7 @@ public class CompositionSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>Connector</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>Connector</em>'.
@@ -245,7 +244,7 @@ public class CompositionSwitch<T> extends Switch<T> {
      * Returns the result of interpreting the object as an instance of '<em>EObject</em>'. <!--
      * begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch, but this is the last case anyway. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
      * @return the result of interpreting the object as an instance of '<em>EObject</em>'.

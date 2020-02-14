@@ -200,7 +200,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getConsumerQueue_IncomingDataChannelConnector() {
+    public EReference getConsumerQueue_IncomingQueueConnector() {
         return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(3);
     }
 
@@ -310,7 +310,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getSupplierQueue_OutgoingDataChannelConnector() {
+    public EReference getSupplierQueue_OutgoingQueueConnector() {
         return (EReference) this.supplierQueueEClass.getEStructuralFeatures().get(2);
     }
 
@@ -348,7 +348,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
         this.createEAttribute(this.consumerQueueEClass, CONSUMER_QUEUE__CAPACITY);
         this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__SOURCE_EVENT_GROUP);
         this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__SINK_EVENT_GROUP);
-        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR);
         this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__SINK_CONNECTOR);
         this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__PARTITIONING);
         this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__TIME_GROUPING);
@@ -360,7 +360,7 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
         this.supplierQueueEClass = this.createEClass(SUPPLIER_QUEUE);
         this.createEReference(this.supplierQueueEClass, SUPPLIER_QUEUE__SOURCE_EVENT_GROUP);
         this.createEReference(this.supplierQueueEClass, SUPPLIER_QUEUE__SOURCE_CONNECTOR);
-        this.createEReference(this.supplierQueueEClass, SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR);
+        this.createEReference(this.supplierQueueEClass, SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR);
     }
 
     /**
@@ -419,10 +419,10 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
         this.initEReference(this.getConsumerQueue_SinkEventGroup(), theRepositoryPackage_1.getEventGroup(), null,
                 "sinkEventGroup", null, 1, 1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getConsumerQueue_IncomingDataChannelConnector(),
-                theCompositionPackage.getDataChannelConnector(), theCompositionPackage.getDataChannelConnector_Sink(),
-                "incomingDataChannelConnector", null, 0, -1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getConsumerQueue_IncomingQueueConnector(), theCompositionPackage.getQueueConnector(),
+                theCompositionPackage.getQueueConnector_Sink(), "incomingQueueConnector", null, 0, -1,
+                ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEReference(this.getConsumerQueue_SinkConnector(),
                 theCompositionPackage.getConsumerQueueSinkConnector(),
                 theCompositionPackage.getConsumerQueueSinkConnector_ConsumerQueue(), "sinkConnector", null, 0, -1,
@@ -457,10 +457,10 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
                 theCompositionPackage.getSupplierQueueSourceConnector_SupplierQueue(), "sourceConnector", null, 0, -1,
                 SupplierQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getSupplierQueue_OutgoingDataChannelConnector(),
-                theCompositionPackage.getDataChannelConnector(), theCompositionPackage.getDataChannelConnector_Source(),
-                "outgoingDataChannelConnector", null, 0, -1, SupplierQueue.class, !IS_TRANSIENT, !IS_VOLATILE,
-                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getSupplierQueue_OutgoingQueueConnector(), theCompositionPackage.getQueueConnector(),
+                theCompositionPackage.getQueueConnector_Source(), "outgoingQueueConnector", null, 0, -1,
+                SupplierQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         this.createResource(eNS_URI);

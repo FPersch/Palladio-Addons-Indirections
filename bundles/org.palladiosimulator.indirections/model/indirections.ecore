@@ -82,7 +82,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Joining">
       <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-          eType="#//composition/DataChannelConnector"/>
+          eType="#//composition/QueueConnector"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="canContributeMultipleTimes"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" upperBound="-1"
@@ -100,8 +100,8 @@
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sinkEventGroup" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="incomingDataChannelConnector"
-          upperBound="-1" eType="#//composition/DataChannelConnector" eOpposite="#//composition/DataChannelConnector/sink"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="incomingQueueConnector"
+          upperBound="-1" eType="#//composition/QueueConnector" eOpposite="#//composition/QueueConnector/sink"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sinkConnector" ordered="false"
           upperBound="-1" eType="#//composition/ConsumerQueueSinkConnector" eOpposite="#//composition/ConsumerQueueSinkConnector/consumerQueue"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="partitioning" eType="#//partitioning/Partitioning"
@@ -120,8 +120,8 @@
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sourceConnector" ordered="false"
           upperBound="-1" eType="#//composition/SupplierQueueSourceConnector" eOpposite="#//composition/SupplierQueueSourceConnector/supplierQueue"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingDataChannelConnector"
-          upperBound="-1" eType="#//composition/DataChannelConnector" eOpposite="#//composition/DataChannelConnector/source"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingQueueConnector"
+          upperBound="-1" eType="#//composition/QueueConnector" eOpposite="#//composition/QueueConnector/source"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="composition" nsURI="http://palladiosimulator.org/Indirections/Composition/1.0"
@@ -142,11 +142,11 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="consumerQueue" ordered="false"
           lowerBound="1" eType="#//system/ConsumerQueue" eOpposite="#//system/ConsumerQueue/sinkConnector"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataChannelConnector" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector">
+    <eClassifiers xsi:type="ecore:EClass" name="QueueConnector" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-          eType="#//system/SupplierQueue" eOpposite="#//system/SupplierQueue/outgoingDataChannelConnector"/>
+          eType="#//system/SupplierQueue" eOpposite="#//system/SupplierQueue/outgoingQueueConnector"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="1"
-          eType="#//system/ConsumerQueue" eOpposite="#//system/ConsumerQueue/incomingDataChannelConnector"/>
+          eType="#//system/ConsumerQueue" eOpposite="#//system/ConsumerQueue/incomingQueueConnector"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="repository" nsURI="http://palladiosimulator.org/Indirections/Repository/1.0"

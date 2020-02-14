@@ -11,7 +11,7 @@ import org.palladiosimulator.indirections.actions.impl.ActionsPackageImpl;
 import org.palladiosimulator.indirections.composition.CompositionFactory;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
 import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.indirections.datatypes.DatatypesPackage;
 import org.palladiosimulator.indirections.datatypes.impl.DatatypesPackageImpl;
@@ -53,7 +53,7 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * 
      * @generated
      */
-    private EClass dataChannelConnectorEClass = null;
+    private EClass queueConnectorEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -246,8 +246,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EClass getDataChannelConnector() {
-        return this.dataChannelConnectorEClass;
+    public EClass getQueueConnector() {
+        return this.queueConnectorEClass;
     }
 
     /**
@@ -256,8 +256,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelConnector_Source() {
-        return (EReference) this.dataChannelConnectorEClass.getEStructuralFeatures().get(0);
+    public EReference getQueueConnector_Source() {
+        return (EReference) this.queueConnectorEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -266,8 +266,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelConnector_Sink() {
-        return (EReference) this.dataChannelConnectorEClass.getEStructuralFeatures().get(1);
+    public EReference getQueueConnector_Sink() {
+        return (EReference) this.queueConnectorEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -312,9 +312,9 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
         this.createEReference(this.consumerQueueSinkConnectorEClass, CONSUMER_QUEUE_SINK_CONNECTOR__ASSEMBLY_CONTEXT);
         this.createEReference(this.consumerQueueSinkConnectorEClass, CONSUMER_QUEUE_SINK_CONNECTOR__CONSUMER_QUEUE);
 
-        this.dataChannelConnectorEClass = this.createEClass(DATA_CHANNEL_CONNECTOR);
-        this.createEReference(this.dataChannelConnectorEClass, DATA_CHANNEL_CONNECTOR__SOURCE);
-        this.createEReference(this.dataChannelConnectorEClass, DATA_CHANNEL_CONNECTOR__SINK);
+        this.queueConnectorEClass = this.createEClass(QUEUE_CONNECTOR);
+        this.createEReference(this.queueConnectorEClass, QUEUE_CONNECTOR__SOURCE);
+        this.createEReference(this.queueConnectorEClass, QUEUE_CONNECTOR__SINK);
     }
 
     /**
@@ -356,7 +356,7 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
         // Add supertypes to classes
         this.supplierQueueSourceConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
         this.consumerQueueSinkConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
-        this.dataChannelConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
+        this.queueConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
 
         // Initialize classes and features; add operations and parameters
         this.initEClass(this.supplierQueueSourceConnectorEClass, SupplierQueueSourceConnector.class,
@@ -388,16 +388,16 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
                 ConsumerQueueSinkConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.dataChannelConnectorEClass, DataChannelConnector.class, "DataChannelConnector",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getDataChannelConnector_Source(), theSystemPackage.getSupplierQueue(),
-                theSystemPackage.getSupplierQueue_OutgoingDataChannelConnector(), "source", null, 1, 1,
-                DataChannelConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataChannelConnector_Sink(), theSystemPackage.getConsumerQueue(),
-                theSystemPackage.getConsumerQueue_IncomingDataChannelConnector(), "sink", null, 1, 1,
-                DataChannelConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEClass(this.queueConnectorEClass, QueueConnector.class, "QueueConnector", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getQueueConnector_Source(), theSystemPackage.getSupplierQueue(),
+                theSystemPackage.getSupplierQueue_OutgoingQueueConnector(), "source", null, 1, 1, QueueConnector.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getQueueConnector_Sink(), theSystemPackage.getConsumerQueue(),
+                theSystemPackage.getConsumerQueue_IncomingQueueConnector(), "sink", null, 1, 1, QueueConnector.class,
+                !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         this.createResource(eNS_URI);

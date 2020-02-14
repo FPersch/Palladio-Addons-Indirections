@@ -6,34 +6,34 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.system.ConsumerQueue;
 import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.indirections.system.SystemPackage;
 import org.palladiosimulator.pcm.core.composition.impl.ConnectorImpl;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '<em><b>Data Channel
- * Connector</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Queue Connector</b></em>'.
+ * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.indirections.composition.impl.DataChannelConnectorImpl#getSource
+ * <li>{@link org.palladiosimulator.indirections.composition.impl.QueueConnectorImpl#getSource
  * <em>Source</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.composition.impl.DataChannelConnectorImpl#getSink
+ * <li>{@link org.palladiosimulator.indirections.composition.impl.QueueConnectorImpl#getSink
  * <em>Sink</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DataChannelConnectorImpl extends ConnectorImpl implements DataChannelConnector {
+public class QueueConnectorImpl extends ConnectorImpl implements QueueConnector {
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    protected DataChannelConnectorImpl() {
+    protected QueueConnectorImpl() {
         super();
     }
 
@@ -44,7 +44,7 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      */
     @Override
     protected EClass eStaticClass() {
-        return CompositionPackage.Literals.DATA_CHANNEL_CONNECTOR;
+        return CompositionPackage.Literals.QUEUE_CONNECTOR;
     }
 
     /**
@@ -54,8 +54,8 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      */
     @Override
     public SupplierQueue getSource() {
-        return (SupplierQueue) this.eDynamicGet(CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE,
-                CompositionPackage.Literals.DATA_CHANNEL_CONNECTOR__SOURCE, true, true);
+        return (SupplierQueue) this.eDynamicGet(CompositionPackage.QUEUE_CONNECTOR__SOURCE,
+                CompositionPackage.Literals.QUEUE_CONNECTOR__SOURCE, true, true);
     }
 
     /**
@@ -64,8 +64,8 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      * @generated
      */
     public SupplierQueue basicGetSource() {
-        return (SupplierQueue) this.eDynamicGet(CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE,
-                CompositionPackage.Literals.DATA_CHANNEL_CONNECTOR__SOURCE, false, true);
+        return (SupplierQueue) this.eDynamicGet(CompositionPackage.QUEUE_CONNECTOR__SOURCE,
+                CompositionPackage.Literals.QUEUE_CONNECTOR__SOURCE, false, true);
     }
 
     /**
@@ -74,8 +74,7 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      * @generated
      */
     public NotificationChain basicSetSource(final SupplierQueue newSource, NotificationChain msgs) {
-        msgs = this.eDynamicInverseAdd((InternalEObject) newSource, CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE,
-                msgs);
+        msgs = this.eDynamicInverseAdd((InternalEObject) newSource, CompositionPackage.QUEUE_CONNECTOR__SOURCE, msgs);
         return msgs;
     }
 
@@ -86,8 +85,8 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      */
     @Override
     public void setSource(final SupplierQueue newSource) {
-        this.eDynamicSet(CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE,
-                CompositionPackage.Literals.DATA_CHANNEL_CONNECTOR__SOURCE, newSource);
+        this.eDynamicSet(CompositionPackage.QUEUE_CONNECTOR__SOURCE,
+                CompositionPackage.Literals.QUEUE_CONNECTOR__SOURCE, newSource);
     }
 
     /**
@@ -97,8 +96,8 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      */
     @Override
     public ConsumerQueue getSink() {
-        return (ConsumerQueue) this.eDynamicGet(CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK,
-                CompositionPackage.Literals.DATA_CHANNEL_CONNECTOR__SINK, true, true);
+        return (ConsumerQueue) this.eDynamicGet(CompositionPackage.QUEUE_CONNECTOR__SINK,
+                CompositionPackage.Literals.QUEUE_CONNECTOR__SINK, true, true);
     }
 
     /**
@@ -107,8 +106,8 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      * @generated
      */
     public ConsumerQueue basicGetSink() {
-        return (ConsumerQueue) this.eDynamicGet(CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK,
-                CompositionPackage.Literals.DATA_CHANNEL_CONNECTOR__SINK, false, true);
+        return (ConsumerQueue) this.eDynamicGet(CompositionPackage.QUEUE_CONNECTOR__SINK,
+                CompositionPackage.Literals.QUEUE_CONNECTOR__SINK, false, true);
     }
 
     /**
@@ -117,8 +116,7 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      * @generated
      */
     public NotificationChain basicSetSink(final ConsumerQueue newSink, NotificationChain msgs) {
-        msgs = this.eDynamicInverseAdd((InternalEObject) newSink, CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK,
-                msgs);
+        msgs = this.eDynamicInverseAdd((InternalEObject) newSink, CompositionPackage.QUEUE_CONNECTOR__SINK, msgs);
         return msgs;
     }
 
@@ -129,8 +127,8 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
      */
     @Override
     public void setSink(final ConsumerQueue newSink) {
-        this.eDynamicSet(CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK,
-                CompositionPackage.Literals.DATA_CHANNEL_CONNECTOR__SINK, newSink);
+        this.eDynamicSet(CompositionPackage.QUEUE_CONNECTOR__SINK, CompositionPackage.Literals.QUEUE_CONNECTOR__SINK,
+                newSink);
     }
 
     /**
@@ -141,18 +139,18 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
     @Override
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE:
+        case CompositionPackage.QUEUE_CONNECTOR__SOURCE:
             final SupplierQueue source = this.basicGetSource();
             if (source != null) {
                 msgs = ((InternalEObject) source).eInverseRemove(this,
-                        SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR, SupplierQueue.class, msgs);
+                        SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR, SupplierQueue.class, msgs);
             }
             return this.basicSetSource((SupplierQueue) otherEnd, msgs);
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK:
+        case CompositionPackage.QUEUE_CONNECTOR__SINK:
             final ConsumerQueue sink = this.basicGetSink();
             if (sink != null) {
                 msgs = ((InternalEObject) sink).eInverseRemove(this,
-                        SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR, ConsumerQueue.class, msgs);
+                        SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR, ConsumerQueue.class, msgs);
             }
             return this.basicSetSink((ConsumerQueue) otherEnd, msgs);
         }
@@ -168,9 +166,9 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE:
+        case CompositionPackage.QUEUE_CONNECTOR__SOURCE:
             return this.basicSetSource(null, msgs);
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK:
+        case CompositionPackage.QUEUE_CONNECTOR__SINK:
             return this.basicSetSink(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -184,12 +182,12 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE:
+        case CompositionPackage.QUEUE_CONNECTOR__SOURCE:
             if (resolve) {
                 return this.getSource();
             }
             return this.basicGetSource();
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK:
+        case CompositionPackage.QUEUE_CONNECTOR__SINK:
             if (resolve) {
                 return this.getSink();
             }
@@ -206,10 +204,10 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE:
+        case CompositionPackage.QUEUE_CONNECTOR__SOURCE:
             this.setSource((SupplierQueue) newValue);
             return;
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK:
+        case CompositionPackage.QUEUE_CONNECTOR__SINK:
             this.setSink((ConsumerQueue) newValue);
             return;
         }
@@ -224,10 +222,10 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE:
+        case CompositionPackage.QUEUE_CONNECTOR__SOURCE:
             this.setSource((SupplierQueue) null);
             return;
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK:
+        case CompositionPackage.QUEUE_CONNECTOR__SINK:
             this.setSink((ConsumerQueue) null);
             return;
         }
@@ -242,12 +240,12 @@ public class DataChannelConnectorImpl extends ConnectorImpl implements DataChann
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SOURCE:
+        case CompositionPackage.QUEUE_CONNECTOR__SOURCE:
             return this.basicGetSource() != null;
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR__SINK:
+        case CompositionPackage.QUEUE_CONNECTOR__SINK:
             return this.basicGetSink() != null;
         }
         return super.eIsSet(featureID);
     }
 
-} // DataChannelConnectorImpl
+} // QueueConnectorImpl

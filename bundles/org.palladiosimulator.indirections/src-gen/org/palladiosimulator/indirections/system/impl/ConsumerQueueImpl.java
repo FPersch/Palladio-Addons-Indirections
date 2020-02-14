@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.datatypes.OutgoingDistribution;
 import org.palladiosimulator.indirections.datatypes.PutPolicy;
 import org.palladiosimulator.indirections.datatypes.Scheduling;
@@ -35,8 +35,8 @@ import org.palladiosimulator.pcm.repository.EventGroup;
  * <em>Source Event Group</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getSinkEventGroup
  * <em>Sink Event Group</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getIncomingDataChannelConnector
- * <em>Incoming Data Channel Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getIncomingQueueConnector
+ * <em>Incoming Queue Connector</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getSinkConnector
  * <em>Sink Connector</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getPartitioning
@@ -59,7 +59,7 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
     /**
      * The default value of the '{@link #getCapacity() <em>Capacity</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getCapacity()
      * @generated
      * @ordered
@@ -79,7 +79,7 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
     /**
      * The default value of the '{@link #getScheduling() <em>Scheduling</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getScheduling()
      * @generated
      * @ordered
@@ -89,7 +89,7 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
     /**
      * The default value of the '{@link #getPutPolicy() <em>Put Policy</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #getPutPolicy()
      * @generated
      * @ordered
@@ -208,10 +208,9 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public EList<DataChannelConnector> getIncomingDataChannelConnector() {
-        return (EList<DataChannelConnector>) this.eDynamicGet(
-                SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR,
-                SystemPackage.Literals.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR, true, true);
+    public EList<QueueConnector> getIncomingQueueConnector() {
+        return (EList<QueueConnector>) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR,
+                SystemPackage.Literals.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR, true, true);
     }
 
     /**
@@ -380,8 +379,8 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getIncomingDataChannelConnector())
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getIncomingQueueConnector())
                     .basicAdd(otherEnd, msgs);
         case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getSinkConnector()).basicAdd(otherEnd,
@@ -399,8 +398,8 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
-            return ((InternalEList<?>) this.getIncomingDataChannelConnector()).basicRemove(otherEnd, msgs);
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR:
+            return ((InternalEList<?>) this.getIncomingQueueConnector()).basicRemove(otherEnd, msgs);
         case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
             return ((InternalEList<?>) this.getSinkConnector()).basicRemove(otherEnd, msgs);
         case SystemPackage.CONSUMER_QUEUE__PARTITIONING:
@@ -433,8 +432,8 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
                 return this.getSinkEventGroup();
             }
             return this.basicGetSinkEventGroup();
-        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
-            return this.getIncomingDataChannelConnector();
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR:
+            return this.getIncomingQueueConnector();
         case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
             return this.getSinkConnector();
         case SystemPackage.CONSUMER_QUEUE__PARTITIONING:
@@ -471,9 +470,9 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
         case SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP:
             this.setSinkEventGroup((EventGroup) newValue);
             return;
-        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
-            this.getIncomingDataChannelConnector().clear();
-            this.getIncomingDataChannelConnector().addAll((Collection<? extends DataChannelConnector>) newValue);
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR:
+            this.getIncomingQueueConnector().clear();
+            this.getIncomingQueueConnector().addAll((Collection<? extends QueueConnector>) newValue);
             return;
         case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
             this.getSinkConnector().clear();
@@ -519,8 +518,8 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
         case SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP:
             this.setSinkEventGroup((EventGroup) null);
             return;
-        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
-            this.getIncomingDataChannelConnector().clear();
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR:
+            this.getIncomingQueueConnector().clear();
             return;
         case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
             this.getSinkConnector().clear();
@@ -561,8 +560,8 @@ public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
             return this.basicGetSourceEventGroup() != null;
         case SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP:
             return this.basicGetSinkEventGroup() != null;
-        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
-            return !this.getIncomingDataChannelConnector().isEmpty();
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR:
+            return !this.getIncomingQueueConnector().isEmpty();
         case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
             return !this.getSinkConnector().isEmpty();
         case SystemPackage.CONSUMER_QUEUE__PARTITIONING:

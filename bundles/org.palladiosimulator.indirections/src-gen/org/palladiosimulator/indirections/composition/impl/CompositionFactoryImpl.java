@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.palladiosimulator.indirections.composition.CompositionFactory;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
 import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 
 /**
@@ -58,8 +58,8 @@ public class CompositionFactoryImpl extends EFactoryImpl implements CompositionF
             return this.createSupplierQueueSourceConnector();
         case CompositionPackage.CONSUMER_QUEUE_SINK_CONNECTOR:
             return this.createConsumerQueueSinkConnector();
-        case CompositionPackage.DATA_CHANNEL_CONNECTOR:
-            return this.createDataChannelConnector();
+        case CompositionPackage.QUEUE_CONNECTOR:
+            return this.createQueueConnector();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -93,9 +93,9 @@ public class CompositionFactoryImpl extends EFactoryImpl implements CompositionF
      * @generated
      */
     @Override
-    public DataChannelConnector createDataChannelConnector() {
-        final DataChannelConnectorImpl dataChannelConnector = new DataChannelConnectorImpl();
-        return dataChannelConnector;
+    public QueueConnector createQueueConnector() {
+        final QueueConnectorImpl queueConnector = new QueueConnectorImpl();
+        return queueConnector;
     }
 
     /**

@@ -4,7 +4,7 @@ package org.palladiosimulator.indirections.partitioning;
 
 import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
 
 /**
@@ -33,12 +33,12 @@ public interface Joining extends CDOObject {
      * end-user-doc -->
      * 
      * @return the value of the '<em>Source</em>' reference.
-     * @see #setSource(DataChannelConnector)
+     * @see #setSource(QueueConnector)
      * @see org.palladiosimulator.indirections.partitioning.PartitioningPackage#getJoining_Source()
      * @model required="true"
      * @generated
      */
-    DataChannelConnector getSource();
+    QueueConnector getSource();
 
     /**
      * Sets the value of the
@@ -50,12 +50,12 @@ public interface Joining extends CDOObject {
      * @see #getSource()
      * @generated
      */
-    void setSource(DataChannelConnector value);
+    void setSource(QueueConnector value);
 
     /**
      * Returns the value of the '<em><b>Can Contribute Multiple Times</b></em>' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Can Contribute Multiple Times</em>' attribute.
      * @see #setCanContributeMultipleTimes(boolean)
      * @see org.palladiosimulator.indirections.partitioning.PartitioningPackage#getJoining_CanContributeMultipleTimes()
@@ -69,7 +69,7 @@ public interface Joining extends CDOObject {
      * '{@link org.palladiosimulator.indirections.partitioning.Joining#isCanContributeMultipleTimes
      * <em>Can Contribute Multiple Times</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
      * -->
-     *
+     * 
      * @param value
      *            the new value of the '<em>Can Contribute Multiple Times</em>' attribute.
      * @see #isCanContributeMultipleTimes()

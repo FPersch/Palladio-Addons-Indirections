@@ -4,7 +4,7 @@ package org.palladiosimulator.indirections.system;
 
 import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.datatypes.OutgoingDistribution;
 import org.palladiosimulator.indirections.datatypes.PutPolicy;
 import org.palladiosimulator.indirections.datatypes.Scheduling;
@@ -28,8 +28,8 @@ import org.palladiosimulator.pcm.repository.EventGroup;
  * Event Group</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSinkEventGroup <em>Sink
  * Event Group</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector
- * <em>Incoming Data Channel Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingQueueConnector
+ * <em>Incoming Queue Connector</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSinkConnector <em>Sink
  * Connector</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getPartitioning
@@ -123,20 +123,19 @@ public interface ConsumerQueue extends Entity {
     void setSinkEventGroup(EventGroup value);
 
     /**
-     * Returns the value of the '<em><b>Incoming Data Channel Connector</b></em>' reference list.
-     * The list contents are of type
-     * {@link org.palladiosimulator.indirections.composition.DataChannelConnector}. It is
-     * bidirectional and its opposite is
-     * '{@link org.palladiosimulator.indirections.composition.DataChannelConnector#getSink
+     * Returns the value of the '<em><b>Incoming Queue Connector</b></em>' reference list. The list
+     * contents are of type {@link org.palladiosimulator.indirections.composition.QueueConnector}.
+     * It is bidirectional and its opposite is
+     * '{@link org.palladiosimulator.indirections.composition.QueueConnector#getSink
      * <em>Sink</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the value of the '<em>Incoming Data Channel Connector</em>' reference list.
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_IncomingDataChannelConnector()
-     * @see org.palladiosimulator.indirections.composition.DataChannelConnector#getSink
+     * @return the value of the '<em>Incoming Queue Connector</em>' reference list.
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_IncomingQueueConnector()
+     * @see org.palladiosimulator.indirections.composition.QueueConnector#getSink
      * @model opposite="sink"
      * @generated
      */
-    EList<DataChannelConnector> getIncomingDataChannelConnector();
+    EList<QueueConnector> getIncomingQueueConnector();
 
     /**
      * Returns the value of the '<em><b>Sink Connector</b></em>' reference list. The list contents
@@ -157,7 +156,7 @@ public interface ConsumerQueue extends Entity {
     /**
      * Returns the value of the '<em><b>Partitioning</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Partitioning</em>' containment reference.
      * @see #setPartitioning(Partitioning)
      * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_Partitioning()
@@ -181,7 +180,7 @@ public interface ConsumerQueue extends Entity {
     /**
      * Returns the value of the '<em><b>Time Grouping</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Time Grouping</em>' containment reference.
      * @see #setTimeGrouping(TimeGrouping)
      * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_TimeGrouping()
@@ -206,7 +205,7 @@ public interface ConsumerQueue extends Entity {
      * Returns the value of the '<em><b>Joins</b></em>' containment reference list. The list
      * contents are of type {@link org.palladiosimulator.indirections.partitioning.Joining}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Joins</em>' containment reference list.
      * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_Joins()
      * @model containment="true"
@@ -219,7 +218,7 @@ public interface ConsumerQueue extends Entity {
      * from the enumeration
      * {@link org.palladiosimulator.indirections.datatypes.OutgoingDistribution}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Outgoing Distribution</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.OutgoingDistribution
      * @see #setOutgoingDistribution(OutgoingDistribution)
@@ -246,7 +245,7 @@ public interface ConsumerQueue extends Entity {
      * Returns the value of the '<em><b>Scheduling</b></em>' attribute. The literals are from the
      * enumeration {@link org.palladiosimulator.indirections.datatypes.Scheduling}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Scheduling</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.Scheduling
      * @see #setScheduling(Scheduling)
@@ -273,7 +272,7 @@ public interface ConsumerQueue extends Entity {
      * Returns the value of the '<em><b>Put Policy</b></em>' attribute. The literals are from the
      * enumeration {@link org.palladiosimulator.indirections.datatypes.PutPolicy}. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @return the value of the '<em>Put Policy</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.PutPolicy
      * @see #setPutPolicy(PutPolicy)

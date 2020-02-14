@@ -3,7 +3,7 @@
 package org.palladiosimulator.indirections.system;
 
 import org.eclipse.emf.common.util.EList;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.repository.EventGroup;
@@ -20,8 +20,8 @@ import org.palladiosimulator.pcm.repository.EventGroup;
  * Event Group</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.SupplierQueue#getSourceConnector <em>Source
  * Connector</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingDataChannelConnector
- * <em>Outgoing Data Channel Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingQueueConnector
+ * <em>Outgoing Queue Connector</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.indirections.system.SystemPackage#getSupplierQueue()
@@ -70,19 +70,18 @@ public interface SupplierQueue extends Entity {
     EList<SupplierQueueSourceConnector> getSourceConnector();
 
     /**
-     * Returns the value of the '<em><b>Outgoing Data Channel Connector</b></em>' reference list.
-     * The list contents are of type
-     * {@link org.palladiosimulator.indirections.composition.DataChannelConnector}. It is
-     * bidirectional and its opposite is
-     * '{@link org.palladiosimulator.indirections.composition.DataChannelConnector#getSource
+     * Returns the value of the '<em><b>Outgoing Queue Connector</b></em>' reference list. The list
+     * contents are of type {@link org.palladiosimulator.indirections.composition.QueueConnector}.
+     * It is bidirectional and its opposite is
+     * '{@link org.palladiosimulator.indirections.composition.QueueConnector#getSource
      * <em>Source</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the value of the '<em>Outgoing Data Channel Connector</em>' reference list.
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getSupplierQueue_OutgoingDataChannelConnector()
-     * @see org.palladiosimulator.indirections.composition.DataChannelConnector#getSource
+     * @return the value of the '<em>Outgoing Queue Connector</em>' reference list.
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getSupplierQueue_OutgoingQueueConnector()
+     * @see org.palladiosimulator.indirections.composition.QueueConnector#getSource
      * @model opposite="source"
      * @generated
      */
-    EList<DataChannelConnector> getOutgoingDataChannelConnector();
+    EList<QueueConnector> getOutgoingQueueConnector();
 
 } // SupplierQueue

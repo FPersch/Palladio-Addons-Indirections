@@ -109,13 +109,13 @@ public interface SystemPackage extends EPackage {
     int CONSUMER_QUEUE__SINK_EVENT_GROUP = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Incoming Data Channel Connector</b></em>' reference list. <!--
+     * The feature id for the '<em><b>Incoming Queue Connector</b></em>' reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
-    int CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 3;
+    int CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
     /**
      * The feature id for the '<em><b>Sink Connector</b></em>' reference list. <!-- begin-user-doc
@@ -129,7 +129,7 @@ public interface SystemPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Partitioning</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -138,7 +138,7 @@ public interface SystemPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Time Grouping</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -147,7 +147,7 @@ public interface SystemPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Joins</b></em>' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -237,13 +237,13 @@ public interface SystemPackage extends EPackage {
     int SUPPLIER_QUEUE__SOURCE_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
     /**
-     * The feature id for the '<em><b>Outgoing Data Channel Connector</b></em>' reference list. <!--
+     * The feature id for the '<em><b>Outgoing Queue Connector</b></em>' reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
-    int SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+    int SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>Supplier Queue</em>' class. <!-- begin-user-doc
@@ -303,15 +303,15 @@ public interface SystemPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference list
-     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector
-     * <em>Incoming Data Channel Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingQueueConnector
+     * <em>Incoming Queue Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the meta object for the reference list '<em>Incoming Data Channel Connector</em>'.
-     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector()
+     * @return the meta object for the reference list '<em>Incoming Queue Connector</em>'.
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingQueueConnector()
      * @see #getConsumerQueue()
      * @generated
      */
-    EReference getConsumerQueue_IncomingDataChannelConnector();
+    EReference getConsumerQueue_IncomingQueueConnector();
 
     /**
      * Returns the meta object for the reference list
@@ -434,15 +434,15 @@ public interface SystemPackage extends EPackage {
 
     /**
      * Returns the meta object for the reference list
-     * '{@link org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingDataChannelConnector
-     * <em>Outgoing Data Channel Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingQueueConnector
+     * <em>Outgoing Queue Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the meta object for the reference list '<em>Outgoing Data Channel Connector</em>'.
-     * @see org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingDataChannelConnector()
+     * @return the meta object for the reference list '<em>Outgoing Queue Connector</em>'.
+     * @see org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingQueueConnector()
      * @see #getSupplierQueue()
      * @generated
      */
-    EReference getSupplierQueue_OutgoingDataChannelConnector();
+    EReference getSupplierQueue_OutgoingQueueConnector();
 
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
@@ -480,7 +480,7 @@ public interface SystemPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Capacity</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EAttribute CONSUMER_QUEUE__CAPACITY = eINSTANCE.getConsumerQueue_Capacity();
@@ -502,13 +502,12 @@ public interface SystemPackage extends EPackage {
         EReference CONSUMER_QUEUE__SINK_EVENT_GROUP = eINSTANCE.getConsumerQueue_SinkEventGroup();
 
         /**
-         * The meta object literal for the '<em><b>Incoming Data Channel Connector</b></em>'
-         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Incoming Queue Connector</b></em>' reference list
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @generated
          */
-        EReference CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR = eINSTANCE
-                .getConsumerQueue_IncomingDataChannelConnector();
+        EReference CONSUMER_QUEUE__INCOMING_QUEUE_CONNECTOR = eINSTANCE.getConsumerQueue_IncomingQueueConnector();
 
         /**
          * The meta object literal for the '<em><b>Sink Connector</b></em>' reference list feature.
@@ -553,7 +552,7 @@ public interface SystemPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Scheduling</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EAttribute CONSUMER_QUEUE__SCHEDULING = eINSTANCE.getConsumerQueue_Scheduling();
@@ -561,7 +560,7 @@ public interface SystemPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Put Policy</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EAttribute CONSUMER_QUEUE__PUT_POLICY = eINSTANCE.getConsumerQueue_PutPolicy();
@@ -594,13 +593,12 @@ public interface SystemPackage extends EPackage {
         EReference SUPPLIER_QUEUE__SOURCE_CONNECTOR = eINSTANCE.getSupplierQueue_SourceConnector();
 
         /**
-         * The meta object literal for the '<em><b>Outgoing Data Channel Connector</b></em>'
-         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Outgoing Queue Connector</b></em>' reference list
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @generated
          */
-        EReference SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR = eINSTANCE
-                .getSupplierQueue_OutgoingDataChannelConnector();
+        EReference SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR = eINSTANCE.getSupplierQueue_OutgoingQueueConnector();
 
     }
 

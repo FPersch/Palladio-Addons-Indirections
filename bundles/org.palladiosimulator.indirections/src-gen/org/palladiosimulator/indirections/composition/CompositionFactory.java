@@ -38,13 +38,13 @@ public interface CompositionFactory extends EFactory {
     ConsumerQueueSinkConnector createConsumerQueueSinkConnector();
 
     /**
-     * Returns a new object of class '<em>Data Channel Connector</em>'. <!-- begin-user-doc --> <!--
+     * Returns a new object of class '<em>Queue Connector</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
-     * @return a new object of class '<em>Data Channel Connector</em>'.
+     * @return a new object of class '<em>Queue Connector</em>'.
      * @generated
      */
-    DataChannelConnector createDataChannelConnector();
+    QueueConnector createQueueConnector();
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->

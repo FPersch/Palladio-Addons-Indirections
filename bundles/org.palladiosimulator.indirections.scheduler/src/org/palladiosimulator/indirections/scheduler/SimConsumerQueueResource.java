@@ -18,7 +18,7 @@ import javax.measure.unit.Unit;
 
 import org.apache.log4j.Logger;
 import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.datatypes.OutgoingDistribution;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.monitoring.IndirectionsMetricDescriptionConstants;
@@ -132,7 +132,7 @@ public class SimConsumerQueueResource extends AbstractSimConsumerQueueResource {
         }
 
         joins = consumerQueue.getJoins();
-        final List<DataChannelConnector> joinSources = joins.stream().map(Joining::getSource)
+        final List<QueueConnector> joinSources = joins.stream().map(Joining::getSource)
                 .collect(Collectors.toList());
         final List<Boolean> retainDataArray = joins.stream().map(Joining::isCanContributeMultipleTimes)
                 .collect(Collectors.toList());

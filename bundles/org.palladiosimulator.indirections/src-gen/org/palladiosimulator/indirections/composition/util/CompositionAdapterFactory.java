@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
 import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.pcm.core.composition.Connector;
 import org.palladiosimulator.pcm.core.entity.Entity;
@@ -79,8 +79,8 @@ public class CompositionAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseDataChannelConnector(final DataChannelConnector object) {
-            return CompositionAdapterFactory.this.createDataChannelConnectorAdapter();
+        public Adapter caseQueueConnector(final QueueConnector object) {
+            return CompositionAdapterFactory.this.createQueueConnectorAdapter();
         }
 
         @Override
@@ -154,16 +154,16 @@ public class CompositionAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.indirections.composition.DataChannelConnector <em>Data Channel
+     * '{@link org.palladiosimulator.indirections.composition.QueueConnector <em>Queue
      * Connector</em>}'. <!-- begin-user-doc --> This default implementation returns null so that we
      * can easily ignore cases; it's useful to ignore a case when inheritance will catch all the
      * cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see org.palladiosimulator.indirections.composition.DataChannelConnector
+     * @see org.palladiosimulator.indirections.composition.QueueConnector
      * @generated
      */
-    public Adapter createDataChannelConnectorAdapter() {
+    public Adapter createQueueConnectorAdapter() {
         return null;
     }
 
@@ -187,7 +187,7 @@ public class CompositionAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.pcm.core.entity.NamedElement
      * @generated
@@ -216,7 +216,7 @@ public class CompositionAdapterFactory extends AdapterFactoryImpl {
      * begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     *
+     * 
      * @return the new adapter.
      * @see org.palladiosimulator.pcm.core.composition.Connector
      * @generated

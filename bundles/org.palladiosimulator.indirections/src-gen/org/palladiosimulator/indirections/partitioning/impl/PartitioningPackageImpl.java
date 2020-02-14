@@ -466,9 +466,9 @@ public class PartitioningPackageImpl extends EPackageImpl implements Partitionin
 
         this.initEClass(this.joiningEClass, Joining.class, "Joining", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getJoining_Source(), theCompositionPackage.getDataChannelConnector(), null, "source",
-                null, 1, 1, Joining.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-                IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getJoining_Source(), theCompositionPackage.getQueueConnector(), null, "source", null,
+                1, 1, Joining.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         this.initEAttribute(this.getJoining_CanContributeMultipleTimes(), this.ecorePackage.getEBoolean(),
                 "canContributeMultipleTimes", null, 1, 1, Joining.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

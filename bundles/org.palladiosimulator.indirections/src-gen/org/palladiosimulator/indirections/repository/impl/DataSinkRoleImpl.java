@@ -27,7 +27,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
     /**
      * The default value of the '{@link #isPushing() <em>Pushing</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @see #isPushing()
      * @generated
      * @ordered

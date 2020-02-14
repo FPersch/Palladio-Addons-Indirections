@@ -84,7 +84,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Predecessor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -93,7 +93,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Successor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -120,7 +120,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Variable Reference</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -129,7 +129,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Analyse Stack Action</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -167,7 +167,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Predecessor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -176,7 +176,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Successor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -212,7 +212,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Variable Reference</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -221,7 +221,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Consume Data Action</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -259,7 +259,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Predecessor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -268,7 +268,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Successor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -304,7 +304,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Variable Reference</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -313,7 +313,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Emit Data Action</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -351,7 +351,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Predecessor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -360,7 +360,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Successor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -378,7 +378,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Variable Reference</b></em>' containment reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -387,7 +387,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Variable Usages</b></em>' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -396,7 +396,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Create Data Action</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -434,7 +434,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Predecessor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -443,7 +443,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Successor Abstract Action</b></em>' reference. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -461,7 +461,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The feature id for the '<em><b>Variable Usages</b></em>' containment reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -470,7 +470,7 @@ public interface ActionsPackage extends EPackage {
     /**
      * The number of structural features of the '<em>Put Data On Stack Action</em>' class. <!--
      * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * 
      * @generated
      * @ordered
      */
@@ -699,7 +699,7 @@ public interface ActionsPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Key</b></em>' attribute feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EAttribute ANALYSE_STACK_ACTION__KEY = eINSTANCE.getAnalyseStackAction_Key();
@@ -726,7 +726,7 @@ public interface ActionsPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Event Type</b></em>' reference feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference CONSUME_DATA_ACTION__EVENT_TYPE = eINSTANCE.getConsumeDataAction_EventType();
@@ -734,7 +734,7 @@ public interface ActionsPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Data Sink Role</b></em>' reference feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference CONSUME_DATA_ACTION__DATA_SINK_ROLE = eINSTANCE.getConsumeDataAction_DataSinkRole();
@@ -761,7 +761,7 @@ public interface ActionsPackage extends EPackage {
         /**
          * The meta object literal for the '<em><b>Event Type</b></em>' reference feature. <!--
          * begin-user-doc --> <!-- end-user-doc -->
-         *
+         * 
          * @generated
          */
         EReference EMIT_DATA_ACTION__EVENT_TYPE = eINSTANCE.getEmitDataAction_EventType();

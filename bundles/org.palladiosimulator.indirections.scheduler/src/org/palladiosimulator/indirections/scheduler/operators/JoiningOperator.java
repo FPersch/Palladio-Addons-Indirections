@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.scheduler.data.DataWithSource;
 import org.palladiosimulator.indirections.scheduler.data.JoinedDate;
@@ -131,7 +131,7 @@ public class JoiningOperator<T extends IndirectionDate> extends SimStatefulOpera
         KeyedChannel<DataWithSource<T>, Object> channelToAddTo = IterableUtil.stream(channels)
                 .filter(it -> it.isResponsibleFor(date)).reduce(StreamUtil.reduceToMaximumOne()).get();
         channelToAddTo.put(date);
-        DataChannelConnector source = date.source;
+        QueueConnector source = date.source;
 
         Object key = channelToAddTo.keyFunction.apply(date);
 

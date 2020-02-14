@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.palladiosimulator.indirections.composition.DataChannelConnector;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.indirections.system.SystemPackage;
@@ -27,8 +27,8 @@ import org.palladiosimulator.pcm.repository.EventGroup;
  * <em>Source Event Group</em>}</li>
  * <li>{@link org.palladiosimulator.indirections.system.impl.SupplierQueueImpl#getSourceConnector
  * <em>Source Connector</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.SupplierQueueImpl#getOutgoingDataChannelConnector
- * <em>Outgoing Data Channel Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.impl.SupplierQueueImpl#getOutgoingQueueConnector
+ * <em>Outgoing Queue Connector</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,10 +104,9 @@ public class SupplierQueueImpl extends EntityImpl implements SupplierQueue {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public EList<DataChannelConnector> getOutgoingDataChannelConnector() {
-        return (EList<DataChannelConnector>) this.eDynamicGet(
-                SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR,
-                SystemPackage.Literals.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR, true, true);
+    public EList<QueueConnector> getOutgoingQueueConnector() {
+        return (EList<QueueConnector>) this.eDynamicGet(SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR,
+                SystemPackage.Literals.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR, true, true);
     }
 
     /**
@@ -123,8 +122,8 @@ public class SupplierQueueImpl extends EntityImpl implements SupplierQueue {
         case SystemPackage.SUPPLIER_QUEUE__SOURCE_CONNECTOR:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getSourceConnector()).basicAdd(otherEnd,
                     msgs);
-        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getOutgoingDataChannelConnector())
+        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getOutgoingQueueConnector())
                     .basicAdd(otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -141,8 +140,8 @@ public class SupplierQueueImpl extends EntityImpl implements SupplierQueue {
         switch (featureID) {
         case SystemPackage.SUPPLIER_QUEUE__SOURCE_CONNECTOR:
             return ((InternalEList<?>) this.getSourceConnector()).basicRemove(otherEnd, msgs);
-        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR:
-            return ((InternalEList<?>) this.getOutgoingDataChannelConnector()).basicRemove(otherEnd, msgs);
+        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR:
+            return ((InternalEList<?>) this.getOutgoingQueueConnector()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -162,8 +161,8 @@ public class SupplierQueueImpl extends EntityImpl implements SupplierQueue {
             return this.basicGetSourceEventGroup();
         case SystemPackage.SUPPLIER_QUEUE__SOURCE_CONNECTOR:
             return this.getSourceConnector();
-        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR:
-            return this.getOutgoingDataChannelConnector();
+        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR:
+            return this.getOutgoingQueueConnector();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -184,9 +183,9 @@ public class SupplierQueueImpl extends EntityImpl implements SupplierQueue {
             this.getSourceConnector().clear();
             this.getSourceConnector().addAll((Collection<? extends SupplierQueueSourceConnector>) newValue);
             return;
-        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR:
-            this.getOutgoingDataChannelConnector().clear();
-            this.getOutgoingDataChannelConnector().addAll((Collection<? extends DataChannelConnector>) newValue);
+        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR:
+            this.getOutgoingQueueConnector().clear();
+            this.getOutgoingQueueConnector().addAll((Collection<? extends QueueConnector>) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -206,8 +205,8 @@ public class SupplierQueueImpl extends EntityImpl implements SupplierQueue {
         case SystemPackage.SUPPLIER_QUEUE__SOURCE_CONNECTOR:
             this.getSourceConnector().clear();
             return;
-        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR:
-            this.getOutgoingDataChannelConnector().clear();
+        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR:
+            this.getOutgoingQueueConnector().clear();
             return;
         }
         super.eUnset(featureID);
@@ -225,8 +224,8 @@ public class SupplierQueueImpl extends EntityImpl implements SupplierQueue {
             return this.basicGetSourceEventGroup() != null;
         case SystemPackage.SUPPLIER_QUEUE__SOURCE_CONNECTOR:
             return !this.getSourceConnector().isEmpty();
-        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR:
-            return !this.getOutgoingDataChannelConnector().isEmpty();
+        case SystemPackage.SUPPLIER_QUEUE__OUTGOING_QUEUE_CONNECTOR:
+            return !this.getOutgoingQueueConnector().isEmpty();
         }
         return super.eIsSet(featureID);
     }
