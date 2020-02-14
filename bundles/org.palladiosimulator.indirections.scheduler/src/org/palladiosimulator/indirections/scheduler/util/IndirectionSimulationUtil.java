@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.scheduler.data.ConcreteIndirectionDate;
 import org.palladiosimulator.indirections.scheduler.data.GroupingIndirectionDate;
+import org.palladiosimulator.indirections.scheduler.scheduling.SuspendableSchedulerEntity;
 import org.palladiosimulator.indirections.util.IterableUtil;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
 import org.palladiosimulator.pcm.core.entity.Entity;
@@ -231,5 +232,11 @@ public final class IndirectionSimulationUtil {
     public static <T extends Identifier> T initName(T identifier, String name) {
         identifier.setId(name + ".ID");
         return identifier;
+    }
+
+    public static void activateIfWaiting(SuspendableSchedulerEntity process) {
+        if (process.isWaiting()) {
+            process.activate();
+        }
     }
 }

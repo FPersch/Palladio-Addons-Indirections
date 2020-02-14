@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.palladiosimulator.indirections.composition.CompositionFactory;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
 import org.palladiosimulator.indirections.composition.DataChannelConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!-- end-user-doc -->
@@ -54,10 +54,10 @@ public class CompositionFactoryImpl extends EFactoryImpl implements CompositionF
     @Override
     public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case CompositionPackage.DATA_CHANNEL_SOURCE_CONNECTOR:
-            return this.createDataChannelSourceConnector();
-        case CompositionPackage.DATA_CHANNEL_SINK_CONNECTOR:
-            return this.createDataChannelSinkConnector();
+        case CompositionPackage.SUPPLIER_QUEUE_SOURCE_CONNECTOR:
+            return this.createSupplierQueueSourceConnector();
+        case CompositionPackage.CONSUMER_QUEUE_SINK_CONNECTOR:
+            return this.createConsumerQueueSinkConnector();
         case CompositionPackage.DATA_CHANNEL_CONNECTOR:
             return this.createDataChannelConnector();
         default:
@@ -71,9 +71,9 @@ public class CompositionFactoryImpl extends EFactoryImpl implements CompositionF
      * @generated
      */
     @Override
-    public DataChannelSourceConnector createDataChannelSourceConnector() {
-        final DataChannelSourceConnectorImpl dataChannelSourceConnector = new DataChannelSourceConnectorImpl();
-        return dataChannelSourceConnector;
+    public SupplierQueueSourceConnector createSupplierQueueSourceConnector() {
+        final SupplierQueueSourceConnectorImpl supplierQueueSourceConnector = new SupplierQueueSourceConnectorImpl();
+        return supplierQueueSourceConnector;
     }
 
     /**
@@ -82,9 +82,9 @@ public class CompositionFactoryImpl extends EFactoryImpl implements CompositionF
      * @generated
      */
     @Override
-    public DataChannelSinkConnector createDataChannelSinkConnector() {
-        final DataChannelSinkConnectorImpl dataChannelSinkConnector = new DataChannelSinkConnectorImpl();
-        return dataChannelSinkConnector;
+    public ConsumerQueueSinkConnector createConsumerQueueSinkConnector() {
+        final ConsumerQueueSinkConnectorImpl consumerQueueSinkConnector = new ConsumerQueueSinkConnectorImpl();
+        return consumerQueueSinkConnector;
     }
 
     /**

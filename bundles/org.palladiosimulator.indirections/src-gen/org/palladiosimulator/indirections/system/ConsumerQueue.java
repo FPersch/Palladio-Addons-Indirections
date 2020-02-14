@@ -3,60 +3,60 @@
 package org.palladiosimulator.indirections.system;
 
 import org.eclipse.emf.common.util.EList;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
+import org.palladiosimulator.indirections.composition.DataChannelConnector;
 import org.palladiosimulator.indirections.datatypes.OutgoingDistribution;
 import org.palladiosimulator.indirections.datatypes.PutPolicy;
 import org.palladiosimulator.indirections.datatypes.Scheduling;
 import org.palladiosimulator.indirections.partitioning.Joining;
 import org.palladiosimulator.indirections.partitioning.Partitioning;
 import org.palladiosimulator.indirections.partitioning.TimeGrouping;
-import org.palladiosimulator.pcm.core.composition.EventChannel;
+import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.repository.EventGroup;
 
 /**
- * <!-- begin-user-doc --> A representation of the model object '<em><b>Data Channel</b></em>'. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc --> A representation of the model object '<em><b>Consumer Queue</b></em>'.
+ * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getCapacity
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getCapacity
  * <em>Capacity</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getSourceEventGroup <em>Source
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSourceEventGroup <em>Source
  * Event Group</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getSinkEventGroup <em>Sink Event
- * Group</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getDataChannelSourceConnector
- * <em>Data Channel Source Connector</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getDataChannelSinkConnector
- * <em>Data Channel Sink Connector</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getPartitioning
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSinkEventGroup <em>Sink
+ * Event Group</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector
+ * <em>Incoming Data Channel Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSinkConnector <em>Sink
+ * Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getPartitioning
  * <em>Partitioning</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getTimeGrouping <em>Time
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getTimeGrouping <em>Time
  * Grouping</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getJoins <em>Joins</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getOutgoingDistribution
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getJoins <em>Joins</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getOutgoingDistribution
  * <em>Outgoing Distribution</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getScheduling
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getScheduling
  * <em>Scheduling</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.DataChannel#getPutPolicy <em>Put
+ * <li>{@link org.palladiosimulator.indirections.system.ConsumerQueue#getPutPolicy <em>Put
  * Policy</em>}</li>
  * </ul>
  *
- * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel()
+ * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue()
  * @model
  * @generated
  */
-public interface DataChannel extends EventChannel {
+public interface ConsumerQueue extends Entity {
     /**
      * Returns the value of the '<em><b>Capacity</b></em>' attribute. The default value is
      * <code>"-1"</code>. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Capacity</em>' attribute.
      * @see #setCapacity(int)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_Capacity()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_Capacity()
      * @model default="-1" required="true" transient="true"
      * @generated
      */
@@ -64,8 +64,8 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getCapacity <em>Capacity</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getCapacity
+     * <em>Capacity</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
      *            the new value of the '<em>Capacity</em>' attribute.
@@ -80,7 +80,7 @@ public interface DataChannel extends EventChannel {
      * 
      * @return the value of the '<em>Source Event Group</em>' reference.
      * @see #setSourceEventGroup(EventGroup)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_SourceEventGroup()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_SourceEventGroup()
      * @model required="true"
      * @generated
      */
@@ -88,8 +88,8 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getSourceEventGroup <em>Source
-     * Event Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSourceEventGroup
+     * <em>Source Event Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
      *            the new value of the '<em>Source Event Group</em>' reference.
@@ -104,7 +104,7 @@ public interface DataChannel extends EventChannel {
      * 
      * @return the value of the '<em>Sink Event Group</em>' reference.
      * @see #setSinkEventGroup(EventGroup)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_SinkEventGroup()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_SinkEventGroup()
      * @model required="true"
      * @generated
      */
@@ -112,7 +112,7 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getSinkEventGroup <em>Sink
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSinkEventGroup <em>Sink
      * Event Group</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -123,36 +123,36 @@ public interface DataChannel extends EventChannel {
     void setSinkEventGroup(EventGroup value);
 
     /**
-     * Returns the value of the '<em><b>Data Channel Source Connector</b></em>' reference list. The
-     * list contents are of type
-     * {@link org.palladiosimulator.indirections.composition.DataChannelSourceConnector}. It is
+     * Returns the value of the '<em><b>Incoming Data Channel Connector</b></em>' reference list.
+     * The list contents are of type
+     * {@link org.palladiosimulator.indirections.composition.DataChannelConnector}. It is
      * bidirectional and its opposite is
-     * '{@link org.palladiosimulator.indirections.composition.DataChannelSourceConnector#getDataChannel
-     * <em>Data Channel</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.composition.DataChannelConnector#getSink
+     * <em>Sink</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the value of the '<em>Data Channel Source Connector</em>' reference list.
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_DataChannelSourceConnector()
-     * @see org.palladiosimulator.indirections.composition.DataChannelSourceConnector#getDataChannel
-     * @model opposite="dataChannel" ordered="false"
+     * @return the value of the '<em>Incoming Data Channel Connector</em>' reference list.
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_IncomingDataChannelConnector()
+     * @see org.palladiosimulator.indirections.composition.DataChannelConnector#getSink
+     * @model opposite="sink"
      * @generated
      */
-    EList<DataChannelSourceConnector> getDataChannelSourceConnector();
+    EList<DataChannelConnector> getIncomingDataChannelConnector();
 
     /**
-     * Returns the value of the '<em><b>Data Channel Sink Connector</b></em>' reference list. The
-     * list contents are of type
-     * {@link org.palladiosimulator.indirections.composition.DataChannelSinkConnector}. It is
+     * Returns the value of the '<em><b>Sink Connector</b></em>' reference list. The list contents
+     * are of type
+     * {@link org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector}. It is
      * bidirectional and its opposite is
-     * '{@link org.palladiosimulator.indirections.composition.DataChannelSinkConnector#getDataChannel
-     * <em>Data Channel</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector#getConsumerQueue
+     * <em>Consumer Queue</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the value of the '<em>Data Channel Sink Connector</em>' reference list.
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_DataChannelSinkConnector()
-     * @see org.palladiosimulator.indirections.composition.DataChannelSinkConnector#getDataChannel
-     * @model opposite="dataChannel" ordered="false"
+     * @return the value of the '<em>Sink Connector</em>' reference list.
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_SinkConnector()
+     * @see org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector#getConsumerQueue
+     * @model opposite="consumerQueue" ordered="false"
      * @generated
      */
-    EList<DataChannelSinkConnector> getDataChannelSinkConnector();
+    EList<ConsumerQueueSinkConnector> getSinkConnector();
 
     /**
      * Returns the value of the '<em><b>Partitioning</b></em>' containment reference. <!--
@@ -160,7 +160,7 @@ public interface DataChannel extends EventChannel {
      *
      * @return the value of the '<em>Partitioning</em>' containment reference.
      * @see #setPartitioning(Partitioning)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_Partitioning()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_Partitioning()
      * @model containment="true"
      * @generated
      */
@@ -168,7 +168,7 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getPartitioning
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getPartitioning
      * <em>Partitioning</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -184,7 +184,7 @@ public interface DataChannel extends EventChannel {
      *
      * @return the value of the '<em>Time Grouping</em>' containment reference.
      * @see #setTimeGrouping(TimeGrouping)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_TimeGrouping()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_TimeGrouping()
      * @model containment="true"
      * @generated
      */
@@ -192,7 +192,7 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getTimeGrouping <em>Time
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getTimeGrouping <em>Time
      * Grouping</em>}' containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -208,7 +208,7 @@ public interface DataChannel extends EventChannel {
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @return the value of the '<em>Joins</em>' containment reference list.
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_Joins()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_Joins()
      * @model containment="true"
      * @generated
      */
@@ -223,7 +223,7 @@ public interface DataChannel extends EventChannel {
      * @return the value of the '<em>Outgoing Distribution</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.OutgoingDistribution
      * @see #setOutgoingDistribution(OutgoingDistribution)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_OutgoingDistribution()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_OutgoingDistribution()
      * @model
      * @generated
      */
@@ -231,7 +231,7 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getOutgoingDistribution
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getOutgoingDistribution
      * <em>Outgoing Distribution</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -250,7 +250,7 @@ public interface DataChannel extends EventChannel {
      * @return the value of the '<em>Scheduling</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.Scheduling
      * @see #setScheduling(Scheduling)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_Scheduling()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_Scheduling()
      * @model
      * @generated
      */
@@ -258,7 +258,7 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getScheduling
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getScheduling
      * <em>Scheduling</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -277,7 +277,7 @@ public interface DataChannel extends EventChannel {
      * @return the value of the '<em>Put Policy</em>' attribute.
      * @see org.palladiosimulator.indirections.datatypes.PutPolicy
      * @see #setPutPolicy(PutPolicy)
-     * @see org.palladiosimulator.indirections.system.SystemPackage#getDataChannel_PutPolicy()
+     * @see org.palladiosimulator.indirections.system.SystemPackage#getConsumerQueue_PutPolicy()
      * @model
      * @generated
      */
@@ -285,7 +285,7 @@ public interface DataChannel extends EventChannel {
 
     /**
      * Sets the value of the
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getPutPolicy <em>Put
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getPutPolicy <em>Put
      * Policy</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @param value
@@ -296,4 +296,4 @@ public interface DataChannel extends EventChannel {
      */
     void setPutPolicy(PutPolicy value);
 
-} // DataChannel
+} // ConsumerQueue

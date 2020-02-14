@@ -5,9 +5,9 @@ package org.palladiosimulator.indirections.system.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
+import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.indirections.system.SystemPackage;
-import org.palladiosimulator.pcm.core.composition.EventChannel;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
 
@@ -66,20 +66,34 @@ public class SystemSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
-        case SystemPackage.DATA_CHANNEL: {
-            final DataChannel dataChannel = (DataChannel) theEObject;
-            T result = this.caseDataChannel(dataChannel);
+        case SystemPackage.CONSUMER_QUEUE: {
+            final ConsumerQueue consumerQueue = (ConsumerQueue) theEObject;
+            T result = this.caseConsumerQueue(consumerQueue);
             if (result == null) {
-                result = this.caseEventChannel(dataChannel);
+                result = this.caseEntity(consumerQueue);
             }
             if (result == null) {
-                result = this.caseEntity(dataChannel);
+                result = this.caseIdentifier(consumerQueue);
             }
             if (result == null) {
-                result = this.caseIdentifier(dataChannel);
+                result = this.caseNamedElement(consumerQueue);
             }
             if (result == null) {
-                result = this.caseNamedElement(dataChannel);
+                result = this.defaultCase(theEObject);
+            }
+            return result;
+        }
+        case SystemPackage.SUPPLIER_QUEUE: {
+            final SupplierQueue supplierQueue = (SupplierQueue) theEObject;
+            T result = this.caseSupplierQueue(supplierQueue);
+            if (result == null) {
+                result = this.caseEntity(supplierQueue);
+            }
+            if (result == null) {
+                result = this.caseIdentifier(supplierQueue);
+            }
+            if (result == null) {
+                result = this.caseNamedElement(supplierQueue);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -92,17 +106,32 @@ public class SystemSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Data Channel</em>'. <!--
-     * begin-user-doc --> This implementation returns null; returning a non-null result will
+     * Returns the result of interpreting the object as an instance of '<em>Consumer Queue</em>'.
+     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
      * terminate the switch. <!-- end-user-doc -->
-     *
+     * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Data Channel</em>'.
+     * @return the result of interpreting the object as an instance of '<em>Consumer Queue</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDataChannel(final DataChannel object) {
+    public T caseConsumerQueue(final ConsumerQueue object) {
+        return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Supplier Queue</em>'.
+     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
+     * terminate the switch. <!-- end-user-doc -->
+     * 
+     * @param object
+     *            the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Supplier Queue</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseSupplierQueue(final SupplierQueue object) {
         return null;
     }
 
@@ -148,21 +177,6 @@ public class SystemSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseEntity(final Entity object) {
-        return null;
-    }
-
-    /**
-     * Returns the result of interpreting the object as an instance of '<em>Event Channel</em>'.
-     * <!-- begin-user-doc --> This implementation returns null; returning a non-null result will
-     * terminate the switch. <!-- end-user-doc -->
-     * 
-     * @param object
-     *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Event Channel</em>'.
-     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-     * @generated
-     */
-    public T caseEventChannel(final EventChannel object) {
         return null;
     }
 

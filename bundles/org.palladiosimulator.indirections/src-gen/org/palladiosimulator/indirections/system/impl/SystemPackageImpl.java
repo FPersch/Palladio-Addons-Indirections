@@ -17,10 +17,12 @@ import org.palladiosimulator.indirections.partitioning.PartitioningPackage;
 import org.palladiosimulator.indirections.partitioning.impl.PartitioningPackageImpl;
 import org.palladiosimulator.indirections.repository.RepositoryPackage;
 import org.palladiosimulator.indirections.repository.impl.RepositoryPackageImpl;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
+import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.indirections.system.SystemFactory;
 import org.palladiosimulator.indirections.system.SystemPackage;
 import org.palladiosimulator.pcm.PcmPackage;
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
 
 import de.uka.ipd.sdq.identifier.IdentifierPackage;
 import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
@@ -38,7 +40,14 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * 
      * @generated
      */
-    private EClass dataChannelEClass = null;
+    private EClass consumerQueueEClass = null;
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    private EClass supplierQueueEClass = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -151,8 +160,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EClass getDataChannel() {
-        return this.dataChannelEClass;
+    public EClass getConsumerQueue() {
+        return this.consumerQueueEClass;
     }
 
     /**
@@ -161,8 +170,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EAttribute getDataChannel_Capacity() {
-        return (EAttribute) this.dataChannelEClass.getEStructuralFeatures().get(0);
+    public EAttribute getConsumerQueue_Capacity() {
+        return (EAttribute) this.consumerQueueEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -171,8 +180,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getDataChannel_SourceEventGroup() {
-        return (EReference) this.dataChannelEClass.getEStructuralFeatures().get(1);
+    public EReference getConsumerQueue_SourceEventGroup() {
+        return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -181,8 +190,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getDataChannel_SinkEventGroup() {
-        return (EReference) this.dataChannelEClass.getEStructuralFeatures().get(2);
+    public EReference getConsumerQueue_SinkEventGroup() {
+        return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -191,8 +200,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getDataChannel_DataChannelSourceConnector() {
-        return (EReference) this.dataChannelEClass.getEStructuralFeatures().get(3);
+    public EReference getConsumerQueue_IncomingDataChannelConnector() {
+        return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(3);
     }
 
     /**
@@ -201,8 +210,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getDataChannel_DataChannelSinkConnector() {
-        return (EReference) this.dataChannelEClass.getEStructuralFeatures().get(4);
+    public EReference getConsumerQueue_SinkConnector() {
+        return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(4);
     }
 
     /**
@@ -211,8 +220,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getDataChannel_Partitioning() {
-        return (EReference) this.dataChannelEClass.getEStructuralFeatures().get(5);
+    public EReference getConsumerQueue_Partitioning() {
+        return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(5);
     }
 
     /**
@@ -221,8 +230,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getDataChannel_TimeGrouping() {
-        return (EReference) this.dataChannelEClass.getEStructuralFeatures().get(6);
+    public EReference getConsumerQueue_TimeGrouping() {
+        return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(6);
     }
 
     /**
@@ -231,8 +240,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EReference getDataChannel_Joins() {
-        return (EReference) this.dataChannelEClass.getEStructuralFeatures().get(7);
+    public EReference getConsumerQueue_Joins() {
+        return (EReference) this.consumerQueueEClass.getEStructuralFeatures().get(7);
     }
 
     /**
@@ -241,8 +250,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EAttribute getDataChannel_OutgoingDistribution() {
-        return (EAttribute) this.dataChannelEClass.getEStructuralFeatures().get(8);
+    public EAttribute getConsumerQueue_OutgoingDistribution() {
+        return (EAttribute) this.consumerQueueEClass.getEStructuralFeatures().get(8);
     }
 
     /**
@@ -251,8 +260,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EAttribute getDataChannel_Scheduling() {
-        return (EAttribute) this.dataChannelEClass.getEStructuralFeatures().get(9);
+    public EAttribute getConsumerQueue_Scheduling() {
+        return (EAttribute) this.consumerQueueEClass.getEStructuralFeatures().get(9);
     }
 
     /**
@@ -261,8 +270,48 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
      * @generated
      */
     @Override
-    public EAttribute getDataChannel_PutPolicy() {
-        return (EAttribute) this.dataChannelEClass.getEStructuralFeatures().get(10);
+    public EAttribute getConsumerQueue_PutPolicy() {
+        return (EAttribute) this.consumerQueueEClass.getEStructuralFeatures().get(10);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EClass getSupplierQueue() {
+        return this.supplierQueueEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EReference getSupplierQueue_SourceEventGroup() {
+        return (EReference) this.supplierQueueEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EReference getSupplierQueue_SourceConnector() {
+        return (EReference) this.supplierQueueEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public EReference getSupplierQueue_OutgoingDataChannelConnector() {
+        return (EReference) this.supplierQueueEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -295,18 +344,23 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
         this.isCreated = true;
 
         // Create classes and their features
-        this.dataChannelEClass = this.createEClass(DATA_CHANNEL);
-        this.createEAttribute(this.dataChannelEClass, DATA_CHANNEL__CAPACITY);
-        this.createEReference(this.dataChannelEClass, DATA_CHANNEL__SOURCE_EVENT_GROUP);
-        this.createEReference(this.dataChannelEClass, DATA_CHANNEL__SINK_EVENT_GROUP);
-        this.createEReference(this.dataChannelEClass, DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR);
-        this.createEReference(this.dataChannelEClass, DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR);
-        this.createEReference(this.dataChannelEClass, DATA_CHANNEL__PARTITIONING);
-        this.createEReference(this.dataChannelEClass, DATA_CHANNEL__TIME_GROUPING);
-        this.createEReference(this.dataChannelEClass, DATA_CHANNEL__JOINS);
-        this.createEAttribute(this.dataChannelEClass, DATA_CHANNEL__OUTGOING_DISTRIBUTION);
-        this.createEAttribute(this.dataChannelEClass, DATA_CHANNEL__SCHEDULING);
-        this.createEAttribute(this.dataChannelEClass, DATA_CHANNEL__PUT_POLICY);
+        this.consumerQueueEClass = this.createEClass(CONSUMER_QUEUE);
+        this.createEAttribute(this.consumerQueueEClass, CONSUMER_QUEUE__CAPACITY);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__SOURCE_EVENT_GROUP);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__SINK_EVENT_GROUP);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__SINK_CONNECTOR);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__PARTITIONING);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__TIME_GROUPING);
+        this.createEReference(this.consumerQueueEClass, CONSUMER_QUEUE__JOINS);
+        this.createEAttribute(this.consumerQueueEClass, CONSUMER_QUEUE__OUTGOING_DISTRIBUTION);
+        this.createEAttribute(this.consumerQueueEClass, CONSUMER_QUEUE__SCHEDULING);
+        this.createEAttribute(this.consumerQueueEClass, CONSUMER_QUEUE__PUT_POLICY);
+
+        this.supplierQueueEClass = this.createEClass(SUPPLIER_QUEUE);
+        this.createEReference(this.supplierQueueEClass, SUPPLIER_QUEUE__SOURCE_EVENT_GROUP);
+        this.createEReference(this.supplierQueueEClass, SUPPLIER_QUEUE__SOURCE_CONNECTOR);
+        this.createEReference(this.supplierQueueEClass, SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR);
     }
 
     /**
@@ -334,8 +388,8 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
         this.setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        final org.palladiosimulator.pcm.core.composition.CompositionPackage theCompositionPackage_1 = (org.palladiosimulator.pcm.core.composition.CompositionPackage) EPackage.Registry.INSTANCE
-                .getEPackage(org.palladiosimulator.pcm.core.composition.CompositionPackage.eNS_URI);
+        final EntityPackage theEntityPackage = (EntityPackage) EPackage.Registry.INSTANCE
+                .getEPackage(EntityPackage.eNS_URI);
         final org.palladiosimulator.pcm.repository.RepositoryPackage theRepositoryPackage_1 = (org.palladiosimulator.pcm.repository.RepositoryPackage) EPackage.Registry.INSTANCE
                 .getEPackage(org.palladiosimulator.pcm.repository.RepositoryPackage.eNS_URI);
         final CompositionPackage theCompositionPackage = (CompositionPackage) EPackage.Registry.INSTANCE
@@ -350,48 +404,63 @@ public class SystemPackageImpl extends EPackageImpl implements SystemPackage {
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        this.dataChannelEClass.getESuperTypes().add(theCompositionPackage_1.getEventChannel());
+        this.consumerQueueEClass.getESuperTypes().add(theEntityPackage.getEntity());
+        this.supplierQueueEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
         // Initialize classes and features; add operations and parameters
-        this.initEClass(this.dataChannelEClass, DataChannel.class, "DataChannel", !IS_ABSTRACT, !IS_INTERFACE,
+        this.initEClass(this.consumerQueueEClass, ConsumerQueue.class, "ConsumerQueue", !IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
-        this.initEAttribute(this.getDataChannel_Capacity(), this.ecorePackage.getEInt(), "capacity", "-1", 1, 1,
-                DataChannel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+        this.initEAttribute(this.getConsumerQueue_Capacity(), this.ecorePackage.getEInt(), "capacity", "-1", 1, 1,
+                ConsumerQueue.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataChannel_SourceEventGroup(), theRepositoryPackage_1.getEventGroup(), null,
-                "sourceEventGroup", null, 1, 1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+        this.initEReference(this.getConsumerQueue_SourceEventGroup(), theRepositoryPackage_1.getEventGroup(), null,
+                "sourceEventGroup", null, 1, 1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataChannel_SinkEventGroup(), theRepositoryPackage_1.getEventGroup(), null,
-                "sinkEventGroup", null, 1, 1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+        this.initEReference(this.getConsumerQueue_SinkEventGroup(), theRepositoryPackage_1.getEventGroup(), null,
+                "sinkEventGroup", null, 1, 1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataChannel_DataChannelSourceConnector(),
-                theCompositionPackage.getDataChannelSourceConnector(),
-                theCompositionPackage.getDataChannelSourceConnector_DataChannel(), "dataChannelSourceConnector", null,
-                0, -1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+        this.initEReference(this.getConsumerQueue_IncomingDataChannelConnector(),
+                theCompositionPackage.getDataChannelConnector(), theCompositionPackage.getDataChannelConnector_Sink(),
+                "incomingDataChannelConnector", null, 0, -1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getConsumerQueue_SinkConnector(),
+                theCompositionPackage.getConsumerQueueSinkConnector(),
+                theCompositionPackage.getConsumerQueueSinkConnector_ConsumerQueue(), "sinkConnector", null, 0, -1,
+                ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getDataChannel_DataChannelSinkConnector(),
-                theCompositionPackage.getDataChannelSinkConnector(),
-                theCompositionPackage.getDataChannelSinkConnector_DataChannel(), "dataChannelSinkConnector", null, 0,
-                -1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getDataChannel_Partitioning(), thePartitioningPackage.getPartitioning(), null,
-                "partitioning", null, 0, 1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataChannel_TimeGrouping(), thePartitioningPackage.getTimeGrouping(), null,
-                "timeGrouping", null, 0, 1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-                !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataChannel_Joins(), thePartitioningPackage.getJoining(), null, "joins", null, 0,
-                -1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+        this.initEReference(this.getConsumerQueue_Partitioning(), thePartitioningPackage.getPartitioning(), null,
+                "partitioning", null, 0, 1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getConsumerQueue_TimeGrouping(), thePartitioningPackage.getTimeGrouping(), null,
+                "timeGrouping", null, 0, 1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getConsumerQueue_Joins(), thePartitioningPackage.getJoining(), null, "joins", null, 0,
+                -1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
                 !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getDataChannel_OutgoingDistribution(), theDatatypesPackage.getOutgoingDistribution(),
-                "outgoingDistribution", null, 0, 1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+        this.initEAttribute(this.getConsumerQueue_OutgoingDistribution(), theDatatypesPackage.getOutgoingDistribution(),
+                "outgoingDistribution", null, 0, 1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
                 !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getDataChannel_Scheduling(), theDatatypesPackage.getScheduling(), "scheduling", null,
-                0, 1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+        this.initEAttribute(this.getConsumerQueue_Scheduling(), theDatatypesPackage.getScheduling(), "scheduling", null,
+                0, 1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+                IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEAttribute(this.getConsumerQueue_PutPolicy(), theDatatypesPackage.getPutPolicy(), "putPolicy", null, 0,
+                1, ConsumerQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
                 !IS_DERIVED, IS_ORDERED);
-        this.initEAttribute(this.getDataChannel_PutPolicy(), theDatatypesPackage.getPutPolicy(), "putPolicy", null, 0,
-                1, DataChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-                !IS_DERIVED, IS_ORDERED);
+
+        this.initEClass(this.supplierQueueEClass, SupplierQueue.class, "SupplierQueue", !IS_ABSTRACT, !IS_INTERFACE,
+                IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getSupplierQueue_SourceEventGroup(), theRepositoryPackage_1.getEventGroup(), null,
+                "sourceEventGroup", null, 1, 1, SupplierQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+                !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        this.initEReference(this.getSupplierQueue_SourceConnector(),
+                theCompositionPackage.getSupplierQueueSourceConnector(),
+                theCompositionPackage.getSupplierQueueSourceConnector_SupplierQueue(), "sourceConnector", null, 0, -1,
+                SupplierQueue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+                !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+        this.initEReference(this.getSupplierQueue_OutgoingDataChannelConnector(),
+                theCompositionPackage.getDataChannelConnector(), theCompositionPackage.getDataChannelConnector_Source(),
+                "outgoingDataChannelConnector", null, 0, -1, SupplierQueue.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
         this.createResource(eNS_URI);

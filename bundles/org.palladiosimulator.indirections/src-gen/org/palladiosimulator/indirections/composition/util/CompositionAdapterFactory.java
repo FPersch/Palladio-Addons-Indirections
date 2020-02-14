@@ -7,9 +7,9 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
 import org.palladiosimulator.indirections.composition.DataChannelConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.pcm.core.composition.Connector;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
@@ -69,13 +69,13 @@ public class CompositionAdapterFactory extends AdapterFactoryImpl {
      */
     protected CompositionSwitch<Adapter> modelSwitch = new CompositionSwitch<Adapter>() {
         @Override
-        public Adapter caseDataChannelSourceConnector(final DataChannelSourceConnector object) {
-            return CompositionAdapterFactory.this.createDataChannelSourceConnectorAdapter();
+        public Adapter caseSupplierQueueSourceConnector(final SupplierQueueSourceConnector object) {
+            return CompositionAdapterFactory.this.createSupplierQueueSourceConnectorAdapter();
         }
 
         @Override
-        public Adapter caseDataChannelSinkConnector(final DataChannelSinkConnector object) {
-            return CompositionAdapterFactory.this.createDataChannelSinkConnectorAdapter();
+        public Adapter caseConsumerQueueSinkConnector(final ConsumerQueueSinkConnector object) {
+            return CompositionAdapterFactory.this.createConsumerQueueSinkConnectorAdapter();
         }
 
         @Override
@@ -124,31 +124,31 @@ public class CompositionAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.indirections.composition.DataChannelSourceConnector <em>Data
-     * Channel Source Connector</em>}'. <!-- begin-user-doc --> This default implementation returns
-     * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
-     * catch all the cases anyway. <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector
+     * <em>Supplier Queue Source Connector</em>}'. <!-- begin-user-doc --> This default
+     * implementation returns null so that we can easily ignore cases; it's useful to ignore a case
+     * when inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see org.palladiosimulator.indirections.composition.DataChannelSourceConnector
+     * @see org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector
      * @generated
      */
-    public Adapter createDataChannelSourceConnectorAdapter() {
+    public Adapter createSupplierQueueSourceConnectorAdapter() {
         return null;
     }
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.indirections.composition.DataChannelSinkConnector <em>Data
-     * Channel Sink Connector</em>}'. <!-- begin-user-doc --> This default implementation returns
-     * null so that we can easily ignore cases; it's useful to ignore a case when inheritance will
-     * catch all the cases anyway. <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector
+     * <em>Consumer Queue Sink Connector</em>}'. <!-- begin-user-doc --> This default implementation
+     * returns null so that we can easily ignore cases; it's useful to ignore a case when
+     * inheritance will catch all the cases anyway. <!-- end-user-doc -->
      * 
      * @return the new adapter.
-     * @see org.palladiosimulator.indirections.composition.DataChannelSinkConnector
+     * @see org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector
      * @generated
      */
-    public Adapter createDataChannelSinkConnectorAdapter() {
+    public Adapter createConsumerQueueSinkConnectorAdapter() {
         return null;
     }
 

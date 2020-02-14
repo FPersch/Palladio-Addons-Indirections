@@ -4,7 +4,7 @@ package org.palladiosimulator.indirections.partitioning;
 
 import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.DataChannelConnector;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
 
 /**
@@ -33,12 +33,12 @@ public interface Joining extends CDOObject {
      * end-user-doc -->
      * 
      * @return the value of the '<em>Source</em>' reference.
-     * @see #setSource(DataChannelSourceConnector)
+     * @see #setSource(DataChannelConnector)
      * @see org.palladiosimulator.indirections.partitioning.PartitioningPackage#getJoining_Source()
      * @model required="true"
      * @generated
      */
-    DataChannelSourceConnector getSource();
+    DataChannelConnector getSource();
 
     /**
      * Sets the value of the
@@ -50,7 +50,7 @@ public interface Joining extends CDOObject {
      * @see #getSource()
      * @generated
      */
-    void setSource(DataChannelSourceConnector value);
+    void setSource(DataChannelConnector value);
 
     /**
      * Returns the value of the '<em><b>Can Contribute Multiple Times</b></em>' attribute. <!--

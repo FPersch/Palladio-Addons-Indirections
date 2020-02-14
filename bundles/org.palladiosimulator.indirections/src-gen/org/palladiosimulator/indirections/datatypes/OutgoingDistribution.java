@@ -18,14 +18,13 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum OutgoingDistribution implements Enumerator {
     /**
-     * The '<em><b>Distribute To All</b></em>' literal object. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * The '<em><b>Broadcast</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see #DISTRIBUTE_TO_ALL_VALUE
+     * @see #BROADCAST_VALUE
      * @generated
      * @ordered
      */
-    DISTRIBUTE_TO_ALL(0, "DistributeToAll", "DistributeToAll"),
+    BROADCAST(0, "Broadcast", "Broadcast"),
 
     /**
      * The '<em><b>Round Robin</b></em>' literal object. <!-- begin-user-doc --> <!-- end-user-doc
@@ -38,15 +37,14 @@ public enum OutgoingDistribution implements Enumerator {
     ROUND_ROBIN(1, "RoundRobin", "RoundRobin");
 
     /**
-     * The '<em><b>Distribute To All</b></em>' literal value. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * The '<em><b>Broadcast</b></em>' literal value. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see #DISTRIBUTE_TO_ALL
-     * @model name="DistributeToAll"
+     * @see #BROADCAST
+     * @model name="Broadcast"
      * @generated
      * @ordered
      */
-    public static final int DISTRIBUTE_TO_ALL_VALUE = 0;
+    public static final int BROADCAST_VALUE = 0;
 
     /**
      * The '<em><b>Round Robin</b></em>' literal value. <!-- begin-user-doc --> <!-- end-user-doc
@@ -65,8 +63,7 @@ public enum OutgoingDistribution implements Enumerator {
      * 
      * @generated
      */
-    private static final OutgoingDistribution[] VALUES_ARRAY = new OutgoingDistribution[] { DISTRIBUTE_TO_ALL,
-            ROUND_ROBIN, };
+    private static final OutgoingDistribution[] VALUES_ARRAY = new OutgoingDistribution[] { BROADCAST, ROUND_ROBIN, };
 
     /**
      * A public read-only list of all the '<em><b>Outgoing Distribution</b></em>' enumerators. <!--
@@ -123,8 +120,8 @@ public enum OutgoingDistribution implements Enumerator {
      */
     public static OutgoingDistribution get(final int value) {
         switch (value) {
-        case DISTRIBUTE_TO_ALL_VALUE:
-            return DISTRIBUTE_TO_ALL;
+        case BROADCAST_VALUE:
+            return BROADCAST;
         case ROUND_ROBIN_VALUE:
             return ROUND_ROBIN;
         }

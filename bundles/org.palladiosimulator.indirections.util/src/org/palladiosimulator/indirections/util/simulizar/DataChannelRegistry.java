@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import org.palladiosimulator.commons.eclipseutils.ExtensionHelper;
-import org.palladiosimulator.indirections.interfaces.IDataChannelResource;
+import org.palladiosimulator.indirections.interfaces.IConsumerQueueResource;
 import org.palladiosimulator.indirections.interfaces.IDataChannelResourceFactory;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.interfaces.ISupplierQueueResource;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
+import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
 
 import de.uka.ipd.sdq.simucomframework.model.SimuComModel;
@@ -16,7 +18,8 @@ public class DataChannelRegistry {
     private static final String ATTRIBUTE_NAME = "dataChannelResourceFactory";
     private static final String EXTENSION_POINT_ID = "org.palladiosimulator.indirections.interfaces.datachannelresourcefactory";
 
-    private final Map<DataChannel, IDataChannelResource> dataChannelToDataChannelResource = new HashMap<DataChannel, IDataChannelResource>();
+    private final Map<ConsumerQueue, IConsumerQueueResource> consumerQueueToResource = new HashMap<ConsumerQueue, IConsumerQueueResource>();
+    private final Map<SupplierQueue, ISupplierQueueResource> supplierQueueToResource = new HashMap<SupplierQueue, ISupplierQueueResource>();
     private IDataChannelResourceFactory dataChannelResourceFactory;
 
     private final SimuComModel model;
@@ -35,16 +38,16 @@ public class DataChannelRegistry {
         this.model = myModel;
     }
 
-    public IDataChannelResource getOrCreateDataChannelResource(final DataChannel dataChannel) {
+    public IConsumerQueueResource getOrCreateConsumerQueueResource(final ConsumerQueue consumerQueue) {
         if (this.dataChannelResourceFactory == null) {
             this.initializeDataChannelResourceFactory();
         }
 
-        if (!this.dataChannelToDataChannelResource.containsKey(dataChannel)) {
-            this.dataChannelToDataChannelResource.put(dataChannel,
-                    this.dataChannelResourceFactory.createDataChannelResource(dataChannel, context, model));
+        if (!this.consumerQueueToResource.containsKey(consumerQueue)) {
+            this.consumerQueueToResource.put(consumerQueue,
+                    this.dataChannelResourceFactory.createConsumerQueueResource(consumerQueue, context, model));
         }
-        return this.dataChannelToDataChannelResource.get(dataChannel);
+        return this.consumerQueueToResource.get(consumerQueue);
     }
 
     private void initializeDataChannelResourceFactory() {
@@ -53,6 +56,18 @@ public class DataChannelRegistry {
         this.dataChannelResourceFactory = executableExtensions.stream().map((it) -> (IDataChannelResourceFactory) it)
                 .findFirst().orElseThrow(() -> new IllegalStateException(
                         "No " + IDataChannelResourceFactory.class.getName() + " found."));
+    }
+
+    public ISupplierQueueResource getOrCreateSupplierQueueResource(SupplierQueue supplierQueue) {
+        if (this.dataChannelResourceFactory == null) {
+            this.initializeDataChannelResourceFactory();
+        }
+
+        if (!this.supplierQueueToResource.containsKey(supplierQueue)) {
+            this.supplierQueueToResource.put(supplierQueue,
+                    this.dataChannelResourceFactory.createSupplierQueueResource(supplierQueue, context, model));
+        }
+        return this.supplierQueueToResource.get(supplierQueue);
     }
 
 }

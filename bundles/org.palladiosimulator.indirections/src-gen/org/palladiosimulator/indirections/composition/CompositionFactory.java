@@ -20,22 +20,22 @@ public interface CompositionFactory extends EFactory {
     CompositionFactory eINSTANCE = org.palladiosimulator.indirections.composition.impl.CompositionFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Data Channel Source Connector</em>'. <!-- begin-user-doc
+     * Returns a new object of class '<em>Supplier Queue Source Connector</em>'. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
-     * @return a new object of class '<em>Data Channel Source Connector</em>'.
+     * @return a new object of class '<em>Supplier Queue Source Connector</em>'.
      * @generated
      */
-    DataChannelSourceConnector createDataChannelSourceConnector();
+    SupplierQueueSourceConnector createSupplierQueueSourceConnector();
 
     /**
-     * Returns a new object of class '<em>Data Channel Sink Connector</em>'. <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * Returns a new object of class '<em>Consumer Queue Sink Connector</em>'. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
      * 
-     * @return a new object of class '<em>Data Channel Sink Connector</em>'.
+     * @return a new object of class '<em>Consumer Queue Sink Connector</em>'.
      * @generated
      */
-    DataChannelSinkConnector createDataChannelSinkConnector();
+    ConsumerQueueSinkConnector createConsumerQueueSinkConnector();
 
     /**
      * Returns a new object of class '<em>Data Channel Connector</em>'. <!-- begin-user-doc --> <!--

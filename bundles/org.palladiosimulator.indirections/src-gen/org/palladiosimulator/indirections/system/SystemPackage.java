@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.palladiosimulator.pcm.core.composition.CompositionPackage;
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
 
 /**
  * <!-- begin-user-doc --> The <b>Package</b> for the model. It contains accessors for the meta
@@ -54,14 +54,14 @@ public interface SystemPackage extends EPackage {
 
     /**
      * The meta object id for the
-     * '{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl <em>Data
-     * Channel</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl <em>Consumer
+     * Queue</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @see org.palladiosimulator.indirections.system.impl.DataChannelImpl
-     * @see org.palladiosimulator.indirections.system.impl.SystemPackageImpl#getDataChannel()
+     * @see org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl
+     * @see org.palladiosimulator.indirections.system.impl.SystemPackageImpl#getConsumerQueue()
      * @generated
      */
-    int DATA_CHANNEL = 0;
+    int CONSUMER_QUEUE = 0;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -70,7 +70,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__ID = CompositionPackage.EVENT_CHANNEL__ID;
+    int CONSUMER_QUEUE__ID = EntityPackage.ENTITY__ID;
 
     /**
      * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -79,43 +79,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__ENTITY_NAME = CompositionPackage.EVENT_CHANNEL__ENTITY_NAME;
-
-    /**
-     * The feature id for the '<em><b>Event Group Event Channel</b></em>' reference. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @generated
-     * @ordered
-     */
-    int DATA_CHANNEL__EVENT_GROUP_EVENT_CHANNEL = CompositionPackage.EVENT_CHANNEL__EVENT_GROUP_EVENT_CHANNEL;
-
-    /**
-     * The feature id for the '<em><b>Event Channel Source Connector Event Channel</b></em>'
-     * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int DATA_CHANNEL__EVENT_CHANNEL_SOURCE_CONNECTOR_EVENT_CHANNEL = CompositionPackage.EVENT_CHANNEL__EVENT_CHANNEL_SOURCE_CONNECTOR_EVENT_CHANNEL;
-
-    /**
-     * The feature id for the '<em><b>Event Channel Sink Connector Event Channel</b></em>' reference
-     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int DATA_CHANNEL__EVENT_CHANNEL_SINK_CONNECTOR_EVENT_CHANNEL = CompositionPackage.EVENT_CHANNEL__EVENT_CHANNEL_SINK_CONNECTOR_EVENT_CHANNEL;
-
-    /**
-     * The feature id for the '<em><b>Parent Structure Event Channel</b></em>' container reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
-    int DATA_CHANNEL__PARENT_STRUCTURE_EVENT_CHANNEL = CompositionPackage.EVENT_CHANNEL__PARENT_STRUCTURE_EVENT_CHANNEL;
+    int CONSUMER_QUEUE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
     /**
      * The feature id for the '<em><b>Capacity</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -124,7 +88,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__CAPACITY = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 0;
+    int CONSUMER_QUEUE__CAPACITY = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Source Event Group</b></em>' reference. <!-- begin-user-doc
@@ -133,7 +97,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__SOURCE_EVENT_GROUP = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 1;
+    int CONSUMER_QUEUE__SOURCE_EVENT_GROUP = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Sink Event Group</b></em>' reference. <!-- begin-user-doc -->
@@ -142,25 +106,25 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__SINK_EVENT_GROUP = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 2;
+    int CONSUMER_QUEUE__SINK_EVENT_GROUP = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
     /**
-     * The feature id for the '<em><b>Data Channel Source Connector</b></em>' reference list. <!--
+     * The feature id for the '<em><b>Incoming Data Channel Connector</b></em>' reference list. <!--
      * begin-user-doc --> <!-- end-user-doc -->
      *
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 3;
+    int CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
     /**
-     * The feature id for the '<em><b>Data Channel Sink Connector</b></em>' reference list. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * The feature id for the '<em><b>Sink Connector</b></em>' reference list. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 4;
+    int CONSUMER_QUEUE__SINK_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Partitioning</b></em>' containment reference. <!--
@@ -169,7 +133,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__PARTITIONING = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 5;
+    int CONSUMER_QUEUE__PARTITIONING = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
     /**
      * The feature id for the '<em><b>Time Grouping</b></em>' containment reference. <!--
@@ -178,7 +142,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__TIME_GROUPING = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 6;
+    int CONSUMER_QUEUE__TIME_GROUPING = EntityPackage.ENTITY_FEATURE_COUNT + 6;
 
     /**
      * The feature id for the '<em><b>Joins</b></em>' containment reference list. <!--
@@ -187,7 +151,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__JOINS = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 7;
+    int CONSUMER_QUEUE__JOINS = EntityPackage.ENTITY_FEATURE_COUNT + 7;
 
     /**
      * The feature id for the '<em><b>Outgoing Distribution</b></em>' attribute. <!-- begin-user-doc
@@ -196,7 +160,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__OUTGOING_DISTRIBUTION = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 8;
+    int CONSUMER_QUEUE__OUTGOING_DISTRIBUTION = EntityPackage.ENTITY_FEATURE_COUNT + 8;
 
     /**
      * The feature id for the '<em><b>Scheduling</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -205,7 +169,7 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__SCHEDULING = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 9;
+    int CONSUMER_QUEUE__SCHEDULING = EntityPackage.ENTITY_FEATURE_COUNT + 9;
 
     /**
      * The feature id for the '<em><b>Put Policy</b></em>' attribute. <!-- begin-user-doc --> <!--
@@ -214,159 +178,271 @@ public interface SystemPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL__PUT_POLICY = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 10;
+    int CONSUMER_QUEUE__PUT_POLICY = EntityPackage.ENTITY_FEATURE_COUNT + 10;
 
     /**
-     * The number of structural features of the '<em>Data Channel</em>' class. <!-- begin-user-doc
+     * The number of structural features of the '<em>Consumer Queue</em>' class. <!-- begin-user-doc
      * --> <!-- end-user-doc -->
      * 
      * @generated
      * @ordered
      */
-    int DATA_CHANNEL_FEATURE_COUNT = CompositionPackage.EVENT_CHANNEL_FEATURE_COUNT + 11;
+    int CONSUMER_QUEUE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 11;
+
+    /**
+     * The meta object id for the
+     * '{@link org.palladiosimulator.indirections.system.impl.SupplierQueueImpl <em>Supplier
+     * Queue</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @see org.palladiosimulator.indirections.system.impl.SupplierQueueImpl
+     * @see org.palladiosimulator.indirections.system.impl.SystemPackageImpl#getSupplierQueue()
+     * @generated
+     */
+    int SUPPLIER_QUEUE = 1;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int SUPPLIER_QUEUE__ID = EntityPackage.ENTITY__ID;
+
+    /**
+     * The feature id for the '<em><b>Entity Name</b></em>' attribute. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int SUPPLIER_QUEUE__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
+
+    /**
+     * The feature id for the '<em><b>Source Event Group</b></em>' reference. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int SUPPLIER_QUEUE__SOURCE_EVENT_GROUP = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Source Connector</b></em>' reference list. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int SUPPLIER_QUEUE__SOURCE_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+    /**
+     * The feature id for the '<em><b>Outgoing Data Channel Connector</b></em>' reference list. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     *
+     * @generated
+     * @ordered
+     */
+    int SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+
+    /**
+     * The number of structural features of the '<em>Supplier Queue</em>' class. <!-- begin-user-doc
+     * --> <!-- end-user-doc -->
+     * 
+     * @generated
+     * @ordered
+     */
+    int SUPPLIER_QUEUE_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
     /**
      * Returns the meta object for class
-     * '{@link org.palladiosimulator.indirections.system.DataChannel <em>Data Channel</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
-     * @return the meta object for class '<em>Data Channel</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue <em>Consumer Queue</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for class '<em>Consumer Queue</em>'.
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue
      * @generated
      */
-    EClass getDataChannel();
+    EClass getConsumerQueue();
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getCapacity
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getCapacity
      * <em>Capacity</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Capacity</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getCapacity()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getCapacity()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EAttribute getDataChannel_Capacity();
+    EAttribute getConsumerQueue_Capacity();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getSourceEventGroup <em>Source
-     * Event Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSourceEventGroup
+     * <em>Source Event Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Source Event Group</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getSourceEventGroup()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getSourceEventGroup()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EReference getDataChannel_SourceEventGroup();
+    EReference getConsumerQueue_SourceEventGroup();
 
     /**
      * Returns the meta object for the reference
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getSinkEventGroup <em>Sink
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSinkEventGroup <em>Sink
      * Event Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the reference '<em>Sink Event Group</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getSinkEventGroup()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getSinkEventGroup()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EReference getDataChannel_SinkEventGroup();
+    EReference getConsumerQueue_SinkEventGroup();
 
     /**
      * Returns the meta object for the reference list
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getDataChannelSourceConnector
-     * <em>Data Channel Source Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector
+     * <em>Incoming Data Channel Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the meta object for the reference list '<em>Data Channel Source Connector</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getDataChannelSourceConnector()
-     * @see #getDataChannel()
+     * @return the meta object for the reference list '<em>Incoming Data Channel Connector</em>'.
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EReference getDataChannel_DataChannelSourceConnector();
+    EReference getConsumerQueue_IncomingDataChannelConnector();
 
     /**
      * Returns the meta object for the reference list
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getDataChannelSinkConnector
-     * <em>Data Channel Sink Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getSinkConnector <em>Sink
+     * Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
-     * @return the meta object for the reference list '<em>Data Channel Sink Connector</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getDataChannelSinkConnector()
-     * @see #getDataChannel()
+     * @return the meta object for the reference list '<em>Sink Connector</em>'.
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getSinkConnector()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EReference getDataChannel_DataChannelSinkConnector();
+    EReference getConsumerQueue_SinkConnector();
 
     /**
      * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getPartitioning
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getPartitioning
      * <em>Partitioning</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Partitioning</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getPartitioning()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getPartitioning()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EReference getDataChannel_Partitioning();
+    EReference getConsumerQueue_Partitioning();
 
     /**
      * Returns the meta object for the containment reference
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getTimeGrouping <em>Time
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getTimeGrouping <em>Time
      * Grouping</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the containment reference '<em>Time Grouping</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getTimeGrouping()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getTimeGrouping()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EReference getDataChannel_TimeGrouping();
+    EReference getConsumerQueue_TimeGrouping();
 
     /**
      * Returns the meta object for the containment reference list
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getJoins <em>Joins</em>}'. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     *
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getJoins <em>Joins</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @return the meta object for the containment reference list '<em>Joins</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getJoins()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getJoins()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EReference getDataChannel_Joins();
+    EReference getConsumerQueue_Joins();
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getOutgoingDistribution
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getOutgoingDistribution
      * <em>Outgoing Distribution</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Outgoing Distribution</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getOutgoingDistribution()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getOutgoingDistribution()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EAttribute getDataChannel_OutgoingDistribution();
+    EAttribute getConsumerQueue_OutgoingDistribution();
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getScheduling
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getScheduling
      * <em>Scheduling</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Scheduling</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getScheduling()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getScheduling()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EAttribute getDataChannel_Scheduling();
+    EAttribute getConsumerQueue_Scheduling();
 
     /**
      * Returns the meta object for the attribute
-     * '{@link org.palladiosimulator.indirections.system.DataChannel#getPutPolicy <em>Put
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getPutPolicy <em>Put
      * Policy</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the meta object for the attribute '<em>Put Policy</em>'.
-     * @see org.palladiosimulator.indirections.system.DataChannel#getPutPolicy()
-     * @see #getDataChannel()
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getPutPolicy()
+     * @see #getConsumerQueue()
      * @generated
      */
-    EAttribute getDataChannel_PutPolicy();
+    EAttribute getConsumerQueue_PutPolicy();
+
+    /**
+     * Returns the meta object for class
+     * '{@link org.palladiosimulator.indirections.system.SupplierQueue <em>Supplier Queue</em>}'.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for class '<em>Supplier Queue</em>'.
+     * @see org.palladiosimulator.indirections.system.SupplierQueue
+     * @generated
+     */
+    EClass getSupplierQueue();
+
+    /**
+     * Returns the meta object for the reference
+     * '{@link org.palladiosimulator.indirections.system.SupplierQueue#getSourceEventGroup
+     * <em>Source Event Group</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference '<em>Source Event Group</em>'.
+     * @see org.palladiosimulator.indirections.system.SupplierQueue#getSourceEventGroup()
+     * @see #getSupplierQueue()
+     * @generated
+     */
+    EReference getSupplierQueue_SourceEventGroup();
+
+    /**
+     * Returns the meta object for the reference list
+     * '{@link org.palladiosimulator.indirections.system.SupplierQueue#getSourceConnector <em>Source
+     * Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference list '<em>Source Connector</em>'.
+     * @see org.palladiosimulator.indirections.system.SupplierQueue#getSourceConnector()
+     * @see #getSupplierQueue()
+     * @generated
+     */
+    EReference getSupplierQueue_SourceConnector();
+
+    /**
+     * Returns the meta object for the reference list
+     * '{@link org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingDataChannelConnector
+     * <em>Outgoing Data Channel Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @return the meta object for the reference list '<em>Outgoing Data Channel Connector</em>'.
+     * @see org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingDataChannelConnector()
+     * @see #getSupplierQueue()
+     * @generated
+     */
+    EReference getSupplierQueue_OutgoingDataChannelConnector();
 
     /**
      * Returns the factory that creates the instances of the model. <!-- begin-user-doc --> <!--
@@ -392,14 +468,14 @@ public interface SystemPackage extends EPackage {
     interface Literals {
         /**
          * The meta object literal for the
-         * '{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl <em>Data
-         * Channel</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * '{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl <em>Consumer
+         * Queue</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
-         * @see org.palladiosimulator.indirections.system.impl.DataChannelImpl
-         * @see org.palladiosimulator.indirections.system.impl.SystemPackageImpl#getDataChannel()
+         * @see org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl
+         * @see org.palladiosimulator.indirections.system.impl.SystemPackageImpl#getConsumerQueue()
          * @generated
          */
-        EClass DATA_CHANNEL = eINSTANCE.getDataChannel();
+        EClass CONSUMER_QUEUE = eINSTANCE.getConsumerQueue();
 
         /**
          * The meta object literal for the '<em><b>Capacity</b></em>' attribute feature. <!--
@@ -407,7 +483,7 @@ public interface SystemPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute DATA_CHANNEL__CAPACITY = eINSTANCE.getDataChannel_Capacity();
+        EAttribute CONSUMER_QUEUE__CAPACITY = eINSTANCE.getConsumerQueue_Capacity();
 
         /**
          * The meta object literal for the '<em><b>Source Event Group</b></em>' reference feature.
@@ -415,7 +491,7 @@ public interface SystemPackage extends EPackage {
          * 
          * @generated
          */
-        EReference DATA_CHANNEL__SOURCE_EVENT_GROUP = eINSTANCE.getDataChannel_SourceEventGroup();
+        EReference CONSUMER_QUEUE__SOURCE_EVENT_GROUP = eINSTANCE.getConsumerQueue_SourceEventGroup();
 
         /**
          * The meta object literal for the '<em><b>Sink Event Group</b></em>' reference feature.
@@ -423,23 +499,24 @@ public interface SystemPackage extends EPackage {
          * 
          * @generated
          */
-        EReference DATA_CHANNEL__SINK_EVENT_GROUP = eINSTANCE.getDataChannel_SinkEventGroup();
+        EReference CONSUMER_QUEUE__SINK_EVENT_GROUP = eINSTANCE.getConsumerQueue_SinkEventGroup();
 
         /**
-         * The meta object literal for the '<em><b>Data Channel Source Connector</b></em>' reference
-         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Incoming Data Channel Connector</b></em>'
+         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @generated
          */
-        EReference DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR = eINSTANCE.getDataChannel_DataChannelSourceConnector();
+        EReference CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR = eINSTANCE
+                .getConsumerQueue_IncomingDataChannelConnector();
 
         /**
-         * The meta object literal for the '<em><b>Data Channel Sink Connector</b></em>' reference
-         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * The meta object literal for the '<em><b>Sink Connector</b></em>' reference list feature.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
          * 
          * @generated
          */
-        EReference DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR = eINSTANCE.getDataChannel_DataChannelSinkConnector();
+        EReference CONSUMER_QUEUE__SINK_CONNECTOR = eINSTANCE.getConsumerQueue_SinkConnector();
 
         /**
          * The meta object literal for the '<em><b>Partitioning</b></em>' containment reference
@@ -447,7 +524,7 @@ public interface SystemPackage extends EPackage {
          * 
          * @generated
          */
-        EReference DATA_CHANNEL__PARTITIONING = eINSTANCE.getDataChannel_Partitioning();
+        EReference CONSUMER_QUEUE__PARTITIONING = eINSTANCE.getConsumerQueue_Partitioning();
 
         /**
          * The meta object literal for the '<em><b>Time Grouping</b></em>' containment reference
@@ -455,7 +532,7 @@ public interface SystemPackage extends EPackage {
          * 
          * @generated
          */
-        EReference DATA_CHANNEL__TIME_GROUPING = eINSTANCE.getDataChannel_TimeGrouping();
+        EReference CONSUMER_QUEUE__TIME_GROUPING = eINSTANCE.getConsumerQueue_TimeGrouping();
 
         /**
          * The meta object literal for the '<em><b>Joins</b></em>' containment reference list
@@ -463,7 +540,7 @@ public interface SystemPackage extends EPackage {
          * 
          * @generated
          */
-        EReference DATA_CHANNEL__JOINS = eINSTANCE.getDataChannel_Joins();
+        EReference CONSUMER_QUEUE__JOINS = eINSTANCE.getConsumerQueue_Joins();
 
         /**
          * The meta object literal for the '<em><b>Outgoing Distribution</b></em>' attribute
@@ -471,7 +548,7 @@ public interface SystemPackage extends EPackage {
          * 
          * @generated
          */
-        EAttribute DATA_CHANNEL__OUTGOING_DISTRIBUTION = eINSTANCE.getDataChannel_OutgoingDistribution();
+        EAttribute CONSUMER_QUEUE__OUTGOING_DISTRIBUTION = eINSTANCE.getConsumerQueue_OutgoingDistribution();
 
         /**
          * The meta object literal for the '<em><b>Scheduling</b></em>' attribute feature. <!--
@@ -479,7 +556,7 @@ public interface SystemPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute DATA_CHANNEL__SCHEDULING = eINSTANCE.getDataChannel_Scheduling();
+        EAttribute CONSUMER_QUEUE__SCHEDULING = eINSTANCE.getConsumerQueue_Scheduling();
 
         /**
          * The meta object literal for the '<em><b>Put Policy</b></em>' attribute feature. <!--
@@ -487,7 +564,43 @@ public interface SystemPackage extends EPackage {
          *
          * @generated
          */
-        EAttribute DATA_CHANNEL__PUT_POLICY = eINSTANCE.getDataChannel_PutPolicy();
+        EAttribute CONSUMER_QUEUE__PUT_POLICY = eINSTANCE.getConsumerQueue_PutPolicy();
+
+        /**
+         * The meta object literal for the
+         * '{@link org.palladiosimulator.indirections.system.impl.SupplierQueueImpl <em>Supplier
+         * Queue</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @see org.palladiosimulator.indirections.system.impl.SupplierQueueImpl
+         * @see org.palladiosimulator.indirections.system.impl.SystemPackageImpl#getSupplierQueue()
+         * @generated
+         */
+        EClass SUPPLIER_QUEUE = eINSTANCE.getSupplierQueue();
+
+        /**
+         * The meta object literal for the '<em><b>Source Event Group</b></em>' reference feature.
+         * <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference SUPPLIER_QUEUE__SOURCE_EVENT_GROUP = eINSTANCE.getSupplierQueue_SourceEventGroup();
+
+        /**
+         * The meta object literal for the '<em><b>Source Connector</b></em>' reference list
+         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference SUPPLIER_QUEUE__SOURCE_CONNECTOR = eINSTANCE.getSupplierQueue_SourceConnector();
+
+        /**
+         * The meta object literal for the '<em><b>Outgoing Data Channel Connector</b></em>'
+         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
+         * 
+         * @generated
+         */
+        EReference SUPPLIER_QUEUE__OUTGOING_DATA_CHANNEL_CONNECTOR = eINSTANCE
+                .getSupplierQueue_OutgoingDataChannelConnector();
 
     }
 

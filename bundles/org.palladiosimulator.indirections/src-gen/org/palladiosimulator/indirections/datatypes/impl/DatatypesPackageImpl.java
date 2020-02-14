@@ -262,7 +262,7 @@ public class DatatypesPackageImpl extends EPackageImpl implements DatatypesPacka
         this.addEEnumLiteral(this.putPolicyEEnum, PutPolicy.DISCARD_INCOMING);
 
         this.initEEnum(this.outgoingDistributionEEnum, OutgoingDistribution.class, "OutgoingDistribution");
-        this.addEEnumLiteral(this.outgoingDistributionEEnum, OutgoingDistribution.DISTRIBUTE_TO_ALL);
+        this.addEEnumLiteral(this.outgoingDistributionEEnum, OutgoingDistribution.BROADCAST);
         this.addEEnumLiteral(this.outgoingDistributionEEnum, OutgoingDistribution.ROUND_ROBIN);
 
         // Create resource

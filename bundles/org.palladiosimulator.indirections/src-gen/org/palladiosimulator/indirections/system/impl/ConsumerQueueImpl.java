@@ -9,53 +9,53 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
+import org.palladiosimulator.indirections.composition.DataChannelConnector;
 import org.palladiosimulator.indirections.datatypes.OutgoingDistribution;
 import org.palladiosimulator.indirections.datatypes.PutPolicy;
 import org.palladiosimulator.indirections.datatypes.Scheduling;
 import org.palladiosimulator.indirections.partitioning.Joining;
 import org.palladiosimulator.indirections.partitioning.Partitioning;
 import org.palladiosimulator.indirections.partitioning.TimeGrouping;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
 import org.palladiosimulator.indirections.system.SystemPackage;
-import org.palladiosimulator.pcm.core.composition.impl.EventChannelImpl;
+import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 import org.palladiosimulator.pcm.repository.EventGroup;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '<em><b>Data Channel</b></em>'.
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Consumer Queue</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getCapacity
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getCapacity
  * <em>Capacity</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getSourceEventGroup
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getSourceEventGroup
  * <em>Source Event Group</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getSinkEventGroup
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getSinkEventGroup
  * <em>Sink Event Group</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getDataChannelSourceConnector
- * <em>Data Channel Source Connector</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getDataChannelSinkConnector
- * <em>Data Channel Sink Connector</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getPartitioning
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getIncomingDataChannelConnector
+ * <em>Incoming Data Channel Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getSinkConnector
+ * <em>Sink Connector</em>}</li>
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getPartitioning
  * <em>Partitioning</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getTimeGrouping
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getTimeGrouping
  * <em>Time Grouping</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getJoins
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getJoins
  * <em>Joins</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getOutgoingDistribution
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getOutgoingDistribution
  * <em>Outgoing Distribution</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getScheduling
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getScheduling
  * <em>Scheduling</em>}</li>
- * <li>{@link org.palladiosimulator.indirections.system.impl.DataChannelImpl#getPutPolicy <em>Put
+ * <li>{@link org.palladiosimulator.indirections.system.impl.ConsumerQueueImpl#getPutPolicy <em>Put
  * Policy</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DataChannelImpl extends EventChannelImpl implements DataChannel {
+public class ConsumerQueueImpl extends EntityImpl implements ConsumerQueue {
     /**
      * The default value of the '{@link #getCapacity() <em>Capacity</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -74,7 +74,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      * @generated
      * @ordered
      */
-    protected static final OutgoingDistribution OUTGOING_DISTRIBUTION_EDEFAULT = OutgoingDistribution.DISTRIBUTE_TO_ALL;
+    protected static final OutgoingDistribution OUTGOING_DISTRIBUTION_EDEFAULT = OutgoingDistribution.BROADCAST;
 
     /**
      * The default value of the '{@link #getScheduling() <em>Scheduling</em>}' attribute. <!--
@@ -101,7 +101,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      * 
      * @generated
      */
-    protected DataChannelImpl() {
+    protected ConsumerQueueImpl() {
         super();
     }
 
@@ -112,7 +112,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     protected EClass eStaticClass() {
-        return SystemPackage.Literals.DATA_CHANNEL;
+        return SystemPackage.Literals.CONSUMER_QUEUE;
     }
 
     /**
@@ -122,8 +122,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public int getCapacity() {
-        return (Integer) this.eDynamicGet(SystemPackage.DATA_CHANNEL__CAPACITY,
-                SystemPackage.Literals.DATA_CHANNEL__CAPACITY, true, true);
+        return (Integer) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__CAPACITY,
+                SystemPackage.Literals.CONSUMER_QUEUE__CAPACITY, true, true);
     }
 
     /**
@@ -133,7 +133,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setCapacity(final int newCapacity) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__CAPACITY, SystemPackage.Literals.DATA_CHANNEL__CAPACITY,
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__CAPACITY, SystemPackage.Literals.CONSUMER_QUEUE__CAPACITY,
                 newCapacity);
     }
 
@@ -144,8 +144,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public EventGroup getSourceEventGroup() {
-        return (EventGroup) this.eDynamicGet(SystemPackage.DATA_CHANNEL__SOURCE_EVENT_GROUP,
-                SystemPackage.Literals.DATA_CHANNEL__SOURCE_EVENT_GROUP, true, true);
+        return (EventGroup) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__SOURCE_EVENT_GROUP,
+                SystemPackage.Literals.CONSUMER_QUEUE__SOURCE_EVENT_GROUP, true, true);
     }
 
     /**
@@ -154,8 +154,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      * @generated
      */
     public EventGroup basicGetSourceEventGroup() {
-        return (EventGroup) this.eDynamicGet(SystemPackage.DATA_CHANNEL__SOURCE_EVENT_GROUP,
-                SystemPackage.Literals.DATA_CHANNEL__SOURCE_EVENT_GROUP, false, true);
+        return (EventGroup) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__SOURCE_EVENT_GROUP,
+                SystemPackage.Literals.CONSUMER_QUEUE__SOURCE_EVENT_GROUP, false, true);
     }
 
     /**
@@ -165,8 +165,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setSourceEventGroup(final EventGroup newSourceEventGroup) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__SOURCE_EVENT_GROUP,
-                SystemPackage.Literals.DATA_CHANNEL__SOURCE_EVENT_GROUP, newSourceEventGroup);
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__SOURCE_EVENT_GROUP,
+                SystemPackage.Literals.CONSUMER_QUEUE__SOURCE_EVENT_GROUP, newSourceEventGroup);
     }
 
     /**
@@ -176,8 +176,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public EventGroup getSinkEventGroup() {
-        return (EventGroup) this.eDynamicGet(SystemPackage.DATA_CHANNEL__SINK_EVENT_GROUP,
-                SystemPackage.Literals.DATA_CHANNEL__SINK_EVENT_GROUP, true, true);
+        return (EventGroup) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP,
+                SystemPackage.Literals.CONSUMER_QUEUE__SINK_EVENT_GROUP, true, true);
     }
 
     /**
@@ -186,8 +186,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      * @generated
      */
     public EventGroup basicGetSinkEventGroup() {
-        return (EventGroup) this.eDynamicGet(SystemPackage.DATA_CHANNEL__SINK_EVENT_GROUP,
-                SystemPackage.Literals.DATA_CHANNEL__SINK_EVENT_GROUP, false, true);
+        return (EventGroup) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP,
+                SystemPackage.Literals.CONSUMER_QUEUE__SINK_EVENT_GROUP, false, true);
     }
 
     /**
@@ -197,8 +197,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setSinkEventGroup(final EventGroup newSinkEventGroup) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__SINK_EVENT_GROUP,
-                SystemPackage.Literals.DATA_CHANNEL__SINK_EVENT_GROUP, newSinkEventGroup);
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP,
+                SystemPackage.Literals.CONSUMER_QUEUE__SINK_EVENT_GROUP, newSinkEventGroup);
     }
 
     /**
@@ -208,10 +208,10 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public EList<DataChannelSourceConnector> getDataChannelSourceConnector() {
-        return (EList<DataChannelSourceConnector>) this.eDynamicGet(
-                SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR,
-                SystemPackage.Literals.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR, true, true);
+    public EList<DataChannelConnector> getIncomingDataChannelConnector() {
+        return (EList<DataChannelConnector>) this.eDynamicGet(
+                SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR,
+                SystemPackage.Literals.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR, true, true);
     }
 
     /**
@@ -221,10 +221,9 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public EList<DataChannelSinkConnector> getDataChannelSinkConnector() {
-        return (EList<DataChannelSinkConnector>) this.eDynamicGet(
-                SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR,
-                SystemPackage.Literals.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR, true, true);
+    public EList<ConsumerQueueSinkConnector> getSinkConnector() {
+        return (EList<ConsumerQueueSinkConnector>) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR,
+                SystemPackage.Literals.CONSUMER_QUEUE__SINK_CONNECTOR, true, true);
     }
 
     /**
@@ -234,8 +233,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public Partitioning getPartitioning() {
-        return (Partitioning) this.eDynamicGet(SystemPackage.DATA_CHANNEL__PARTITIONING,
-                SystemPackage.Literals.DATA_CHANNEL__PARTITIONING, true, true);
+        return (Partitioning) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__PARTITIONING,
+                SystemPackage.Literals.CONSUMER_QUEUE__PARTITIONING, true, true);
     }
 
     /**
@@ -244,7 +243,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      * @generated
      */
     public NotificationChain basicSetPartitioning(final Partitioning newPartitioning, NotificationChain msgs) {
-        msgs = this.eDynamicInverseAdd((InternalEObject) newPartitioning, SystemPackage.DATA_CHANNEL__PARTITIONING,
+        msgs = this.eDynamicInverseAdd((InternalEObject) newPartitioning, SystemPackage.CONSUMER_QUEUE__PARTITIONING,
                 msgs);
         return msgs;
     }
@@ -256,8 +255,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setPartitioning(final Partitioning newPartitioning) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__PARTITIONING, SystemPackage.Literals.DATA_CHANNEL__PARTITIONING,
-                newPartitioning);
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__PARTITIONING,
+                SystemPackage.Literals.CONSUMER_QUEUE__PARTITIONING, newPartitioning);
     }
 
     /**
@@ -267,8 +266,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public TimeGrouping getTimeGrouping() {
-        return (TimeGrouping) this.eDynamicGet(SystemPackage.DATA_CHANNEL__TIME_GROUPING,
-                SystemPackage.Literals.DATA_CHANNEL__TIME_GROUPING, true, true);
+        return (TimeGrouping) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__TIME_GROUPING,
+                SystemPackage.Literals.CONSUMER_QUEUE__TIME_GROUPING, true, true);
     }
 
     /**
@@ -277,7 +276,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      * @generated
      */
     public NotificationChain basicSetTimeGrouping(final TimeGrouping newTimeGrouping, NotificationChain msgs) {
-        msgs = this.eDynamicInverseAdd((InternalEObject) newTimeGrouping, SystemPackage.DATA_CHANNEL__TIME_GROUPING,
+        msgs = this.eDynamicInverseAdd((InternalEObject) newTimeGrouping, SystemPackage.CONSUMER_QUEUE__TIME_GROUPING,
                 msgs);
         return msgs;
     }
@@ -289,8 +288,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setTimeGrouping(final TimeGrouping newTimeGrouping) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__TIME_GROUPING, SystemPackage.Literals.DATA_CHANNEL__TIME_GROUPING,
-                newTimeGrouping);
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__TIME_GROUPING,
+                SystemPackage.Literals.CONSUMER_QUEUE__TIME_GROUPING, newTimeGrouping);
     }
 
     /**
@@ -301,8 +300,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
     @SuppressWarnings("unchecked")
     @Override
     public EList<Joining> getJoins() {
-        return (EList<Joining>) this.eDynamicGet(SystemPackage.DATA_CHANNEL__JOINS,
-                SystemPackage.Literals.DATA_CHANNEL__JOINS, true, true);
+        return (EList<Joining>) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__JOINS,
+                SystemPackage.Literals.CONSUMER_QUEUE__JOINS, true, true);
     }
 
     /**
@@ -312,8 +311,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public OutgoingDistribution getOutgoingDistribution() {
-        return (OutgoingDistribution) this.eDynamicGet(SystemPackage.DATA_CHANNEL__OUTGOING_DISTRIBUTION,
-                SystemPackage.Literals.DATA_CHANNEL__OUTGOING_DISTRIBUTION, true, true);
+        return (OutgoingDistribution) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION,
+                SystemPackage.Literals.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION, true, true);
     }
 
     /**
@@ -323,8 +322,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setOutgoingDistribution(final OutgoingDistribution newOutgoingDistribution) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__OUTGOING_DISTRIBUTION,
-                SystemPackage.Literals.DATA_CHANNEL__OUTGOING_DISTRIBUTION, newOutgoingDistribution);
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION,
+                SystemPackage.Literals.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION, newOutgoingDistribution);
     }
 
     /**
@@ -334,8 +333,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public Scheduling getScheduling() {
-        return (Scheduling) this.eDynamicGet(SystemPackage.DATA_CHANNEL__SCHEDULING,
-                SystemPackage.Literals.DATA_CHANNEL__SCHEDULING, true, true);
+        return (Scheduling) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__SCHEDULING,
+                SystemPackage.Literals.CONSUMER_QUEUE__SCHEDULING, true, true);
     }
 
     /**
@@ -345,7 +344,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setScheduling(final Scheduling newScheduling) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__SCHEDULING, SystemPackage.Literals.DATA_CHANNEL__SCHEDULING,
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__SCHEDULING, SystemPackage.Literals.CONSUMER_QUEUE__SCHEDULING,
                 newScheduling);
     }
 
@@ -356,8 +355,8 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public PutPolicy getPutPolicy() {
-        return (PutPolicy) this.eDynamicGet(SystemPackage.DATA_CHANNEL__PUT_POLICY,
-                SystemPackage.Literals.DATA_CHANNEL__PUT_POLICY, true, true);
+        return (PutPolicy) this.eDynamicGet(SystemPackage.CONSUMER_QUEUE__PUT_POLICY,
+                SystemPackage.Literals.CONSUMER_QUEUE__PUT_POLICY, true, true);
     }
 
     /**
@@ -367,7 +366,7 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
      */
     @Override
     public void setPutPolicy(final PutPolicy newPutPolicy) {
-        this.eDynamicSet(SystemPackage.DATA_CHANNEL__PUT_POLICY, SystemPackage.Literals.DATA_CHANNEL__PUT_POLICY,
+        this.eDynamicSet(SystemPackage.CONSUMER_QUEUE__PUT_POLICY, SystemPackage.Literals.CONSUMER_QUEUE__PUT_POLICY,
                 newPutPolicy);
     }
 
@@ -381,12 +380,12 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
     public NotificationChain eInverseAdd(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getDataChannelSourceConnector())
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getIncomingDataChannelConnector())
                     .basicAdd(otherEnd, msgs);
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR:
-            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getDataChannelSinkConnector())
-                    .basicAdd(otherEnd, msgs);
+        case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
+            return ((InternalEList<InternalEObject>) (InternalEList<?>) this.getSinkConnector()).basicAdd(otherEnd,
+                    msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -400,15 +399,15 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
     public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
             final NotificationChain msgs) {
         switch (featureID) {
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR:
-            return ((InternalEList<?>) this.getDataChannelSourceConnector()).basicRemove(otherEnd, msgs);
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR:
-            return ((InternalEList<?>) this.getDataChannelSinkConnector()).basicRemove(otherEnd, msgs);
-        case SystemPackage.DATA_CHANNEL__PARTITIONING:
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
+            return ((InternalEList<?>) this.getIncomingDataChannelConnector()).basicRemove(otherEnd, msgs);
+        case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
+            return ((InternalEList<?>) this.getSinkConnector()).basicRemove(otherEnd, msgs);
+        case SystemPackage.CONSUMER_QUEUE__PARTITIONING:
             return this.basicSetPartitioning(null, msgs);
-        case SystemPackage.DATA_CHANNEL__TIME_GROUPING:
+        case SystemPackage.CONSUMER_QUEUE__TIME_GROUPING:
             return this.basicSetTimeGrouping(null, msgs);
-        case SystemPackage.DATA_CHANNEL__JOINS:
+        case SystemPackage.CONSUMER_QUEUE__JOINS:
             return ((InternalEList<?>) this.getJoins()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -422,33 +421,33 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
     @Override
     public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
         switch (featureID) {
-        case SystemPackage.DATA_CHANNEL__CAPACITY:
+        case SystemPackage.CONSUMER_QUEUE__CAPACITY:
             return this.getCapacity();
-        case SystemPackage.DATA_CHANNEL__SOURCE_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SOURCE_EVENT_GROUP:
             if (resolve) {
                 return this.getSourceEventGroup();
             }
             return this.basicGetSourceEventGroup();
-        case SystemPackage.DATA_CHANNEL__SINK_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP:
             if (resolve) {
                 return this.getSinkEventGroup();
             }
             return this.basicGetSinkEventGroup();
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR:
-            return this.getDataChannelSourceConnector();
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR:
-            return this.getDataChannelSinkConnector();
-        case SystemPackage.DATA_CHANNEL__PARTITIONING:
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
+            return this.getIncomingDataChannelConnector();
+        case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
+            return this.getSinkConnector();
+        case SystemPackage.CONSUMER_QUEUE__PARTITIONING:
             return this.getPartitioning();
-        case SystemPackage.DATA_CHANNEL__TIME_GROUPING:
+        case SystemPackage.CONSUMER_QUEUE__TIME_GROUPING:
             return this.getTimeGrouping();
-        case SystemPackage.DATA_CHANNEL__JOINS:
+        case SystemPackage.CONSUMER_QUEUE__JOINS:
             return this.getJoins();
-        case SystemPackage.DATA_CHANNEL__OUTGOING_DISTRIBUTION:
+        case SystemPackage.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION:
             return this.getOutgoingDistribution();
-        case SystemPackage.DATA_CHANNEL__SCHEDULING:
+        case SystemPackage.CONSUMER_QUEUE__SCHEDULING:
             return this.getScheduling();
-        case SystemPackage.DATA_CHANNEL__PUT_POLICY:
+        case SystemPackage.CONSUMER_QUEUE__PUT_POLICY:
             return this.getPutPolicy();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -463,40 +462,40 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
     @Override
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
-        case SystemPackage.DATA_CHANNEL__CAPACITY:
+        case SystemPackage.CONSUMER_QUEUE__CAPACITY:
             this.setCapacity((Integer) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__SOURCE_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SOURCE_EVENT_GROUP:
             this.setSourceEventGroup((EventGroup) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__SINK_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP:
             this.setSinkEventGroup((EventGroup) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR:
-            this.getDataChannelSourceConnector().clear();
-            this.getDataChannelSourceConnector().addAll((Collection<? extends DataChannelSourceConnector>) newValue);
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
+            this.getIncomingDataChannelConnector().clear();
+            this.getIncomingDataChannelConnector().addAll((Collection<? extends DataChannelConnector>) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR:
-            this.getDataChannelSinkConnector().clear();
-            this.getDataChannelSinkConnector().addAll((Collection<? extends DataChannelSinkConnector>) newValue);
+        case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
+            this.getSinkConnector().clear();
+            this.getSinkConnector().addAll((Collection<? extends ConsumerQueueSinkConnector>) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__PARTITIONING:
+        case SystemPackage.CONSUMER_QUEUE__PARTITIONING:
             this.setPartitioning((Partitioning) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__TIME_GROUPING:
+        case SystemPackage.CONSUMER_QUEUE__TIME_GROUPING:
             this.setTimeGrouping((TimeGrouping) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__JOINS:
+        case SystemPackage.CONSUMER_QUEUE__JOINS:
             this.getJoins().clear();
             this.getJoins().addAll((Collection<? extends Joining>) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__OUTGOING_DISTRIBUTION:
+        case SystemPackage.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION:
             this.setOutgoingDistribution((OutgoingDistribution) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__SCHEDULING:
+        case SystemPackage.CONSUMER_QUEUE__SCHEDULING:
             this.setScheduling((Scheduling) newValue);
             return;
-        case SystemPackage.DATA_CHANNEL__PUT_POLICY:
+        case SystemPackage.CONSUMER_QUEUE__PUT_POLICY:
             this.setPutPolicy((PutPolicy) newValue);
             return;
         }
@@ -511,37 +510,37 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
     @Override
     public void eUnset(final int featureID) {
         switch (featureID) {
-        case SystemPackage.DATA_CHANNEL__CAPACITY:
+        case SystemPackage.CONSUMER_QUEUE__CAPACITY:
             this.setCapacity(CAPACITY_EDEFAULT);
             return;
-        case SystemPackage.DATA_CHANNEL__SOURCE_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SOURCE_EVENT_GROUP:
             this.setSourceEventGroup((EventGroup) null);
             return;
-        case SystemPackage.DATA_CHANNEL__SINK_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP:
             this.setSinkEventGroup((EventGroup) null);
             return;
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR:
-            this.getDataChannelSourceConnector().clear();
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
+            this.getIncomingDataChannelConnector().clear();
             return;
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR:
-            this.getDataChannelSinkConnector().clear();
+        case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
+            this.getSinkConnector().clear();
             return;
-        case SystemPackage.DATA_CHANNEL__PARTITIONING:
+        case SystemPackage.CONSUMER_QUEUE__PARTITIONING:
             this.setPartitioning((Partitioning) null);
             return;
-        case SystemPackage.DATA_CHANNEL__TIME_GROUPING:
+        case SystemPackage.CONSUMER_QUEUE__TIME_GROUPING:
             this.setTimeGrouping((TimeGrouping) null);
             return;
-        case SystemPackage.DATA_CHANNEL__JOINS:
+        case SystemPackage.CONSUMER_QUEUE__JOINS:
             this.getJoins().clear();
             return;
-        case SystemPackage.DATA_CHANNEL__OUTGOING_DISTRIBUTION:
+        case SystemPackage.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION:
             this.setOutgoingDistribution(OUTGOING_DISTRIBUTION_EDEFAULT);
             return;
-        case SystemPackage.DATA_CHANNEL__SCHEDULING:
+        case SystemPackage.CONSUMER_QUEUE__SCHEDULING:
             this.setScheduling(SCHEDULING_EDEFAULT);
             return;
-        case SystemPackage.DATA_CHANNEL__PUT_POLICY:
+        case SystemPackage.CONSUMER_QUEUE__PUT_POLICY:
             this.setPutPolicy(PUT_POLICY_EDEFAULT);
             return;
         }
@@ -556,30 +555,30 @@ public class DataChannelImpl extends EventChannelImpl implements DataChannel {
     @Override
     public boolean eIsSet(final int featureID) {
         switch (featureID) {
-        case SystemPackage.DATA_CHANNEL__CAPACITY:
+        case SystemPackage.CONSUMER_QUEUE__CAPACITY:
             return this.getCapacity() != CAPACITY_EDEFAULT;
-        case SystemPackage.DATA_CHANNEL__SOURCE_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SOURCE_EVENT_GROUP:
             return this.basicGetSourceEventGroup() != null;
-        case SystemPackage.DATA_CHANNEL__SINK_EVENT_GROUP:
+        case SystemPackage.CONSUMER_QUEUE__SINK_EVENT_GROUP:
             return this.basicGetSinkEventGroup() != null;
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SOURCE_CONNECTOR:
-            return !this.getDataChannelSourceConnector().isEmpty();
-        case SystemPackage.DATA_CHANNEL__DATA_CHANNEL_SINK_CONNECTOR:
-            return !this.getDataChannelSinkConnector().isEmpty();
-        case SystemPackage.DATA_CHANNEL__PARTITIONING:
+        case SystemPackage.CONSUMER_QUEUE__INCOMING_DATA_CHANNEL_CONNECTOR:
+            return !this.getIncomingDataChannelConnector().isEmpty();
+        case SystemPackage.CONSUMER_QUEUE__SINK_CONNECTOR:
+            return !this.getSinkConnector().isEmpty();
+        case SystemPackage.CONSUMER_QUEUE__PARTITIONING:
             return this.getPartitioning() != null;
-        case SystemPackage.DATA_CHANNEL__TIME_GROUPING:
+        case SystemPackage.CONSUMER_QUEUE__TIME_GROUPING:
             return this.getTimeGrouping() != null;
-        case SystemPackage.DATA_CHANNEL__JOINS:
+        case SystemPackage.CONSUMER_QUEUE__JOINS:
             return !this.getJoins().isEmpty();
-        case SystemPackage.DATA_CHANNEL__OUTGOING_DISTRIBUTION:
+        case SystemPackage.CONSUMER_QUEUE__OUTGOING_DISTRIBUTION:
             return this.getOutgoingDistribution() != OUTGOING_DISTRIBUTION_EDEFAULT;
-        case SystemPackage.DATA_CHANNEL__SCHEDULING:
+        case SystemPackage.CONSUMER_QUEUE__SCHEDULING:
             return this.getScheduling() != SCHEDULING_EDEFAULT;
-        case SystemPackage.DATA_CHANNEL__PUT_POLICY:
+        case SystemPackage.CONSUMER_QUEUE__PUT_POLICY:
             return this.getPutPolicy() != PUT_POLICY_EDEFAULT;
         }
         return super.eIsSet(featureID);
     }
 
-} // DataChannelImpl
+} // ConsumerQueueImpl

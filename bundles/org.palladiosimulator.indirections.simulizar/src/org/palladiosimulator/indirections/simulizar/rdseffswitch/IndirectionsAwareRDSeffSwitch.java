@@ -15,9 +15,10 @@ import org.palladiosimulator.indirections.actions.CreateDataAction;
 import org.palladiosimulator.indirections.actions.EmitDataAction;
 import org.palladiosimulator.indirections.actions.PutDataOnStackAction;
 import org.palladiosimulator.indirections.actions.util.ActionsSwitch;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
-import org.palladiosimulator.indirections.interfaces.IDataChannelResource;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
+import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
+import org.palladiosimulator.indirections.interfaces.IConsumerQueueResource;
+import org.palladiosimulator.indirections.interfaces.ISupplierQueueResource;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.monitoring.simulizar.IndirectionMeasuringPointRegistry;
 import org.palladiosimulator.indirections.monitoring.simulizar.TriggeredProxyProbe;
@@ -85,16 +86,17 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
         LOGGER.trace("Emit event action: " + action.getEntityName());
         LOGGER.trace("Emit event action: " + action.getEntityName());
 
-        final DataChannelSourceConnector dataChannelSourceConnector = IndirectionModelUtil.getSourceConnector(context,
+        final SupplierQueueSourceConnector dataChannelSourceConnector = IndirectionModelUtil.getSourceConnector(context,
                 action);
-        final IDataChannelResource dataChannelResource = IndirectionModelUtil.getDataChannelResource(context, action);
+        final ISupplierQueueResource supplierQueueResource = IndirectionModelUtil.getDataChannelResource(context,
+                action);
 
         String referenceName = action.getVariableReference().getReferenceName();
         IndirectionDate date = IndirectionSimulationUtil.claimDataFromStack(context.getStack(), referenceName);
 
-        LOGGER.trace("Trying to emit data " + date + " to " + dataChannelResource.getName() + " - "
-                + dataChannelResource.getId());
-        dataChannelResource.put(this.context.getThread(), dataChannelSourceConnector, date);
+        LOGGER.trace("Trying to emit data " + date + " to " + supplierQueueResource.getName() + " - "
+                + supplierQueueResource.getId());
+        supplierQueueResource.put(this.context.getThread(), dataChannelSourceConnector, date);
 
         return true;
     }
@@ -103,9 +105,9 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
     public Object caseConsumeDataAction(final ConsumeDataAction action) {
         LOGGER.trace("Consume data action: " + action.getEntityName());
 
-        final DataChannelSinkConnector dataChannelSinkConnector = IndirectionModelUtil.getSinkConnector(context,
+        final ConsumerQueueSinkConnector dataChannelSinkConnector = IndirectionModelUtil.getSinkConnector(context,
                 action);
-        final IDataChannelResource dataChannelResource = IndirectionModelUtil.getDataChannelResource(context, action);
+        final IConsumerQueueResource dataChannelResource = IndirectionModelUtil.getDataChannelResource(context, action);
 
         final String threadName = Thread.currentThread().getName();
 

@@ -6,9 +6,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
 import org.palladiosimulator.indirections.composition.DataChannelConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.pcm.core.composition.Connector;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
@@ -68,40 +68,40 @@ public class CompositionSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(final int classifierID, final EObject theEObject) {
         switch (classifierID) {
-        case CompositionPackage.DATA_CHANNEL_SOURCE_CONNECTOR: {
-            final DataChannelSourceConnector dataChannelSourceConnector = (DataChannelSourceConnector) theEObject;
-            T result = this.caseDataChannelSourceConnector(dataChannelSourceConnector);
+        case CompositionPackage.SUPPLIER_QUEUE_SOURCE_CONNECTOR: {
+            final SupplierQueueSourceConnector supplierQueueSourceConnector = (SupplierQueueSourceConnector) theEObject;
+            T result = this.caseSupplierQueueSourceConnector(supplierQueueSourceConnector);
             if (result == null) {
-                result = this.caseConnector(dataChannelSourceConnector);
+                result = this.caseConnector(supplierQueueSourceConnector);
             }
             if (result == null) {
-                result = this.caseEntity(dataChannelSourceConnector);
+                result = this.caseEntity(supplierQueueSourceConnector);
             }
             if (result == null) {
-                result = this.caseIdentifier(dataChannelSourceConnector);
+                result = this.caseIdentifier(supplierQueueSourceConnector);
             }
             if (result == null) {
-                result = this.caseNamedElement(dataChannelSourceConnector);
+                result = this.caseNamedElement(supplierQueueSourceConnector);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
             }
             return result;
         }
-        case CompositionPackage.DATA_CHANNEL_SINK_CONNECTOR: {
-            final DataChannelSinkConnector dataChannelSinkConnector = (DataChannelSinkConnector) theEObject;
-            T result = this.caseDataChannelSinkConnector(dataChannelSinkConnector);
+        case CompositionPackage.CONSUMER_QUEUE_SINK_CONNECTOR: {
+            final ConsumerQueueSinkConnector consumerQueueSinkConnector = (ConsumerQueueSinkConnector) theEObject;
+            T result = this.caseConsumerQueueSinkConnector(consumerQueueSinkConnector);
             if (result == null) {
-                result = this.caseConnector(dataChannelSinkConnector);
+                result = this.caseConnector(consumerQueueSinkConnector);
             }
             if (result == null) {
-                result = this.caseEntity(dataChannelSinkConnector);
+                result = this.caseEntity(consumerQueueSinkConnector);
             }
             if (result == null) {
-                result = this.caseIdentifier(dataChannelSinkConnector);
+                result = this.caseIdentifier(consumerQueueSinkConnector);
             }
             if (result == null) {
-                result = this.caseNamedElement(dataChannelSinkConnector);
+                result = this.caseNamedElement(consumerQueueSinkConnector);
             }
             if (result == null) {
                 result = this.defaultCase(theEObject);
@@ -134,34 +134,34 @@ public class CompositionSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Data Channel Source
+     * Returns the result of interpreting the object as an instance of '<em>Supplier Queue Source
      * Connector</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
      * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Data Channel Source
+     * @return the result of interpreting the object as an instance of '<em>Supplier Queue Source
      *         Connector</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDataChannelSourceConnector(final DataChannelSourceConnector object) {
+    public T caseSupplierQueueSourceConnector(final SupplierQueueSourceConnector object) {
         return null;
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>Data Channel Sink
+     * Returns the result of interpreting the object as an instance of '<em>Consumer Queue Sink
      * Connector</em>'. <!-- begin-user-doc --> This implementation returns null; returning a
      * non-null result will terminate the switch. <!-- end-user-doc -->
      * 
      * @param object
      *            the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>Data Channel Sink
+     * @return the result of interpreting the object as an instance of '<em>Consumer Queue Sink
      *         Connector</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseDataChannelSinkConnector(final DataChannelSinkConnector object) {
+    public T caseConsumerQueueSinkConnector(final ConsumerQueueSinkConnector object) {
         return null;
     }
 

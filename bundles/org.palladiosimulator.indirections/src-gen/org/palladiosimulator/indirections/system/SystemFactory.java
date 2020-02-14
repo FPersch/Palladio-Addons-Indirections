@@ -20,13 +20,22 @@ public interface SystemFactory extends EFactory {
     SystemFactory eINSTANCE = org.palladiosimulator.indirections.system.impl.SystemFactoryImpl.init();
 
     /**
-     * Returns a new object of class '<em>Data Channel</em>'. <!-- begin-user-doc --> <!--
+     * Returns a new object of class '<em>Consumer Queue</em>'. <!-- begin-user-doc --> <!--
      * end-user-doc -->
      * 
-     * @return a new object of class '<em>Data Channel</em>'.
+     * @return a new object of class '<em>Consumer Queue</em>'.
      * @generated
      */
-    DataChannel createDataChannel();
+    ConsumerQueue createConsumerQueue();
+
+    /**
+     * Returns a new object of class '<em>Supplier Queue</em>'. <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * 
+     * @return a new object of class '<em>Supplier Queue</em>'.
+     * @generated
+     */
+    SupplierQueue createSupplierQueue();
 
     /**
      * Returns the package supported by this factory. <!-- begin-user-doc --> <!-- end-user-doc -->

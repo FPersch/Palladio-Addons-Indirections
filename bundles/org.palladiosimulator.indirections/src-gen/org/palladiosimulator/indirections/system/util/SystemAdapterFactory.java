@@ -6,9 +6,9 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
+import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.indirections.system.SystemPackage;
-import org.palladiosimulator.pcm.core.composition.EventChannel;
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
 
@@ -67,8 +67,13 @@ public class SystemAdapterFactory extends AdapterFactoryImpl {
      */
     protected SystemSwitch<Adapter> modelSwitch = new SystemSwitch<Adapter>() {
         @Override
-        public Adapter caseDataChannel(final DataChannel object) {
-            return SystemAdapterFactory.this.createDataChannelAdapter();
+        public Adapter caseConsumerQueue(final ConsumerQueue object) {
+            return SystemAdapterFactory.this.createConsumerQueueAdapter();
+        }
+
+        @Override
+        public Adapter caseSupplierQueue(final SupplierQueue object) {
+            return SystemAdapterFactory.this.createSupplierQueueAdapter();
         }
 
         @Override
@@ -84,11 +89,6 @@ public class SystemAdapterFactory extends AdapterFactoryImpl {
         @Override
         public Adapter caseEntity(final Entity object) {
             return SystemAdapterFactory.this.createEntityAdapter();
-        }
-
-        @Override
-        public Adapter caseEventChannel(final EventChannel object) {
-            return SystemAdapterFactory.this.createEventChannelAdapter();
         }
 
         @Override
@@ -112,16 +112,31 @@ public class SystemAdapterFactory extends AdapterFactoryImpl {
 
     /**
      * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.indirections.system.DataChannel <em>Data Channel</em>}'. <!--
-     * begin-user-doc --> This default implementation returns null so that we can easily ignore
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue <em>Consumer Queue</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
      * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
      * end-user-doc -->
-     *
+     * 
      * @return the new adapter.
-     * @see org.palladiosimulator.indirections.system.DataChannel
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue
      * @generated
      */
-    public Adapter createDataChannelAdapter() {
+    public Adapter createConsumerQueueAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class
+     * '{@link org.palladiosimulator.indirections.system.SupplierQueue <em>Supplier Queue</em>}'.
+     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
+     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
+     * end-user-doc -->
+     * 
+     * @return the new adapter.
+     * @see org.palladiosimulator.indirections.system.SupplierQueue
+     * @generated
+     */
+    public Adapter createSupplierQueueAdapter() {
         return null;
     }
 
@@ -165,21 +180,6 @@ public class SystemAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createEntityAdapter() {
-        return null;
-    }
-
-    /**
-     * Creates a new adapter for an object of class
-     * '{@link org.palladiosimulator.pcm.core.composition.EventChannel <em>Event Channel</em>}'.
-     * <!-- begin-user-doc --> This default implementation returns null so that we can easily ignore
-     * cases; it's useful to ignore a case when inheritance will catch all the cases anyway. <!--
-     * end-user-doc -->
-     * 
-     * @return the new adapter.
-     * @see org.palladiosimulator.pcm.core.composition.EventChannel
-     * @generated
-     */
-    public Adapter createEventChannelAdapter() {
         return null;
     }
 

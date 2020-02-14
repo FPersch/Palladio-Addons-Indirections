@@ -5,7 +5,7 @@ import static org.palladiosimulator.indirections.scheduler.util.IndirectionSimul
 import java.util.List;
 import java.util.Objects;
 
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.repository.DataSinkRole;
 import org.palladiosimulator.indirections.scheduler.util.IndirectionSimulationUtil;
@@ -129,7 +129,7 @@ public class OpenWorkloadUserWithStackFactory extends AbstractWorkloadUserFactor
         return new OpenWorkloadUserWithStack(model, "OpenWorkloadUserWithStack");
     }
 
-    public static OpenWorkloadUserWithStackFactory createPushingUserFactory(DataChannelSinkConnector sinkConnector,
+    public static OpenWorkloadUserWithStackFactory createPushingUserFactory(ConsumerQueueSinkConnector sinkConnector,
             SimuComModel model) {
 
         final DataSinkRole sinkRole = sinkConnector.getDataSinkRole();

@@ -17,8 +17,8 @@ import javax.measure.quantity.Dimensionless;
 import javax.measure.unit.Unit;
 
 import org.apache.log4j.Logger;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
+import org.palladiosimulator.indirections.composition.DataChannelConnector;
 import org.palladiosimulator.indirections.datatypes.OutgoingDistribution;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.monitoring.IndirectionsMetricDescriptionConstants;
@@ -39,7 +39,7 @@ import org.palladiosimulator.indirections.scheduler.operators.PartitioningOperat
 import org.palladiosimulator.indirections.scheduler.operators.SpecificationPartitioningOperator;
 import org.palladiosimulator.indirections.scheduler.operators.TimeBasedWindowingOperator;
 import org.palladiosimulator.indirections.scheduler.operators.WindowingOperator;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
 import org.palladiosimulator.simulizar.exceptions.PCMModelInterpreterException;
 import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
@@ -50,7 +50,7 @@ import de.uka.ipd.sdq.simucomframework.Context;
 import de.uka.ipd.sdq.simucomframework.model.SimuComModel;
 
 /**
- * Variability that needs to be handled by a {@link SimDataChannelResource}:
+ * Variability that needs to be handled by a {@link SimConsumerQueueResource}:
  * <ul>
  * <li>How is data ingress handled: FCFS, LIFO, Priorities, etc.</li>
  * <li>How is data grouped, etc.</li>
@@ -59,7 +59,7 @@ import de.uka.ipd.sdq.simucomframework.model.SimuComModel;
  * 
  * <p>
  * 
- * The {@link AbstractSimDataChannelResource}, <strong>not</strong> {@link SimDataChannelResource}
+ * The {@link AbstractSimDataChannelResource}, <strong>not</strong> {@link SimConsumerQueueResource}
  * handles:
  * <ul>
  * <li>Blocking/unblocking processes</li>
@@ -73,10 +73,10 @@ import de.uka.ipd.sdq.simucomframework.model.SimuComModel;
  *           instead of inheriting from {@link AbstractSimDataChannelResource}.
  * 
  */
-public class SimDataChannelResource extends AbstractSimDataChannelResource {
-    private static final Logger LOGGER = Logger.getLogger(SimDataChannelResource.class);
+public class SimConsumerQueueResource extends AbstractSimConsumerQueueResource {
+    private static final Logger LOGGER = Logger.getLogger(SimConsumerQueueResource.class);
 
-    private Map<DataChannelSinkConnector, Queue<IndirectionDate>> outQueues = new HashMap<>();
+    private Map<ConsumerQueueSinkConnector, Queue<IndirectionDate>> outQueues = new HashMap<>();
     private Deque<DataWithSource<IndirectionDate>> dataBeforeJoiningQueue = new ArrayDeque<>();
     private Deque<IndirectionDate> dataAfterJoiningQueue = new ArrayDeque<>();
 
@@ -89,8 +89,9 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
     private EqualityCollectorWithHoldback<IndirectionDate, Object> holdbackOperator;
     private JoiningOperator<IndirectionDate> joinOperator;
 
-    public SimDataChannelResource(DataChannel dataChannel, InterpreterDefaultContext context, SchedulerModel model) {
-        super(dataChannel, context, model);
+    public SimConsumerQueueResource(ConsumerQueue consumerQueue, InterpreterDefaultContext context,
+            SchedulerModel model) {
+        super(consumerQueue, context, model);
 
         if (!(model instanceof SimuComModel)) {
             throw new PCMModelInterpreterException("Unsupported type of model: " + model.getClass().getName()
@@ -99,7 +100,7 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
 
         SimuComModel simuComModel = (SimuComModel) model;
 
-        partitioning = dataChannel.getPartitioning();
+        partitioning = consumerQueue.getPartitioning();
         if (partitioning != null) {
             partitioningOperator = new SpecificationPartitioningOperator<>(partitioning.getSpecification());
             partitioningOperator.addConsumer(this::emit);
@@ -111,7 +112,7 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
             });
         }
 
-        timeGrouping = dataChannel.getTimeGrouping();
+        timeGrouping = consumerQueue.getTimeGrouping();
         if (timeGrouping != null) {
             if (timeGrouping instanceof Windowing) {
                 Windowing windowing = (Windowing) timeGrouping;
@@ -130,8 +131,8 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
             }
         }
 
-        joins = dataChannel.getJoins();
-        final List<DataChannelSourceConnector> joinSources = joins.stream().map(Joining::getSource)
+        joins = consumerQueue.getJoins();
+        final List<DataChannelConnector> joinSources = joins.stream().map(Joining::getSource)
                 .collect(Collectors.toList());
         final List<Boolean> retainDataArray = joins.stream().map(Joining::isCanContributeMultipleTimes)
                 .collect(Collectors.toList());
@@ -158,7 +159,7 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
             joinOperator.addConsumer(it -> dataAfterJoiningQueue.add(it));
         }
 
-        for (DataChannelSinkConnector dcsc : dataChannel.getDataChannelSinkConnector()) {
+        for (ConsumerQueueSinkConnector dcsc : consumerQueue.getSinkConnector()) {
             outQueues.put(dcsc, new ArrayDeque<IndirectionDate>());
         }
 
@@ -191,7 +192,7 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
     private CollectWithHoldback collectWithHoldback;
 
     private Queue<IndirectionDate> getNextQueue() {
-        if (dataChannel.getOutgoingDistribution().equals(OutgoingDistribution.ROUND_ROBIN))
+        if (consumerQueue.getOutgoingDistribution().equals(OutgoingDistribution.ROUND_ROBIN))
             throw new IllegalStateException();
 
         if (queueIterator == null || !queueIterator.hasNext())
@@ -201,17 +202,17 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
     }
 
     private Iterable<Queue<IndirectionDate>> getQueuesToSendTo(IndirectionDate date) {
-        if (dataChannel.getOutgoingDistribution().equals(OutgoingDistribution.DISTRIBUTE_TO_ALL)) {
+        if (consumerQueue.getOutgoingDistribution().equals(OutgoingDistribution.BROADCAST)) {
             return outQueues.values();
-        } else if (dataChannel.getOutgoingDistribution().equals(OutgoingDistribution.ROUND_ROBIN)) {
+        } else if (consumerQueue.getOutgoingDistribution().equals(OutgoingDistribution.ROUND_ROBIN)) {
             return Collections.singleton(getNextQueue());
         } else {
             throw new PCMModelInterpreterException(
-                    "Unexpected type of outgoing distribution strategy: " + dataChannel.getOutgoingDistribution());
+                    "Unexpected type of outgoing distribution strategy: " + consumerQueue.getOutgoingDistribution());
         }
     }
 
-    private Queue<IndirectionDate> getQueueToReadFrom(DataChannelSinkConnector sinkConnector) {
+    private Queue<IndirectionDate> getQueueToReadFrom(ConsumerQueueSinkConnector sinkConnector) {
         return outQueues.get(sinkConnector);
     }
 
@@ -235,12 +236,12 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
     }
 
     @Override
-    protected boolean canProvideDataFor(DataChannelSinkConnector sinkConnector) {
+    protected boolean canProvideDataFor(ConsumerQueueSinkConnector sinkConnector) {
         return !getQueueToReadFrom(sinkConnector).isEmpty();
     }
 
     @Override
-    protected Iterable<IndirectionDate> provideDataFor(DataChannelSinkConnector sinkConnector) {
+    protected Iterable<IndirectionDate> provideDataFor(ConsumerQueueSinkConnector sinkConnector) {
         if (timeGrouping instanceof ConsumeAllAvailable) {
             List<IndirectionDate> dataInGroup = new ArrayList<>(getQueueToReadFrom(sinkConnector));
             getQueueToReadFrom(sinkConnector).clear();
@@ -287,17 +288,13 @@ public class SimDataChannelResource extends AbstractSimDataChannelResource {
         }
     }
 
-    @Override
-    protected boolean canAcceptDataFrom(DataChannelSourceConnector sourceConnector) {
-        return true;
-    }
-
-    @Override
-    protected void acceptDataFrom(DataChannelSourceConnector sourceConnector, IndirectionDate date) {
-        DataWithSource<IndirectionDate> createdDate = new DataWithSource<>(sourceConnector, date);
-        dataBeforeJoiningQueue.add(createdDate);
-        LOGGER.trace("Added date to queue: " + createdDate + " from connector " + sourceConnector.getEntityName());
-
-        processDataQueue();
-    }
+    /*
+     * @Override protected void acceptDataFrom(SupplierQueueSourceConnector sourceConnector,
+     * IndirectionDate date) { DataWithSource<IndirectionDate> createdDate = new
+     * DataWithSource<>(sourceConnector, date); dataBeforeJoiningQueue.add(createdDate);
+     * LOGGER.trace("Added date to queue: " + createdDate + " from connector " +
+     * sourceConnector.getEntityName());
+     * 
+     * processDataQueue(); }
+     */
 }

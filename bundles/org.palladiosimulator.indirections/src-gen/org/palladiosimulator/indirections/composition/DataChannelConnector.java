@@ -2,7 +2,8 @@
  */
 package org.palladiosimulator.indirections.composition;
 
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
+import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.pcm.core.composition.Connector;
 
 /**
@@ -25,16 +26,19 @@ import org.palladiosimulator.pcm.core.composition.Connector;
  */
 public interface DataChannelConnector extends Connector {
     /**
-     * Returns the value of the '<em><b>Source</b></em>' reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * Returns the value of the '<em><b>Source</b></em>' reference. It is bidirectional and its
+     * opposite is
+     * '{@link org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingDataChannelConnector
+     * <em>Outgoing Data Channel Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Source</em>' reference.
-     * @see #setSource(DataChannel)
+     * @see #setSource(SupplierQueue)
      * @see org.palladiosimulator.indirections.composition.CompositionPackage#getDataChannelConnector_Source()
-     * @model required="true"
+     * @see org.palladiosimulator.indirections.system.SupplierQueue#getOutgoingDataChannelConnector
+     * @model opposite="outgoingDataChannelConnector" required="true"
      * @generated
      */
-    DataChannel getSource();
+    SupplierQueue getSource();
 
     /**
      * Sets the value of the
@@ -46,19 +50,22 @@ public interface DataChannelConnector extends Connector {
      * @see #getSource()
      * @generated
      */
-    void setSource(DataChannel value);
+    void setSource(SupplierQueue value);
 
     /**
-     * Returns the value of the '<em><b>Sink</b></em>' reference. <!-- begin-user-doc --> <!--
-     * end-user-doc -->
+     * Returns the value of the '<em><b>Sink</b></em>' reference. It is bidirectional and its
+     * opposite is
+     * '{@link org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector
+     * <em>Incoming Data Channel Connector</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @return the value of the '<em>Sink</em>' reference.
-     * @see #setSink(DataChannel)
+     * @see #setSink(ConsumerQueue)
      * @see org.palladiosimulator.indirections.composition.CompositionPackage#getDataChannelConnector_Sink()
-     * @model required="true"
+     * @see org.palladiosimulator.indirections.system.ConsumerQueue#getIncomingDataChannelConnector
+     * @model opposite="incomingDataChannelConnector" required="true"
      * @generated
      */
-    DataChannel getSink();
+    ConsumerQueue getSink();
 
     /**
      * Sets the value of the
@@ -70,6 +77,6 @@ public interface DataChannelConnector extends Connector {
      * @see #getSink()
      * @generated
      */
-    void setSink(DataChannel value);
+    void setSink(ConsumerQueue value);
 
 } // DataChannelConnector

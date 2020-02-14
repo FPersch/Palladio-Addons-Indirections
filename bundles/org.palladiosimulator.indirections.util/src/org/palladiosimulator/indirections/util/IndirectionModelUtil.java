@@ -6,12 +6,14 @@ import java.util.stream.Collectors;
 import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.indirections.actions.ConsumeDataAction;
 import org.palladiosimulator.indirections.actions.EmitDataAction;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
-import org.palladiosimulator.indirections.interfaces.IDataChannelResource;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
+import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
+import org.palladiosimulator.indirections.interfaces.IConsumerQueueResource;
+import org.palladiosimulator.indirections.interfaces.ISupplierQueueResource;
 import org.palladiosimulator.indirections.repository.DataSinkRole;
 import org.palladiosimulator.indirections.repository.DataSourceRole;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
+import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.indirections.util.simulizar.DataChannelRegistry;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.Connector;
@@ -22,67 +24,67 @@ public final class IndirectionModelUtil {
 
     }
 
-    public static DataChannel getConnectedSinkDataChannel(final AssemblyContext assemblyContext,
+    public static SupplierQueue getConnectedSinkDataChannel(final AssemblyContext assemblyContext,
             final DataSourceRole sourceRole) {
         final EList<Connector> connectors = assemblyContext.getParentStructure__AssemblyContext()
                 .getConnectors__ComposedStructure();
-        final List<DataChannelSourceConnector> dataChannelSourceConnectors = connectors.stream()
-                .filter(DataChannelSourceConnector.class::isInstance).map(DataChannelSourceConnector.class::cast)
+        final List<SupplierQueueSourceConnector> dataChannelSourceConnectors = connectors.stream()
+                .filter(SupplierQueueSourceConnector.class::isInstance).map(SupplierQueueSourceConnector.class::cast)
                 .collect(Collectors.toList());
 
         return dataChannelSourceConnectors.stream().filter(it -> it.getDataSourceRole().equals(sourceRole)).findAny()
                 .orElseThrow(
                         () -> new IllegalStateException("Could not find data channel for source role " + sourceRole))
-                .getDataChannel();
+                .getSupplierQueue();
     }
 
-    public static DataChannelSinkConnector getSinkConnectorForRole(final AssemblyContext assemblyContext,
+    public static ConsumerQueueSinkConnector getSinkConnectorForRole(final AssemblyContext assemblyContext,
             final DataSinkRole sinkRole) {
         final EList<Connector> connectors = assemblyContext.getParentStructure__AssemblyContext()
                 .getConnectors__ComposedStructure();
 
-        final List<DataChannelSinkConnector> dataChannelSinkConnectors = connectors.stream()
-                .filter(DataChannelSinkConnector.class::isInstance).map(DataChannelSinkConnector.class::cast)
+        final List<ConsumerQueueSinkConnector> dataChannelSinkConnectors = connectors.stream()
+                .filter(ConsumerQueueSinkConnector.class::isInstance).map(ConsumerQueueSinkConnector.class::cast)
                 .collect(Collectors.toList());
 
-        final DataChannelSinkConnector sinkConnectorForRole = dataChannelSinkConnectors.stream()
+        final ConsumerQueueSinkConnector sinkConnectorForRole = dataChannelSinkConnectors.stream()
                 .filter(it -> it.getDataSinkRole().equals(sinkRole)).findAny()
                 .orElseThrow(() -> new IllegalStateException("Could not find data channel for sink role " + sinkRole));
 
         return sinkConnectorForRole;
     }
 
-    public static DataChannelSourceConnector getSourceConnectorForRole(final AssemblyContext assemblyContext,
+    public static SupplierQueueSourceConnector getSourceConnectorForRole(final AssemblyContext assemblyContext,
             final DataSourceRole sourceRole) {
         final EList<Connector> connectors = assemblyContext.getParentStructure__AssemblyContext()
                 .getConnectors__ComposedStructure();
 
-        final List<DataChannelSourceConnector> dataChannelSourceConnectors = connectors.stream()
-                .filter(DataChannelSourceConnector.class::isInstance).map(DataChannelSourceConnector.class::cast)
+        final List<SupplierQueueSourceConnector> dataChannelSourceConnectors = connectors.stream()
+                .filter(SupplierQueueSourceConnector.class::isInstance).map(SupplierQueueSourceConnector.class::cast)
                 .collect(Collectors.toList());
 
-        final DataChannelSourceConnector sourceConnectorForRole = dataChannelSourceConnectors.stream()
+        final SupplierQueueSourceConnector sourceConnectorForRole = dataChannelSourceConnectors.stream()
                 .filter(it -> it.getDataSourceRole().equals(sourceRole)).findAny().orElseThrow(
                         () -> new IllegalStateException("Could not find data channel for source role " + sourceRole));
 
         return sourceConnectorForRole;
     }
 
-    public static DataChannel getConnectedSourceDataChannel(final AssemblyContext assemblyContext,
+    public static ConsumerQueue getConnectedSourceDataChannel(final AssemblyContext assemblyContext,
             final DataSinkRole sinkRole) {
-        return getSinkConnectorForRole(assemblyContext, sinkRole).getDataChannel();
+        return getSinkConnectorForRole(assemblyContext, sinkRole).getConsumerQueue();
     }
 
-    public static IDataChannelResource getDataChannelResource(InterpreterDefaultContext context,
+    public static ISupplierQueueResource getDataChannelResource(InterpreterDefaultContext context,
             final EmitDataAction action) {
-        final DataChannel dataChannel = getSourceConnector(context, action).getDataChannel();
+        final SupplierQueue supplierQueue = getSourceConnector(context, action).getSupplierQueue();
 
-        final IDataChannelResource dataChannelResource = DataChannelRegistry.getInstanceFor(context)
-                .getOrCreateDataChannelResource(dataChannel);
-        return dataChannelResource;
+        final ISupplierQueueResource supplierQueueResource = DataChannelRegistry.getInstanceFor(context)
+                .getOrCreateSupplierQueueResource(supplierQueue);
+        return supplierQueueResource;
     }
 
-    public static DataChannelSourceConnector getSourceConnector(InterpreterDefaultContext context,
+    public static SupplierQueueSourceConnector getSourceConnector(InterpreterDefaultContext context,
             final EmitDataAction action) {
         final AssemblyContext assemblyContext = context.getAssemblyContextStack().peek();
         final DataSourceRole sinkRole = action.getDataSourceRole();
@@ -90,15 +92,15 @@ public final class IndirectionModelUtil {
         return IndirectionModelUtil.getSourceConnectorForRole(assemblyContext, sinkRole);
     }
 
-    public static IDataChannelResource getDataChannelResource(InterpreterDefaultContext context,
+    public static IConsumerQueueResource getDataChannelResource(InterpreterDefaultContext context,
             final ConsumeDataAction action) {
-        final DataChannel dataChannel = getSinkConnector(context, action).getDataChannel();
-        final IDataChannelResource dataChannelResource = DataChannelRegistry.getInstanceFor(context)
-                .getOrCreateDataChannelResource(dataChannel);
+        final ConsumerQueue consumerQueue = getSinkConnector(context, action).getConsumerQueue();
+        final IConsumerQueueResource dataChannelResource = DataChannelRegistry.getInstanceFor(context)
+                .getOrCreateConsumerQueueResource(consumerQueue);
         return dataChannelResource;
     }
 
-    public static DataChannelSinkConnector getSinkConnector(InterpreterDefaultContext context,
+    public static ConsumerQueueSinkConnector getSinkConnector(InterpreterDefaultContext context,
             final ConsumeDataAction action) {
         final AssemblyContext assemblyContext = context.getAssemblyContextStack().peek();
         final DataSinkRole sinkRole = action.getDataSinkRole();

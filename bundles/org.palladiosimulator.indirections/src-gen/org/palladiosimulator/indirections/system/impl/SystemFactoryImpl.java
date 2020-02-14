@@ -7,7 +7,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.palladiosimulator.indirections.system.DataChannel;
+import org.palladiosimulator.indirections.system.ConsumerQueue;
+import org.palladiosimulator.indirections.system.SupplierQueue;
 import org.palladiosimulator.indirections.system.SystemFactory;
 import org.palladiosimulator.indirections.system.SystemPackage;
 
@@ -52,8 +53,10 @@ public class SystemFactoryImpl extends EFactoryImpl implements SystemFactory {
     @Override
     public EObject create(final EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case SystemPackage.DATA_CHANNEL:
-            return this.createDataChannel();
+        case SystemPackage.CONSUMER_QUEUE:
+            return this.createConsumerQueue();
+        case SystemPackage.SUPPLIER_QUEUE:
+            return this.createSupplierQueue();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -65,9 +68,20 @@ public class SystemFactoryImpl extends EFactoryImpl implements SystemFactory {
      * @generated
      */
     @Override
-    public DataChannel createDataChannel() {
-        final DataChannelImpl dataChannel = new DataChannelImpl();
-        return dataChannel;
+    public ConsumerQueue createConsumerQueue() {
+        final ConsumerQueueImpl consumerQueue = new ConsumerQueueImpl();
+        return consumerQueue;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
+     * @generated
+     */
+    @Override
+    public SupplierQueue createSupplierQueue() {
+        final SupplierQueueImpl supplierQueue = new SupplierQueueImpl();
+        return supplierQueue;
     }
 
     /**

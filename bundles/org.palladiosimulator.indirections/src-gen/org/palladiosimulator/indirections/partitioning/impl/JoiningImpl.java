@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.DataChannelConnector;
 import org.palladiosimulator.indirections.partitioning.Joining;
 import org.palladiosimulator.indirections.partitioning.PartitioningPackage;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
@@ -78,8 +78,8 @@ public class JoiningImpl extends CDOObjectImpl implements Joining {
      * @generated
      */
     @Override
-    public DataChannelSourceConnector getSource() {
-        return (DataChannelSourceConnector) this.eDynamicGet(PartitioningPackage.JOINING__SOURCE,
+    public DataChannelConnector getSource() {
+        return (DataChannelConnector) this.eDynamicGet(PartitioningPackage.JOINING__SOURCE,
                 PartitioningPackage.Literals.JOINING__SOURCE, true, true);
     }
 
@@ -88,8 +88,8 @@ public class JoiningImpl extends CDOObjectImpl implements Joining {
      * 
      * @generated
      */
-    public DataChannelSourceConnector basicGetSource() {
-        return (DataChannelSourceConnector) this.eDynamicGet(PartitioningPackage.JOINING__SOURCE,
+    public DataChannelConnector basicGetSource() {
+        return (DataChannelConnector) this.eDynamicGet(PartitioningPackage.JOINING__SOURCE,
                 PartitioningPackage.Literals.JOINING__SOURCE, false, true);
     }
 
@@ -99,7 +99,7 @@ public class JoiningImpl extends CDOObjectImpl implements Joining {
      * @generated
      */
     @Override
-    public void setSource(final DataChannelSourceConnector newSource) {
+    public void setSource(final DataChannelConnector newSource) {
         this.eDynamicSet(PartitioningPackage.JOINING__SOURCE, PartitioningPackage.Literals.JOINING__SOURCE, newSource);
     }
 
@@ -183,7 +183,7 @@ public class JoiningImpl extends CDOObjectImpl implements Joining {
     public void eSet(final int featureID, final Object newValue) {
         switch (featureID) {
         case PartitioningPackage.JOINING__SOURCE:
-            this.setSource((DataChannelSourceConnector) newValue);
+            this.setSource((DataChannelConnector) newValue);
             return;
         case PartitioningPackage.JOINING__CAN_CONTRIBUTE_MULTIPLE_TIMES:
             this.setCanContributeMultipleTimes((Boolean) newValue);
@@ -205,7 +205,7 @@ public class JoiningImpl extends CDOObjectImpl implements Joining {
     public void eUnset(final int featureID) {
         switch (featureID) {
         case PartitioningPackage.JOINING__SOURCE:
-            this.setSource((DataChannelSourceConnector) null);
+            this.setSource((DataChannelConnector) null);
             return;
         case PartitioningPackage.JOINING__CAN_CONTRIBUTE_MULTIPLE_TIMES:
             this.setCanContributeMultipleTimes(CAN_CONTRIBUTE_MULTIPLE_TIMES_EDEFAULT);

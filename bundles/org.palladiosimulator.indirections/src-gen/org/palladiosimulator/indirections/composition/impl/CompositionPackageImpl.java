@@ -10,9 +10,9 @@ import org.palladiosimulator.indirections.actions.ActionsPackage;
 import org.palladiosimulator.indirections.actions.impl.ActionsPackageImpl;
 import org.palladiosimulator.indirections.composition.CompositionFactory;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
+import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector;
 import org.palladiosimulator.indirections.composition.DataChannelConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
-import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
+import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.indirections.datatypes.DatatypesPackage;
 import org.palladiosimulator.indirections.datatypes.impl.DatatypesPackageImpl;
 import org.palladiosimulator.indirections.partitioning.PartitioningPackage;
@@ -39,14 +39,14 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * 
      * @generated
      */
-    private EClass dataChannelSourceConnectorEClass = null;
+    private EClass supplierQueueSourceConnectorEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * 
      * @generated
      */
-    private EClass dataChannelSinkConnectorEClass = null;
+    private EClass consumerQueueSinkConnectorEClass = null;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -166,8 +166,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EClass getDataChannelSourceConnector() {
-        return this.dataChannelSourceConnectorEClass;
+    public EClass getSupplierQueueSourceConnector() {
+        return this.supplierQueueSourceConnectorEClass;
     }
 
     /**
@@ -176,8 +176,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelSourceConnector_DataSourceRole() {
-        return (EReference) this.dataChannelSourceConnectorEClass.getEStructuralFeatures().get(0);
+    public EReference getSupplierQueueSourceConnector_DataSourceRole() {
+        return (EReference) this.supplierQueueSourceConnectorEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -186,8 +186,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelSourceConnector_AssemblyContext() {
-        return (EReference) this.dataChannelSourceConnectorEClass.getEStructuralFeatures().get(1);
+    public EReference getSupplierQueueSourceConnector_AssemblyContext() {
+        return (EReference) this.supplierQueueSourceConnectorEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -196,8 +196,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelSourceConnector_DataChannel() {
-        return (EReference) this.dataChannelSourceConnectorEClass.getEStructuralFeatures().get(2);
+    public EReference getSupplierQueueSourceConnector_SupplierQueue() {
+        return (EReference) this.supplierQueueSourceConnectorEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -206,8 +206,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EClass getDataChannelSinkConnector() {
-        return this.dataChannelSinkConnectorEClass;
+    public EClass getConsumerQueueSinkConnector() {
+        return this.consumerQueueSinkConnectorEClass;
     }
 
     /**
@@ -216,8 +216,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelSinkConnector_DataSinkRole() {
-        return (EReference) this.dataChannelSinkConnectorEClass.getEStructuralFeatures().get(0);
+    public EReference getConsumerQueueSinkConnector_DataSinkRole() {
+        return (EReference) this.consumerQueueSinkConnectorEClass.getEStructuralFeatures().get(0);
     }
 
     /**
@@ -226,8 +226,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelSinkConnector_AssemblyContext() {
-        return (EReference) this.dataChannelSinkConnectorEClass.getEStructuralFeatures().get(1);
+    public EReference getConsumerQueueSinkConnector_AssemblyContext() {
+        return (EReference) this.consumerQueueSinkConnectorEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -236,8 +236,8 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
      * @generated
      */
     @Override
-    public EReference getDataChannelSinkConnector_DataChannel() {
-        return (EReference) this.dataChannelSinkConnectorEClass.getEStructuralFeatures().get(2);
+    public EReference getConsumerQueueSinkConnector_ConsumerQueue() {
+        return (EReference) this.consumerQueueSinkConnectorEClass.getEStructuralFeatures().get(2);
     }
 
     /**
@@ -300,15 +300,17 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
         this.isCreated = true;
 
         // Create classes and their features
-        this.dataChannelSourceConnectorEClass = this.createEClass(DATA_CHANNEL_SOURCE_CONNECTOR);
-        this.createEReference(this.dataChannelSourceConnectorEClass, DATA_CHANNEL_SOURCE_CONNECTOR__DATA_SOURCE_ROLE);
-        this.createEReference(this.dataChannelSourceConnectorEClass, DATA_CHANNEL_SOURCE_CONNECTOR__ASSEMBLY_CONTEXT);
-        this.createEReference(this.dataChannelSourceConnectorEClass, DATA_CHANNEL_SOURCE_CONNECTOR__DATA_CHANNEL);
+        this.supplierQueueSourceConnectorEClass = this.createEClass(SUPPLIER_QUEUE_SOURCE_CONNECTOR);
+        this.createEReference(this.supplierQueueSourceConnectorEClass,
+                SUPPLIER_QUEUE_SOURCE_CONNECTOR__DATA_SOURCE_ROLE);
+        this.createEReference(this.supplierQueueSourceConnectorEClass,
+                SUPPLIER_QUEUE_SOURCE_CONNECTOR__ASSEMBLY_CONTEXT);
+        this.createEReference(this.supplierQueueSourceConnectorEClass, SUPPLIER_QUEUE_SOURCE_CONNECTOR__SUPPLIER_QUEUE);
 
-        this.dataChannelSinkConnectorEClass = this.createEClass(DATA_CHANNEL_SINK_CONNECTOR);
-        this.createEReference(this.dataChannelSinkConnectorEClass, DATA_CHANNEL_SINK_CONNECTOR__DATA_SINK_ROLE);
-        this.createEReference(this.dataChannelSinkConnectorEClass, DATA_CHANNEL_SINK_CONNECTOR__ASSEMBLY_CONTEXT);
-        this.createEReference(this.dataChannelSinkConnectorEClass, DATA_CHANNEL_SINK_CONNECTOR__DATA_CHANNEL);
+        this.consumerQueueSinkConnectorEClass = this.createEClass(CONSUMER_QUEUE_SINK_CONNECTOR);
+        this.createEReference(this.consumerQueueSinkConnectorEClass, CONSUMER_QUEUE_SINK_CONNECTOR__DATA_SINK_ROLE);
+        this.createEReference(this.consumerQueueSinkConnectorEClass, CONSUMER_QUEUE_SINK_CONNECTOR__ASSEMBLY_CONTEXT);
+        this.createEReference(this.consumerQueueSinkConnectorEClass, CONSUMER_QUEUE_SINK_CONNECTOR__CONSUMER_QUEUE);
 
         this.dataChannelConnectorEClass = this.createEClass(DATA_CHANNEL_CONNECTOR);
         this.createEReference(this.dataChannelConnectorEClass, DATA_CHANNEL_CONNECTOR__SOURCE);
@@ -352,47 +354,49 @@ public class CompositionPackageImpl extends EPackageImpl implements CompositionP
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        this.dataChannelSourceConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
-        this.dataChannelSinkConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
+        this.supplierQueueSourceConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
+        this.consumerQueueSinkConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
         this.dataChannelConnectorEClass.getESuperTypes().add(theCompositionPackage_1.getConnector());
 
         // Initialize classes and features; add operations and parameters
-        this.initEClass(this.dataChannelSourceConnectorEClass, DataChannelSourceConnector.class,
-                "DataChannelSourceConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getDataChannelSourceConnector_DataSourceRole(),
+        this.initEClass(this.supplierQueueSourceConnectorEClass, SupplierQueueSourceConnector.class,
+                "SupplierQueueSourceConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getSupplierQueueSourceConnector_DataSourceRole(),
                 theRepositoryPackage.getDataSourceRole(), null, "dataSourceRole", null, 1, 1,
-                DataChannelSourceConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                SupplierQueueSourceConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getDataChannelSourceConnector_AssemblyContext(),
+        this.initEReference(this.getSupplierQueueSourceConnector_AssemblyContext(),
                 theCompositionPackage_1.getAssemblyContext(), null, "assemblyContext", null, 1, 1,
-                DataChannelSourceConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                SupplierQueueSourceConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getDataChannelSourceConnector_DataChannel(), theSystemPackage.getDataChannel(),
-                theSystemPackage.getDataChannel_DataChannelSourceConnector(), "dataChannel", null, 1, 1,
-                DataChannelSourceConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+        this.initEReference(this.getSupplierQueueSourceConnector_SupplierQueue(), theSystemPackage.getSupplierQueue(),
+                theSystemPackage.getSupplierQueue_SourceConnector(), "supplierQueue", null, 1, 1,
+                SupplierQueueSourceConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-        this.initEClass(this.dataChannelSinkConnectorEClass, DataChannelSinkConnector.class, "DataChannelSinkConnector",
-                !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getDataChannelSinkConnector_DataSinkRole(), theRepositoryPackage.getDataSinkRole(),
-                null, "dataSinkRole", null, 1, 1, DataChannelSinkConnector.class, !IS_TRANSIENT, !IS_VOLATILE,
+        this.initEClass(this.consumerQueueSinkConnectorEClass, ConsumerQueueSinkConnector.class,
+                "ConsumerQueueSinkConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        this.initEReference(this.getConsumerQueueSinkConnector_DataSinkRole(), theRepositoryPackage.getDataSinkRole(),
+                null, "dataSinkRole", null, 1, 1, ConsumerQueueSinkConnector.class, !IS_TRANSIENT, !IS_VOLATILE,
                 IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getDataChannelSinkConnector_AssemblyContext(),
+        this.initEReference(this.getConsumerQueueSinkConnector_AssemblyContext(),
                 theCompositionPackage_1.getAssemblyContext(), null, "assemblyContext", null, 1, 1,
-                DataChannelSinkConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+                ConsumerQueueSinkConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-        this.initEReference(this.getDataChannelSinkConnector_DataChannel(), theSystemPackage.getDataChannel(),
-                theSystemPackage.getDataChannel_DataChannelSinkConnector(), "dataChannel", null, 1, 1,
-                DataChannelSinkConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+        this.initEReference(this.getConsumerQueueSinkConnector_ConsumerQueue(), theSystemPackage.getConsumerQueue(),
+                theSystemPackage.getConsumerQueue_SinkConnector(), "consumerQueue", null, 1, 1,
+                ConsumerQueueSinkConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
         this.initEClass(this.dataChannelConnectorEClass, DataChannelConnector.class, "DataChannelConnector",
                 !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        this.initEReference(this.getDataChannelConnector_Source(), theSystemPackage.getDataChannel(), null, "source",
-                null, 1, 1, DataChannelConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+        this.initEReference(this.getDataChannelConnector_Source(), theSystemPackage.getSupplierQueue(),
+                theSystemPackage.getSupplierQueue_OutgoingDataChannelConnector(), "source", null, 1, 1,
+                DataChannelConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        this.initEReference(this.getDataChannelConnector_Sink(), theSystemPackage.getDataChannel(), null, "sink", null,
-                1, 1, DataChannelConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+        this.initEReference(this.getDataChannelConnector_Sink(), theSystemPackage.getConsumerQueue(),
+                theSystemPackage.getConsumerQueue_IncomingDataChannelConnector(), "sink", null, 1, 1,
+                DataChannelConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
                 IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Create resource
