@@ -18,7 +18,7 @@
       </annotation>
       <complexType>
          <sequence>
-            <element ref="dataChannelResourceFactory"/>
+            <element ref="queueResourceFactory"/>
          </sequence>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,15 +47,15 @@
       </complexType>
    </element>
 
-   <element name="dataChannelResourceFactory">
+   <element name="queueResourceFactory">
       <complexType>
-         <attribute name="dataChannelResourceFactory" type="string" use="required">
+         <attribute name="queueResourceFactory" type="string" use="required">
             <annotation>
                <documentation>
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn=":org.palladiosimulator.indirections.scheduler.IDataChannelResourceFactory"/>
+                  <meta.attribute kind="java" basedOn=":org.palladiosimulator.indirections.interfaces.IQueueResourceFactory"/>
                </appinfo>
             </annotation>
          </attribute>

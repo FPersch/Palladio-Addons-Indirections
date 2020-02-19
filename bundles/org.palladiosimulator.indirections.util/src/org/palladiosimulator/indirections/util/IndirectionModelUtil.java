@@ -14,7 +14,7 @@ import org.palladiosimulator.indirections.repository.DataSinkRole;
 import org.palladiosimulator.indirections.repository.DataSourceRole;
 import org.palladiosimulator.indirections.system.ConsumerQueue;
 import org.palladiosimulator.indirections.system.SupplierQueue;
-import org.palladiosimulator.indirections.util.simulizar.DataChannelRegistry;
+import org.palladiosimulator.indirections.util.simulizar.QueueRegistry;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.Connector;
 import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
@@ -79,7 +79,7 @@ public final class IndirectionModelUtil {
             final EmitDataAction action) {
         final SupplierQueue supplierQueue = getSourceConnector(context, action).getSupplierQueue();
 
-        final ISupplierQueueResource supplierQueueResource = DataChannelRegistry.getInstanceFor(context)
+        final ISupplierQueueResource supplierQueueResource = QueueRegistry.getInstanceFor(context)
                 .getOrCreateSupplierQueueResource(supplierQueue);
         return supplierQueueResource;
     }
@@ -95,7 +95,7 @@ public final class IndirectionModelUtil {
     public static IConsumerQueueResource getDataChannelResource(InterpreterDefaultContext context,
             final ConsumeDataAction action) {
         final ConsumerQueue consumerQueue = getSinkConnector(context, action).getConsumerQueue();
-        final IConsumerQueueResource dataChannelResource = DataChannelRegistry.getInstanceFor(context)
+        final IConsumerQueueResource dataChannelResource = QueueRegistry.getInstanceFor(context)
                 .getOrCreateConsumerQueueResource(consumerQueue);
         return dataChannelResource;
     }

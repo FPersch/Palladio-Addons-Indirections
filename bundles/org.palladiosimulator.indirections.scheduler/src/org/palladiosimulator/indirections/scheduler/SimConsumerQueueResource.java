@@ -132,8 +132,7 @@ public class SimConsumerQueueResource extends AbstractSimConsumerQueueResource {
         }
 
         joins = consumerQueue.getJoins();
-        final List<QueueConnector> joinSources = joins.stream().map(Joining::getSource)
-                .collect(Collectors.toList());
+        final List<QueueConnector> joinSources = joins.stream().map(Joining::getSource).collect(Collectors.toList());
         final List<Boolean> retainDataArray = joins.stream().map(Joining::isCanContributeMultipleTimes)
                 .collect(Collectors.toList());
 
@@ -286,6 +285,11 @@ public class SimConsumerQueueResource extends AbstractSimConsumerQueueResource {
             dataAfterJoiningQueue.forEach(it -> postprocessAndEmit(it));
             dataAfterJoiningQueue.clear();
         }
+    }
+
+    @Override
+    public void putDate(IndirectionDate date) {
+
     }
 
     /*

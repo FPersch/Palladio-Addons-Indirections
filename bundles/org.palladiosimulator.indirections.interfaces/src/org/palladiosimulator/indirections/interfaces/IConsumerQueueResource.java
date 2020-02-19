@@ -7,7 +7,7 @@ import org.palladiosimulator.indirections.composition.ConsumerQueueSinkConnector
 import de.uka.ipd.sdq.scheduler.ISchedulableProcess;
 
 public interface IConsumerQueueResource {
-    public abstract boolean get(ISchedulableProcess process, ConsumerQueueSinkConnector sinkConnector,
+    public boolean get(ISchedulableProcess process, ConsumerQueueSinkConnector sinkConnector,
             Consumer<IndirectionDate> callback);
 
     /**
@@ -23,4 +23,6 @@ public interface IConsumerQueueResource {
      * @return
      */
     public String getId();
+
+    public void putDate(IndirectionDate date);
 }

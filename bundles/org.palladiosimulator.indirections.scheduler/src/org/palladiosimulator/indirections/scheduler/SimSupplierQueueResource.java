@@ -1,9 +1,11 @@
 package org.palladiosimulator.indirections.scheduler;
 
 import org.apache.log4j.Logger;
+import org.palladiosimulator.indirections.composition.QueueConnector;
 import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnector;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.system.SupplierQueue;
+import org.palladiosimulator.indirections.util.simulizar.QueueRegistry;
 import org.palladiosimulator.simulizar.exceptions.PCMModelInterpreterException;
 import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
 
@@ -27,7 +29,10 @@ public class SimSupplierQueueResource extends AbstractSimSupplierQueueResource {
 
     @Override
     protected void acceptDataFrom(SupplierQueueSourceConnector sourceConnector, IndirectionDate date) {
-        throw new UnsupportedOperationException();
+        for (QueueConnector connector : supplierQueue.getOutgoingQueueConnector()) {
+            QueueRegistry.getInstanceFor(this.context).getOrCreateConsumerQueueResource(connector.getSink())
+                    .putDate(date);
+        }
     }
 
     @Override

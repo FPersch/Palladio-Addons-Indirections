@@ -6,7 +6,7 @@ import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
 
 import de.uka.ipd.sdq.scheduler.SchedulerModel;
 
-public interface IDataChannelResourceFactory {
+public interface IQueueResourceFactory {
     public IConsumerQueueResource createConsumerQueueResource(ConsumerQueue consumerQueue,
             InterpreterDefaultContext context, final SchedulerModel model);
 

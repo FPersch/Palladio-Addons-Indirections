@@ -5,8 +5,7 @@ import org.palladiosimulator.indirections.composition.SupplierQueueSourceConnect
 import de.uka.ipd.sdq.scheduler.ISchedulableProcess;
 
 public interface ISupplierQueueResource {
-    public abstract boolean put(ISchedulableProcess process, SupplierQueueSourceConnector sourceConnector,
-            IndirectionDate date);
+    public boolean put(ISchedulableProcess process, SupplierQueueSourceConnector sourceConnector, IndirectionDate date);
 
     /**
      * Name of the resource.

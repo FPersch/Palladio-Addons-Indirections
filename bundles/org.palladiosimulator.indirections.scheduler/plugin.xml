@@ -2,9 +2,9 @@
 <?eclipse version="3.4"?>
 <plugin>
 <extension
-         point="org.palladiosimulator.indirections.interfaces.datachannelresourcefactory">
-      <dataChannelResourceFactory
-            dataChannelResourceFactory="org.palladiosimulator.indirections.scheduler.DataChannelResourceFactory">
-      </dataChannelResourceFactory>
+         point="org.palladiosimulator.indirections.interfaces.queueresourcefactory">
+      <queueResourceFactory
+            queueResourceFactory="org.palladiosimulator.indirections.scheduler.QueueResourceFactory">
+      </queueResourceFactory>
    </extension>
 </plugin>

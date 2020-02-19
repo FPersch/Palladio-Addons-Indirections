@@ -28,7 +28,7 @@ import org.palladiosimulator.indirections.scheduler.data.JoinedDate;
 import org.palladiosimulator.indirections.scheduler.data.PartitionedIndirectionDate;
 import org.palladiosimulator.indirections.scheduler.util.IndirectionSimulationUtil;
 import org.palladiosimulator.indirections.util.IndirectionModelUtil;
-import org.palladiosimulator.indirections.util.simulizar.DataChannelRegistry;
+import org.palladiosimulator.indirections.util.simulizar.QueueRegistry;
 import org.palladiosimulator.pcm.allocation.Allocation;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.simulizar.exceptions.PCMModelInterpreterException;
@@ -50,7 +50,7 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
     private final AssemblyContext assemblyContext;
     private final SimulatedStackframe<Object> resultStackFrame;
 
-    private final DataChannelRegistry dataChannelRegistry;
+    private final QueueRegistry dataChannelRegistry;
     private final IndirectionMeasuringPointRegistry indirectionMeasuringPointRegistry;
 
     /**
@@ -70,7 +70,7 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
         this.resultStackFrame = new SimulatedStackframe<Object>();
         this.basicComponentInstance = basicComponentInstance;
 
-        this.dataChannelRegistry = DataChannelRegistry.getInstanceFor(context);
+        this.dataChannelRegistry = QueueRegistry.getInstanceFor(context);
         this.indirectionMeasuringPointRegistry = IndirectionMeasuringPointRegistry.getInstanceFor(context);
     }
 

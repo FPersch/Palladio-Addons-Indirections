@@ -1,7 +1,7 @@
 package org.palladiosimulator.indirections.scheduler;
 
 import org.palladiosimulator.indirections.interfaces.IConsumerQueueResource;
-import org.palladiosimulator.indirections.interfaces.IDataChannelResourceFactory;
+import org.palladiosimulator.indirections.interfaces.IQueueResourceFactory;
 import org.palladiosimulator.indirections.interfaces.ISupplierQueueResource;
 import org.palladiosimulator.indirections.system.ConsumerQueue;
 import org.palladiosimulator.indirections.system.SupplierQueue;
@@ -9,7 +9,7 @@ import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
 
 import de.uka.ipd.sdq.scheduler.SchedulerModel;
 
-public class DataChannelResourceFactory implements IDataChannelResourceFactory {
+public class QueueResourceFactory implements IQueueResourceFactory {
 
     @Override
     public IConsumerQueueResource createConsumerQueueResource(ConsumerQueue consumerQueue,
@@ -20,8 +20,7 @@ public class DataChannelResourceFactory implements IDataChannelResourceFactory {
     @Override
     public ISupplierQueueResource createSupplierQueueResource(SupplierQueue supplierQueue,
             InterpreterDefaultContext context, SchedulerModel model) {
-        // TODO Auto-generated method stub
-        return null;
+        return new SimSupplierQueueResource(supplierQueue, context, model);
     }
 
 }
