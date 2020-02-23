@@ -56,97 +56,40 @@
       <eLiterals name="DiscardLastIn" value="2"/>
       <eLiterals name="DiscardIncoming" value="3"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="OutgoingDistribution">
-      <eLiterals name="Broadcast"/>
-      <eLiterals name="RoundRobin" value="1"/>
-    </eClassifiers>
-  </eSubpackages>
-  <eSubpackages name="partitioning" nsURI="http://palladiosimulator.org/Indirections/Partitioning/1.0"
-      nsPrefix="org.palladiosimulator.indirections.partitioning">
-    <eClassifiers xsi:type="ecore:EClass" name="Partitioning" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/NamedElement">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="specification" lowerBound="1"
-          upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
-          containment="true"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TimeGrouping" abstract="true" interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Windowing" eSuperTypes="#//partitioning/TimeGrouping">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="shift" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConsumeAllAvailable" eSuperTypes="#//partitioning/TimeGrouping"/>
-    <eClassifiers xsi:type="ecore:EClass" name="CollectWithHoldback" eSuperTypes="#//partitioning/TimeGrouping">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="holdback" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="partitionDataName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Joining">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-          eType="#//composition/QueueConnector"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="canContributeMultipleTimes"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" upperBound="-1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
-          containment="true"/>
-    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="system" nsURI="http://palladiosimulator.org/Indirections/System/1.0"
       nsPrefix="org.palladiosimulator.indirections.system">
-    <eClassifiers xsi:type="ecore:EClass" name="ConsumerQueue" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
+    <eClassifiers xsi:type="ecore:EClass" name="Queue">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduling" eType="#//datatypes/Scheduling"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" transient="true"
           defaultValueLiteral="-1"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEventGroup" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="sinkEventGroup" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="incomingQueueConnector"
-          upperBound="-1" eType="#//composition/QueueConnector" eOpposite="#//composition/QueueConnector/sink"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="sinkConnector" ordered="false"
-          upperBound="-1" eType="#//composition/ConsumerQueueSinkConnector" eOpposite="#//composition/ConsumerQueueSinkConnector/consumerQueue"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="partitioning" eType="#//partitioning/Partitioning"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="timeGrouping" eType="#//partitioning/TimeGrouping"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="joins" upperBound="-1"
-          eType="#//partitioning/Joining" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outgoingDistribution"
-          eType="#//datatypes/OutgoingDistribution"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduling" eType="#//datatypes/Scheduling"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="putPolicy" eType="#//datatypes/PutPolicy"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSinkRole" lowerBound="1"
+          eType="#//repository/DataSinkRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSourceRole" lowerBound="1"
+          eType="#//repository/DataSourceRole"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SupplierQueue" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceEventGroup" lowerBound="1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceConnector" ordered="false"
-          upperBound="-1" eType="#//composition/SupplierQueueSourceConnector" eOpposite="#//composition/SupplierQueueSourceConnector/supplierQueue"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingQueueConnector"
-          upperBound="-1" eType="#//composition/QueueConnector" eOpposite="#//composition/QueueConnector/source"/>
+    <eClassifiers xsi:type="ecore:EClass" name="StatefulOperator">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSinkRole" upperBound="-1"
+          eType="#//repository/DataSinkRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSourceRole" upperBound="-1"
+          eType="#//repository/DataSourceRole"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="composition" nsURI="http://palladiosimulator.org/Indirections/Composition/1.0"
       nsPrefix="org.palladiosimulator.indirections.composition">
-    <eClassifiers xsi:type="ecore:EClass" name="SupplierQueueSourceConnector" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector">
+    <eClassifiers xsi:type="ecore:EClass" name="DataConnection" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector">
       <eStructuralFeatures xsi:type="ecore:EReference" name="dataSourceRole" ordered="false"
           lowerBound="1" eType="#//repository/DataSourceRole"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="supplierQueue" ordered="false"
-          lowerBound="1" eType="#//system/SupplierQueue" eOpposite="#//system/SupplierQueue/sourceConnector"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConsumerQueueSinkConnector" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceAssemblyContext"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="dataSinkRole" ordered="false"
           lowerBound="1" eType="#//repository/DataSinkRole"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyContext" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="consumerQueue" ordered="false"
-          lowerBound="1" eType="#//system/ConsumerQueue" eOpposite="#//system/ConsumerQueue/sinkConnector"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="QueueConnector" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/Connector">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-          eType="#//system/SupplierQueue" eOpposite="#//system/SupplierQueue/outgoingQueueConnector"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="1"
-          eType="#//system/ConsumerQueue" eOpposite="#//system/ConsumerQueue/incomingQueueConnector"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sinkAssemblyContext"
+          ordered="false" lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="repository" nsURI="http://palladiosimulator.org/Indirections/Repository/1.0"
