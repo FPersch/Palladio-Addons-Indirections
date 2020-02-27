@@ -23,13 +23,6 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//actions/AnalyseStackAction/key"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference indirections.ecore#//actions/AnalyseStackAction/variableReference"/>
       </genClasses>
-      <genClasses ecoreClass="indirections.ecore#//actions/ConsumeDataAction" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference indirections.ecore#//actions/ConsumeDataAction/eventType"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference indirections.ecore#//actions/ConsumeDataAction/dataSinkRole"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference indirections.ecore#//actions/ConsumeDataAction/variableReference"/>
-      </genClasses>
       <genClasses ecoreClass="indirections.ecore#//actions/EmitDataAction" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference indirections.ecore#//actions/EmitDataAction/eventType"/>
@@ -50,44 +43,17 @@
         ecorePackage="indirections.ecore#//datatypes">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="indirections.ecore#//datatypes/Scheduling">
         <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/Scheduling/FirstInFirstOut"/>
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/Scheduling/LastInFirstOut"/>
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/Scheduling/Priority"/>
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/Scheduling/Random"/>
       </genEnums>
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="indirections.ecore#//datatypes/PutPolicy">
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/PutPolicy/Blocking"/>
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/PutPolicy/DiscardFirstIn"/>
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/PutPolicy/DiscardLastIn"/>
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/PutPolicy/DiscardIncoming"/>
+        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/PutPolicy/OverwriteLast"/>
       </genEnums>
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="indirections.ecore#//datatypes/OutgoingDistribution">
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/OutgoingDistribution/DistributeToAll"/>
-        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/OutgoingDistribution/RoundRobin"/>
+        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/OutgoingDistribution/ExactlyOneConsumer"/>
       </genEnums>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Partitioning" disposableProviderFactory="true" generateModelWizard="false"
-        extensibleProviderFactory="true" childCreationExtenders="true" fileExtensions=""
-        ecorePackage="indirections.ecore#//partitioning">
-      <genClasses ecoreClass="indirections.ecore#//partitioning/Partitioning">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference indirections.ecore#//partitioning/Partitioning/specification"/>
-      </genClasses>
-      <genClasses ecoreClass="indirections.ecore#//partitioning/TimeGrouping"/>
-      <genClasses ecoreClass="indirections.ecore#//partitioning/Windowing">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//partitioning/Windowing/size"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//partitioning/Windowing/shift"/>
-      </genClasses>
-      <genClasses ecoreClass="indirections.ecore#//partitioning/ConsumeAllAvailable"/>
-      <genClasses ecoreClass="indirections.ecore#//partitioning/CollectWithHoldback">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//partitioning/CollectWithHoldback/holdback"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//partitioning/CollectWithHoldback/key"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//partitioning/CollectWithHoldback/partitionDataName"/>
-      </genClasses>
-      <genClasses ecoreClass="indirections.ecore#//partitioning/Joining">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference indirections.ecore#//partitioning/Joining/source"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//partitioning/Joining/canContributeMultipleTimes"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference indirections.ecore#//partitioning/Joining/key"/>
-      </genClasses>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="indirections.ecore#//datatypes/SpinType">
+        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/SpinType/SPIN_ONCE"/>
+        <genEnumLiterals ecoreEnumLiteral="indirections.ecore#//datatypes/SpinType/SPIN"/>
+      </genEnums>
     </nestedGenPackages>
     <nestedGenPackages prefix="System" disposableProviderFactory="true" generateModelWizard="false"
         extensibleProviderFactory="true" childCreationExtenders="true" fileExtensions=""
@@ -102,12 +68,10 @@
             ecoreFeature="ecore:EReference indirections.ecore#//system/DataChannel/dataChannelSourceConnector"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference indirections.ecore#//system/DataChannel/dataChannelSinkConnector"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference indirections.ecore#//system/DataChannel/partitioning"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference indirections.ecore#//system/DataChannel/timeGrouping"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference indirections.ecore#//system/DataChannel/joins"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//system/DataChannel/outgoingDistribution"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//system/DataChannel/scheduling"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//system/DataChannel/putPolicy"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//system/DataChannel/spinType"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Composition" disposableProviderFactory="true" generateModelWizard="false"
@@ -145,10 +109,6 @@
       <genClasses ecoreClass="indirections.ecore#//repository/DataSinkRole" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference indirections.ecore#//repository/DataSinkRole/eventGroup"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference indirections.ecore#//repository/DataSinkRole/pushesTo"/>
-        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute indirections.ecore#//repository/DataSinkRole/pushing"
-            get="return (this.getPushesTo() != null);"/>
       </genClasses>
       <genClasses ecoreClass="indirections.ecore#//repository/DataSourceRole" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"

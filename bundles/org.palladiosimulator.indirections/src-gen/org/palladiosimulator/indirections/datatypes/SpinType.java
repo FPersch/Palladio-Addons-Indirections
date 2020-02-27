@@ -10,62 +10,83 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Put Policy</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Spin Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.palladiosimulator.indirections.datatypes.DatatypesPackage#getPutPolicy()
+ * @see org.palladiosimulator.indirections.datatypes.DatatypesPackage#getSpinType()
  * @model
  * @generated
  */
-public enum PutPolicy implements Enumerator {
+public enum SpinType implements Enumerator {
 	/**
-	 * The '<em><b>Overwrite Last</b></em>' literal object.
+	 * The '<em><b>SPIN ONCE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OVERWRITE_LAST_VALUE
+	 * @see #SPIN_ONCE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	OVERWRITE_LAST(0, "OverwriteLast", "OverwriteLast");
+	SPIN_ONCE(0, "SPIN_ONCE", "SPIN_ONCE"),
 
 	/**
-	 * The '<em><b>Overwrite Last</b></em>' literal value.
+	 * The '<em><b>SPIN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OVERWRITE_LAST
-	 * @model name="OverwriteLast"
+	 * @see #SPIN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OVERWRITE_LAST_VALUE = 0;
+	SPIN(1, "SPIN", "SPIN");
 
 	/**
-	 * An array of all the '<em><b>Put Policy</b></em>' enumerators.
+	 * The '<em><b>SPIN ONCE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SPIN_ONCE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SPIN_ONCE_VALUE = 0;
+
+	/**
+	 * The '<em><b>SPIN</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SPIN
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SPIN_VALUE = 1;
+
+	/**
+	 * An array of all the '<em><b>Spin Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final PutPolicy[] VALUES_ARRAY = new PutPolicy[] { OVERWRITE_LAST, };
+	private static final SpinType[] VALUES_ARRAY = new SpinType[] { SPIN_ONCE, SPIN, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Put Policy</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Spin Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<PutPolicy> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<SpinType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Put Policy</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Spin Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static PutPolicy get(String literal) {
+	public static SpinType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			PutPolicy result = VALUES_ARRAY[i];
+			SpinType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -74,16 +95,16 @@ public enum PutPolicy implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Put Policy</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Spin Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static PutPolicy getByName(String name) {
+	public static SpinType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			PutPolicy result = VALUES_ARRAY[i];
+			SpinType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -92,17 +113,19 @@ public enum PutPolicy implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Put Policy</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Spin Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static PutPolicy get(int value) {
+	public static SpinType get(int value) {
 		switch (value) {
-		case OVERWRITE_LAST_VALUE:
-			return OVERWRITE_LAST;
+		case SPIN_ONCE_VALUE:
+			return SPIN_ONCE;
+		case SPIN_VALUE:
+			return SPIN;
 		}
 		return null;
 	}
@@ -134,7 +157,7 @@ public enum PutPolicy implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private PutPolicy(int value, String name, String literal) {
+	private SpinType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -181,4 +204,4 @@ public enum PutPolicy implements Enumerator {
 		return literal;
 	}
 
-} //PutPolicy
+} //SpinType

@@ -1,10 +1,11 @@
 package org.palladiosimulator.indirections.util;
 
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.EList;
-import org.palladiosimulator.indirections.actions.ConsumeDataAction;
 import org.palladiosimulator.indirections.actions.EmitDataAction;
 import org.palladiosimulator.indirections.composition.DataChannelSinkConnector;
 import org.palladiosimulator.indirections.composition.DataChannelSourceConnector;
@@ -72,37 +73,15 @@ public final class IndirectionModelUtil {
             final DataSinkRole sinkRole) {
         return getSinkConnectorForRole(assemblyContext, sinkRole).getDataChannel();
     }
-
-    public static IDataChannelResource getDataChannelResource(InterpreterDefaultContext context,
-            final EmitDataAction action) {
-        final DataChannel dataChannel = getSourceConnector(context, action).getDataChannel();
-
-        final IDataChannelResource dataChannelResource = DataChannelRegistry.getInstanceFor(context)
-                .getOrCreateDataChannelResource(dataChannel);
-        return dataChannelResource;
-    }
-
-    public static DataChannelSourceConnector getSourceConnector(InterpreterDefaultContext context,
-            final EmitDataAction action) {
-        final AssemblyContext assemblyContext = context.getAssemblyContextStack().peek();
-        final DataSourceRole sinkRole = action.getDataSourceRole();
-
-        return IndirectionModelUtil.getSourceConnectorForRole(assemblyContext, sinkRole);
-    }
-
-    public static IDataChannelResource getDataChannelResource(InterpreterDefaultContext context,
-            final ConsumeDataAction action) {
-        final DataChannel dataChannel = getSinkConnector(context, action).getDataChannel();
-        final IDataChannelResource dataChannelResource = DataChannelRegistry.getInstanceFor(context)
-                .getOrCreateDataChannelResource(dataChannel);
-        return dataChannelResource;
-    }
-
-    public static DataChannelSinkConnector getSinkConnector(InterpreterDefaultContext context,
-            final ConsumeDataAction action) {
-        final AssemblyContext assemblyContext = context.getAssemblyContextStack().peek();
-        final DataSinkRole sinkRole = action.getDataSinkRole();
-
-        return IndirectionModelUtil.getSinkConnectorForRole(assemblyContext, sinkRole);
+    
+    public static Map<DataChannelSourceConnector, IDataChannelResource> getEmitTargetResources(InterpreterDefaultContext context, final EmitDataAction action) {
+    	final DataChannelRegistry registry = DataChannelRegistry.getInstanceFor(context);
+    	final AssemblyContext assemblyContext = context.getAssemblyContextStack().peek();
+    	
+    	return action.getDataSourceRole().stream()
+    			.map(it -> IndirectionModelUtil.getSourceConnectorForRole(assemblyContext, it))
+    			.collect(Collectors.toMap(
+    					Function.identity(),
+    					it -> registry.getOrCreateDataChannelResource(it.getDataChannel())));
     }
 }

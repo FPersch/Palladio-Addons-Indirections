@@ -10,20 +10,11 @@
           eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//VariableReference"
           containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConsumeDataAction" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//seff/AbstractAction">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="eventType" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventType"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dataSinkRole" ordered="false"
-          lowerBound="1" eType="#//repository/DataSinkRole"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="variableReference" lowerBound="1"
-          eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//VariableReference"
-          containment="true"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="EmitDataAction" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//seff/AbstractAction">
       <eStructuralFeatures xsi:type="ecore:EReference" name="eventType" lowerBound="1"
           eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventType"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="dataSourceRole" lowerBound="1"
-          eType="#//repository/DataSourceRole"/>
+          upperBound="-1" eType="#//repository/DataSourceRole"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="variableReference" lowerBound="1"
           eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore#//VariableReference"
           containment="true"/>
@@ -46,48 +37,16 @@
       nsPrefix="org.palladiosimulator.indirections.datatypes">
     <eClassifiers xsi:type="ecore:EEnum" name="Scheduling">
       <eLiterals name="FirstInFirstOut"/>
-      <eLiterals name="LastInFirstOut" value="1"/>
-      <eLiterals name="Priority" value="2"/>
-      <eLiterals name="Random" value="3"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="PutPolicy">
-      <eLiterals name="Blocking" literal=""/>
-      <eLiterals name="DiscardFirstIn" value="1"/>
-      <eLiterals name="DiscardLastIn" value="2"/>
-      <eLiterals name="DiscardIncoming" value="3"/>
+      <eLiterals name="OverwriteLast"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="OutgoingDistribution">
-      <eLiterals name="DistributeToAll"/>
-      <eLiterals name="RoundRobin" value="1"/>
+      <eLiterals name="ExactlyOneConsumer"/>
     </eClassifiers>
-  </eSubpackages>
-  <eSubpackages name="partitioning" nsURI="http://palladiosimulator.org/Indirections/Partitioning/1.0"
-      nsPrefix="org.palladiosimulator.indirections.partitioning">
-    <eClassifiers xsi:type="ecore:EClass" name="Partitioning" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/NamedElement">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="specification" lowerBound="1"
-          upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
-          containment="true"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TimeGrouping" abstract="true" interface="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Windowing" eSuperTypes="#//partitioning/TimeGrouping">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="shift" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConsumeAllAvailable" eSuperTypes="#//partitioning/TimeGrouping"/>
-    <eClassifiers xsi:type="ecore:EClass" name="CollectWithHoldback" eSuperTypes="#//partitioning/TimeGrouping">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="holdback" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="partitionDataName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Joining">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-          eType="#//composition/DataChannelSourceConnector"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="canContributeMultipleTimes"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="key" lowerBound="1" upperBound="-1"
-          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
-          containment="true"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="SpinType">
+      <eLiterals name="SPIN_ONCE"/>
+      <eLiterals name="SPIN" value="1"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="system" nsURI="http://palladiosimulator.org/Indirections/System/1.0"
@@ -106,16 +65,12 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="dataChannelSinkConnector"
           ordered="false" upperBound="-1" eType="#//composition/DataChannelSinkConnector"
           eOpposite="#//composition/DataChannelSinkConnector/dataChannel"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="partitioning" eType="#//partitioning/Partitioning"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="timeGrouping" eType="#//partitioning/TimeGrouping"
-          containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="joins" upperBound="-1"
-          eType="#//partitioning/Joining" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="outgoingDistribution"
           eType="#//datatypes/OutgoingDistribution"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduling" eType="#//datatypes/Scheduling"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="putPolicy" eType="#//datatypes/PutPolicy"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="spinType" lowerBound="1"
+          eType="#//datatypes/SpinType"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="composition" nsURI="http://palladiosimulator.org/Indirections/Composition/1.0"
@@ -147,8 +102,6 @@
       nsPrefix="org.palladiosimulator.indirections.repository">
     <eClassifiers xsi:type="ecore:EClass" name="DataSinkRole" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole">
       <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="pushing" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DataSourceRole" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RequiredRole">
       <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>

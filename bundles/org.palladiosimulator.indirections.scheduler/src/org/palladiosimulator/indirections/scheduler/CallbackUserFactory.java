@@ -34,52 +34,32 @@ import de.uka.ipd.sdq.simucomframework.usage.IUserFactory;
 import de.uka.ipd.sdq.stoex.StoexFactory;
 import de.uka.ipd.sdq.stoex.VariableReference;
 
-public class OpenWorkloadUserWithStackFactory extends AbstractWorkloadUserFactory implements IUserFactory {
-    public class OpenWorkloadUserWithStack extends SimuComSimProcess implements IUser {
-        private String dataId = null;
-        private IndirectionDate date = null;
-        private InterpreterDefaultContext context;
+public class CallbackUserFactory extends AbstractWorkloadUserFactory {
+	/**
+	 * @param <T> type of the data 
+	 */
+	public abstract class AbstractCallbackUser<T> extends SimuComSimProcess implements IUser {
+		protected String dataId = null;
+		protected T date = null;
+		protected InterpreterDefaultContext context;
+		
+        protected AbstractCallbackUser(SimuComModel model, String name) {
+			super(model, name);
+		}
 
-        public OpenWorkloadUserWithStack(SimuComModel owner, String name) {
-            super(owner, name);
-        }
-
-        public void setDataAndStartUserLife(String dataId, IndirectionDate date, InterpreterDefaultContext context) {
+		public void setDataAndStartUserLife(String dataId, T date, InterpreterDefaultContext context) {
             this.dataId = dataId;
             this.date = date;
             this.context = context;
-            startUserLife();
+        	
+        	startUserLife();
         }
 
-        @Override
-        public void scenarioRunner(SimuComSimProcess thread) {
-            final InterpreterDefaultContext newContext = new InterpreterDefaultContext(
-                    context.getRuntimeState().getMainContext(), thread);
-
-            // TODO: fix helper method to handle data on stack
-            context.getStack().createAndPushNewStackFrame();
-            IndirectionSimulationUtil.createNewDataOnStack(context.getStack(), Objects.requireNonNull(dataId),
-                    Objects.requireNonNull(date));
-
-            final UsageModel usageModel = newContext.getPCMPartitionManager().getLocalPCMModel().getUsageModel();
-            new UsageScenarioSwitch<Object>(newContext).doSwitch(usageScenario);
-        }
-
-        /*
-         * (non-Javadoc)
-         * 
-         * @see de.uka.ipd.sdq.simucomframework.usage.OpenWorkloadUser#startUserLife()
-         */
         @Override
         public void startUserLife() {
             this.scheduleAt(0);
         }
-
-        /*
-         * (non-Javadoc)
-         * 
-         * @see de.uka.ipd.sdq.simucomframework.usage.OpenWorkloadUser#internalLifeCycle()
-         */
+        
         @Override
         protected void internalLifeCycle() {
             if (LOGGER.isDebugEnabled()) {
@@ -115,29 +95,70 @@ public class OpenWorkloadUserWithStackFactory extends AbstractWorkloadUserFactor
                 LOGGER.debug(getName() + " done! I'm dying!!!");
             }
         }
+	}
+	
+	public class CallbackIteratingUser extends AbstractCallbackUser<List<IndirectionDate>> {
+        public CallbackIteratingUser(SimuComModel owner, String name) {
+            super(owner, name);
+        }
+        
+        @Override
+        public void scenarioRunner(SimuComSimProcess thread) {
+        	for (IndirectionDate currentDate : this.date) {
+	            final InterpreterDefaultContext newContext = new InterpreterDefaultContext(
+	                    context.getRuntimeState().getMainContext(), thread);
+	
+	            // TODO: fix helper method to handle data on stack
+	            context.getStack().createAndPushNewStackFrame();
+	            IndirectionSimulationUtil.createNewDataOnStack(context.getStack(), Objects.requireNonNull(dataId),
+	                    Objects.requireNonNull(currentDate));
+	
+	            final UsageModel usageModel = newContext.getPCMPartitionManager().getLocalPCMModel().getUsageModel();
+	            new UsageScenarioSwitch<Object>(newContext).doSwitch(usageScenario);
+        	}
+        }
+    }
+	
+	
+    public class CallbackUser extends AbstractCallbackUser<IndirectionDate> {
+        public CallbackUser(SimuComModel owner, String name) {
+            super(owner, name);
+        }
+
+        @Override
+        public void scenarioRunner(SimuComSimProcess thread) {
+            final InterpreterDefaultContext newContext = new InterpreterDefaultContext(
+                    context.getRuntimeState().getMainContext(), thread);
+
+            // TODO: fix helper method to handle data on stack
+            context.getStack().createAndPushNewStackFrame();
+            IndirectionSimulationUtil.createNewDataOnStack(context.getStack(), Objects.requireNonNull(dataId),
+                    Objects.requireNonNull(date));
+
+            final UsageModel usageModel = newContext.getPCMPartitionManager().getLocalPCMModel().getUsageModel();
+            new UsageScenarioSwitch<Object>(newContext).doSwitch(usageScenario);
+        }
     }
 
     private final UsageScenario usageScenario;
 
-    public OpenWorkloadUserWithStackFactory(SimuComModel model, UsageScenario usageScenario) {
+    public CallbackUserFactory(SimuComModel model, UsageScenario usageScenario) {
         super(model, usageScenario);
         this.usageScenario = usageScenario;
     }
 
-    @Override
-    public OpenWorkloadUserWithStack createUser() {
-        return new OpenWorkloadUserWithStack(model, "OpenWorkloadUserWithStack");
+    public CallbackUser createUser() {
+        return new CallbackUser(model, "CallbackUser");
+    }
+    
+    public CallbackIteratingUser createIteratingUser() {
+        return new CallbackIteratingUser(model, "CallbackIteratingUser");
     }
 
-    public static OpenWorkloadUserWithStackFactory createPushingUserFactory(DataChannelSinkConnector sinkConnector,
+    public static CallbackUserFactory createPushingUserFactory(DataChannelSinkConnector sinkConnector,
             SimuComModel model) {
 
         final DataSinkRole sinkRole = sinkConnector.getDataSinkRole();
-
-        if (!sinkRole.isPushing()) {
-            throw new IllegalStateException(
-                    "Sink role " + sinkRole + " for connector " + sinkConnector + " is not pushing.");
-        }
 
         UsagemodelFactory factory = UsagemodelFactory.eINSTANCE;
         ParameterFactory parameterFactory = ParameterFactory.eINSTANCE;
@@ -182,7 +203,7 @@ public class OpenWorkloadUserWithStackFactory extends AbstractWorkloadUserFactor
 
         usageScenario.setScenarioBehaviour_UsageScenario(scenarioBehaviour);
 
-        OpenWorkloadUserWithStackFactory userFactory = new OpenWorkloadUserWithStackFactory(model, usageScenario);
+        CallbackUserFactory userFactory = new CallbackUserFactory(model, usageScenario);
 
         return userFactory;
     }

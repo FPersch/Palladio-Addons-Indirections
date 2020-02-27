@@ -10,7 +10,6 @@ import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.scheduler.data.ConcreteIndirectionDate;
-import org.palladiosimulator.indirections.scheduler.data.GroupingIndirectionDate;
 import org.palladiosimulator.indirections.util.IterableUtil;
 import org.palladiosimulator.pcm.core.PCMRandomVariable;
 import org.palladiosimulator.pcm.core.entity.Entity;
@@ -211,13 +210,7 @@ public final class IndirectionSimulationUtil {
     }
 
     public static List<Double> getDataAgeRecursive(IndirectionDate data, List<Double> measurements) {
-        if (data instanceof GroupingIndirectionDate<?>) {
-            for (IndirectionDate id : ((GroupingIndirectionDate<IndirectionDate>) data).getDataInGroup()) {
-                getDataAgeRecursive(id, measurements);
-            }
-        } else {
-            measurements.add(data.getTime());
-        }
+        measurements.add(data.getTime());
         return measurements;
     }
 
