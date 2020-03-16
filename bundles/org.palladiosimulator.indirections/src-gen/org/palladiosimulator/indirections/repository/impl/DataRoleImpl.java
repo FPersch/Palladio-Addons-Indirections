@@ -4,34 +4,33 @@ package org.palladiosimulator.indirections.repository.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
+
 import org.palladiosimulator.indirections.repository.DataRole;
-import org.palladiosimulator.indirections.repository.DataSinkRole;
 import org.palladiosimulator.indirections.repository.RepositoryPackage;
 
 import org.palladiosimulator.pcm.repository.EventGroup;
 
-import org.palladiosimulator.pcm.repository.impl.ProvidedRoleImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Data Sink Role</b></em>'.
+ * An implementation of the model object '<em><b>Data Role</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.indirections.repository.impl.DataSinkRoleImpl#getEventGroup <em>Event Group</em>}</li>
+ *   <li>{@link org.palladiosimulator.indirections.repository.impl.DataRoleImpl#getEventGroup <em>Event Group</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
+public abstract class DataRoleImpl extends CDOObjectImpl implements DataRole {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataSinkRoleImpl() {
+	protected DataRoleImpl() {
 		super();
 	}
 
@@ -42,7 +41,17 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return RepositoryPackage.Literals.DATA_SINK_ROLE;
+		return RepositoryPackage.Literals.DATA_ROLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -52,7 +61,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	 */
 	@Override
 	public EventGroup getEventGroup() {
-		return (EventGroup) eDynamicGet(RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP,
+		return (EventGroup) eDynamicGet(RepositoryPackage.DATA_ROLE__EVENT_GROUP,
 				RepositoryPackage.Literals.DATA_ROLE__EVENT_GROUP, true, true);
 	}
 
@@ -62,7 +71,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	 * @generated
 	 */
 	public EventGroup basicGetEventGroup() {
-		return (EventGroup) eDynamicGet(RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP,
+		return (EventGroup) eDynamicGet(RepositoryPackage.DATA_ROLE__EVENT_GROUP,
 				RepositoryPackage.Literals.DATA_ROLE__EVENT_GROUP, false, true);
 	}
 
@@ -73,7 +82,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	 */
 	@Override
 	public void setEventGroup(EventGroup newEventGroup) {
-		eDynamicSet(RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP, RepositoryPackage.Literals.DATA_ROLE__EVENT_GROUP,
+		eDynamicSet(RepositoryPackage.DATA_ROLE__EVENT_GROUP, RepositoryPackage.Literals.DATA_ROLE__EVENT_GROUP,
 				newEventGroup);
 	}
 
@@ -85,7 +94,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
+		case RepositoryPackage.DATA_ROLE__EVENT_GROUP:
 			if (resolve)
 				return getEventGroup();
 			return basicGetEventGroup();
@@ -101,7 +110,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
+		case RepositoryPackage.DATA_ROLE__EVENT_GROUP:
 			setEventGroup((EventGroup) newValue);
 			return;
 		}
@@ -116,7 +125,7 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
+		case RepositoryPackage.DATA_ROLE__EVENT_GROUP:
 			setEventGroup((EventGroup) null);
 			return;
 		}
@@ -131,46 +140,10 @@ public class DataSinkRoleImpl extends ProvidedRoleImpl implements DataSinkRole {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
+		case RepositoryPackage.DATA_ROLE__EVENT_GROUP:
 			return basicGetEventGroup() != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DataRole.class) {
-			switch (derivedFeatureID) {
-			case RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP:
-				return RepositoryPackage.DATA_ROLE__EVENT_GROUP;
-			default:
-				return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DataRole.class) {
-			switch (baseFeatureID) {
-			case RepositoryPackage.DATA_ROLE__EVENT_GROUP:
-				return RepositoryPackage.DATA_SINK_ROLE__EVENT_GROUP;
-			default:
-				return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-} //DataSinkRoleImpl
+} //DataRoleImpl

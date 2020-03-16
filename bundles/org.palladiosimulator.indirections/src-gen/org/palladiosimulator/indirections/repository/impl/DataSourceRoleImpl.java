@@ -4,6 +4,7 @@ package org.palladiosimulator.indirections.repository.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.palladiosimulator.indirections.repository.DataRole;
 import org.palladiosimulator.indirections.repository.DataSourceRole;
 import org.palladiosimulator.indirections.repository.RepositoryPackage;
 
@@ -52,7 +53,7 @@ public class DataSourceRoleImpl extends RequiredRoleImpl implements DataSourceRo
 	@Override
 	public EventGroup getEventGroup() {
 		return (EventGroup) eDynamicGet(RepositoryPackage.DATA_SOURCE_ROLE__EVENT_GROUP,
-				RepositoryPackage.Literals.DATA_SOURCE_ROLE__EVENT_GROUP, true, true);
+				RepositoryPackage.Literals.DATA_ROLE__EVENT_GROUP, true, true);
 	}
 
 	/**
@@ -62,7 +63,7 @@ public class DataSourceRoleImpl extends RequiredRoleImpl implements DataSourceRo
 	 */
 	public EventGroup basicGetEventGroup() {
 		return (EventGroup) eDynamicGet(RepositoryPackage.DATA_SOURCE_ROLE__EVENT_GROUP,
-				RepositoryPackage.Literals.DATA_SOURCE_ROLE__EVENT_GROUP, false, true);
+				RepositoryPackage.Literals.DATA_ROLE__EVENT_GROUP, false, true);
 	}
 
 	/**
@@ -72,8 +73,8 @@ public class DataSourceRoleImpl extends RequiredRoleImpl implements DataSourceRo
 	 */
 	@Override
 	public void setEventGroup(EventGroup newEventGroup) {
-		eDynamicSet(RepositoryPackage.DATA_SOURCE_ROLE__EVENT_GROUP,
-				RepositoryPackage.Literals.DATA_SOURCE_ROLE__EVENT_GROUP, newEventGroup);
+		eDynamicSet(RepositoryPackage.DATA_SOURCE_ROLE__EVENT_GROUP, RepositoryPackage.Literals.DATA_ROLE__EVENT_GROUP,
+				newEventGroup);
 	}
 
 	/**
@@ -134,6 +135,42 @@ public class DataSourceRoleImpl extends RequiredRoleImpl implements DataSourceRo
 			return basicGetEventGroup() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == DataRole.class) {
+			switch (derivedFeatureID) {
+			case RepositoryPackage.DATA_SOURCE_ROLE__EVENT_GROUP:
+				return RepositoryPackage.DATA_ROLE__EVENT_GROUP;
+			default:
+				return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == DataRole.class) {
+			switch (baseFeatureID) {
+			case RepositoryPackage.DATA_ROLE__EVENT_GROUP:
+				return RepositoryPackage.DATA_SOURCE_ROLE__EVENT_GROUP;
+			default:
+				return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //DataSourceRoleImpl

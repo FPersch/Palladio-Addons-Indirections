@@ -81,6 +81,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseProvidedRole(dataSinkRole);
 			if (result == null)
+				result = caseDataRole(dataSinkRole);
+			if (result == null)
 				result = caseRole(dataSinkRole);
 			if (result == null)
 				result = caseEntity(dataSinkRole);
@@ -98,6 +100,8 @@ public class RepositorySwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseRequiredRole(dataSourceRole);
 			if (result == null)
+				result = caseDataRole(dataSourceRole);
+			if (result == null)
 				result = caseRole(dataSourceRole);
 			if (result == null)
 				result = caseEntity(dataSourceRole);
@@ -105,6 +109,13 @@ public class RepositorySwitch<T> extends Switch<T> {
 				result = caseIdentifier(dataSourceRole);
 			if (result == null)
 				result = caseNamedElement(dataSourceRole);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RepositoryPackage.DATA_ROLE: {
+			DataRole dataRole = (DataRole) theEObject;
+			T result = caseDataRole(dataRole);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -141,6 +152,21 @@ public class RepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDataSourceRole(DataSourceRole object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Role</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Role</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataRole(DataRole object) {
 		return null;
 	}
 

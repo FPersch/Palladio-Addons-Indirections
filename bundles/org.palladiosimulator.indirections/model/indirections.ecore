@@ -32,6 +32,10 @@
           upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//parameter/VariableUsage"
           containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpinOnceAction" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//seff/AbstractAction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataRole" lowerBound="1"
+          eType="#//repository/DataRole"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="datatypes" nsURI="http://palladiosimulator.org/Indirections/Datatypes/1.0"
       nsPrefix="org.palladiosimulator.indirections.datatypes">
@@ -100,10 +104,9 @@
   </eSubpackages>
   <eSubpackages name="repository" nsURI="http://palladiosimulator.org/Indirections/Repository/1.0"
       nsPrefix="org.palladiosimulator.indirections.repository">
-    <eClassifiers xsi:type="ecore:EClass" name="DataSinkRole" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataSourceRole" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RequiredRole">
+    <eClassifiers xsi:type="ecore:EClass" name="DataSinkRole" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole #//repository/DataRole"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataSourceRole" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RequiredRole #//repository/DataRole"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataRole" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EReference" name="eventGroup" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/EventGroup"/>
     </eClassifiers>
   </eSubpackages>

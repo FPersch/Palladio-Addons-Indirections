@@ -133,6 +133,21 @@ public class ActionsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ActionsPackage.SPIN_ONCE_ACTION: {
+			SpinOnceAction spinOnceAction = (SpinOnceAction) theEObject;
+			T result = caseSpinOnceAction(spinOnceAction);
+			if (result == null)
+				result = caseAbstractAction(spinOnceAction);
+			if (result == null)
+				result = caseEntity(spinOnceAction);
+			if (result == null)
+				result = caseIdentifier(spinOnceAction);
+			if (result == null)
+				result = caseNamedElement(spinOnceAction);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -195,6 +210,21 @@ public class ActionsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePutDataOnStackAction(PutDataOnStackAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Spin Once Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Spin Once Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpinOnceAction(SpinOnceAction object) {
 		return null;
 	}
 

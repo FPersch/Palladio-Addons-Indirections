@@ -24,6 +24,7 @@ import org.palladiosimulator.indirections.actions.CreateDataAction;
 import org.palladiosimulator.indirections.actions.EmitDataAction;
 import org.palladiosimulator.indirections.actions.PutDataOnStackAction;
 
+import org.palladiosimulator.indirections.actions.SpinOnceAction;
 import org.palladiosimulator.indirections.composition.CompositionPackage;
 
 import org.palladiosimulator.indirections.composition.impl.CompositionPackageImpl;
@@ -80,6 +81,13 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 	 * @generated
 	 */
 	private EClass putDataOnStackActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass spinOnceActionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -304,6 +312,26 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getSpinOnceAction() {
+		return spinOnceActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSpinOnceAction_DataRole() {
+		return (EReference) spinOnceActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ActionsFactory getActionsFactory() {
 		return (ActionsFactory) getEFactoryInstance();
 	}
@@ -343,6 +371,9 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 
 		putDataOnStackActionEClass = createEClass(PUT_DATA_ON_STACK_ACTION);
 		createEReference(putDataOnStackActionEClass, PUT_DATA_ON_STACK_ACTION__VARIABLE_USAGES);
+
+		spinOnceActionEClass = createEClass(SPIN_ONCE_ACTION);
+		createEReference(spinOnceActionEClass, SPIN_ONCE_ACTION__DATA_ROLE);
 	}
 
 	/**
@@ -388,6 +419,7 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 		emitDataActionEClass.getESuperTypes().add(theSeffPackage.getAbstractAction());
 		createDataActionEClass.getESuperTypes().add(theSeffPackage.getAbstractAction());
 		putDataOnStackActionEClass.getESuperTypes().add(theSeffPackage.getAbstractAction());
+		spinOnceActionEClass.getESuperTypes().add(theSeffPackage.getAbstractAction());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(analyseStackActionEClass, AnalyseStackAction.class, "AnalyseStackAction", !IS_ABSTRACT,
@@ -425,6 +457,12 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 		initEReference(getPutDataOnStackAction_VariableUsages(), theParameterPackage.getVariableUsage(), null,
 				"variableUsages", null, 1, -1, PutDataOnStackAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(spinOnceActionEClass, SpinOnceAction.class, "SpinOnceAction", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSpinOnceAction_DataRole(), theRepositoryPackage.getDataRole(), null, "dataRole", null, 1, 1,
+				SpinOnceAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

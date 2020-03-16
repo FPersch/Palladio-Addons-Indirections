@@ -38,7 +38,7 @@ public class CallbackUserFactory extends AbstractWorkloadUserFactory {
 	/**
 	 * @param <T> type of the data 
 	 */
-	public abstract class AbstractCallbackUser<T> extends SimuComSimProcess implements IUser {
+	private abstract class AbstractCallbackUser<T> extends SimuComSimProcess implements IUser {
 		protected String dataId = null;
 		protected T date = null;
 		protected InterpreterDefaultContext context;
@@ -113,7 +113,6 @@ public class CallbackUserFactory extends AbstractWorkloadUserFactory {
 	            IndirectionSimulationUtil.createNewDataOnStack(context.getStack(), Objects.requireNonNull(dataId),
 	                    Objects.requireNonNull(currentDate));
 	
-	            final UsageModel usageModel = newContext.getPCMPartitionManager().getLocalPCMModel().getUsageModel();
 	            new UsageScenarioSwitch<Object>(newContext).doSwitch(usageScenario);
         	}
         }
@@ -135,7 +134,6 @@ public class CallbackUserFactory extends AbstractWorkloadUserFactory {
             IndirectionSimulationUtil.createNewDataOnStack(context.getStack(), Objects.requireNonNull(dataId),
                     Objects.requireNonNull(date));
 
-            final UsageModel usageModel = newContext.getPCMPartitionManager().getLocalPCMModel().getUsageModel();
             new UsageScenarioSwitch<Object>(newContext).doSwitch(usageScenario);
         }
     }

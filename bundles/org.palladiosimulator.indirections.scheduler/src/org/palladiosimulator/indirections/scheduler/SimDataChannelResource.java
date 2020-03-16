@@ -16,6 +16,7 @@ import org.palladiosimulator.indirections.interfaces.IndirectionDate;
 import org.palladiosimulator.indirections.monitoring.IndirectionsMetricDescriptionConstants;
 import org.palladiosimulator.indirections.scheduler.CallbackUserFactory.CallbackIteratingUser;
 import org.palladiosimulator.indirections.scheduler.CallbackUserFactory.CallbackUser;
+import org.palladiosimulator.indirections.scheduler.calculators.TriggerableCountingCalculator;
 import org.palladiosimulator.indirections.scheduler.calculators.TriggerableTimeSpanCalculator;
 import org.palladiosimulator.indirections.scheduler.util.IndirectionSimulationUtil;
 import org.palladiosimulator.indirections.system.DataChannel;
@@ -78,6 +79,7 @@ public class SimDataChannelResource implements IDataChannelResource {
 
 	private TriggerableTimeSpanCalculator afterAcceptingAgeCalculator;
 	private TriggerableTimeSpanCalculator beforeEmittingAgeCalculator;
+	private TriggerableCountingCalculator numberOfDiscardedElementsCalculator;
 
 	private void setupCalculators() {
 		this.afterAcceptingAgeCalculator = new TriggerableTimeSpanCalculator(
@@ -86,6 +88,11 @@ public class SimDataChannelResource implements IDataChannelResource {
 		this.beforeEmittingAgeCalculator = new TriggerableTimeSpanCalculator("Data age before emitting (" + name + ")",
 				IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC,
 				IndirectionsMetricDescriptionConstants.DATA_AGE_METRIC_TUPLE, context);
+		this.numberOfDiscardedElementsCalculator = new TriggerableCountingCalculator(
+				"Discarded elements (" + name + ")", "Total discarded elements (" + name + ")",
+				IndirectionsMetricDescriptionConstants.NUMBER_OF_DISCARDED_ELEMENTS_METRIC,
+				IndirectionsMetricDescriptionConstants.NUMBER_OF_DISCARDED_ELEMENTS_METRIC_TUPLE,
+				IndirectionsMetricDescriptionConstants.TOTAL_NUMBER_OF_DISCARDED_ELEMENTS_METRIC_TUPLE, context);
 	}
 
 	private CallbackUserFactory sinkConnectorUserFactory;
@@ -100,22 +107,28 @@ public class SimDataChannelResource implements IDataChannelResource {
 
 	private void spawnNewConsumerUser() {
 		IndirectionDate date = outgoingQueue.removeLast();
+		
+		beforeEmittingAgeCalculator.doMeasure(date.getTime());
+		
 		String parameterName = IndirectionSimulationUtil
 				.getOneParameter(sinkConnector.getDataSinkRole().getEventGroup()).getParameterName();
-		
+
 		CallbackUser user = sinkConnectorUserFactory.createUser();
 		user.setDataAndStartUserLife(parameterName, date, context);
 
 	}
-	
+
 	private void spawnNewConsumeAllUser() {
 		List<IndirectionDate> date = new ArrayList<>();
-		while (outgoingQueue.size() > 0)
-			date.add(outgoingQueue.removeLast());
-		
+		while (outgoingQueue.size() > 0) {
+			IndirectionDate nextElement = outgoingQueue.removeLast();
+			beforeEmittingAgeCalculator.doMeasure(nextElement.getTime());
+			date.add(nextElement);
+		}
+
 		String parameterName = IndirectionSimulationUtil
 				.getOneParameter(sinkConnector.getDataSinkRole().getEventGroup()).getParameterName();
-		
+
 		CallbackIteratingUser user = sinkConnectorUserFactory.createIteratingUser();
 		user.setDataAndStartUserLife(parameterName, date, context);
 	}
@@ -135,17 +148,20 @@ public class SimDataChannelResource implements IDataChannelResource {
 					+ ". Chosen put policy: " + dataChannel.getPutPolicy());
 		}
 
-		// remove one more, because we will subsequently add an element
-		while ((this.capacity != -1) && (this.outgoingQueue.size() >= this.capacity - 1)) {
-			this.outgoingQueue.removeLast();
+		afterAcceptingAgeCalculator.doMeasure(date.getTime());
+
+		// Remove one more than the capacity, because we will subsequently add an
+		// element.
+		// This is the PutPolicy.OVERWRITE_LAST behavior.
+		if ((capacity != -1) && (outgoingQueue.size() == capacity)) {
+			outgoingQueue.removeLast();
+			numberOfDiscardedElementsCalculator.change(1);
 		}
 		this.outgoingQueue.add(date);
 
 		if (dataChannel.getSpinType() == SpinType.SPIN) {
 			spawnNewConsumerUser();
 		}
-
-		afterAcceptingAgeCalculator.doMeasure(date.getTime());
 
 		return true;
 	}

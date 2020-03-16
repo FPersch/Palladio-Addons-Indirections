@@ -169,6 +169,34 @@ public interface RepositoryPackage extends EPackage {
 			+ 1;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.indirections.repository.impl.DataRoleImpl <em>Data Role</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.indirections.repository.impl.DataRoleImpl
+	 * @see org.palladiosimulator.indirections.repository.impl.RepositoryPackageImpl#getDataRole()
+	 * @generated
+	 */
+	int DATA_ROLE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Event Group</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ROLE__EVENT_GROUP = 0;
+
+	/**
+	 * The number of structural features of the '<em>Data Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ROLE_FEATURE_COUNT = 1;
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.indirections.repository.DataSinkRole <em>Data Sink Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,17 +205,6 @@ public interface RepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDataSinkRole();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.indirections.repository.DataSinkRole#getEventGroup <em>Event Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Event Group</em>'.
-	 * @see org.palladiosimulator.indirections.repository.DataSinkRole#getEventGroup()
-	 * @see #getDataSinkRole()
-	 * @generated
-	 */
-	EReference getDataSinkRole_EventGroup();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.indirections.repository.DataSourceRole <em>Data Source Role</em>}'.
@@ -200,15 +217,25 @@ public interface RepositoryPackage extends EPackage {
 	EClass getDataSourceRole();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.palladiosimulator.indirections.repository.DataSourceRole#getEventGroup <em>Event Group</em>}'.
+	 * Returns the meta object for class '{@link org.palladiosimulator.indirections.repository.DataRole <em>Data Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Role</em>'.
+	 * @see org.palladiosimulator.indirections.repository.DataRole
+	 * @generated
+	 */
+	EClass getDataRole();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.indirections.repository.DataRole#getEventGroup <em>Event Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Event Group</em>'.
-	 * @see org.palladiosimulator.indirections.repository.DataSourceRole#getEventGroup()
-	 * @see #getDataSourceRole()
+	 * @see org.palladiosimulator.indirections.repository.DataRole#getEventGroup()
+	 * @see #getDataRole()
 	 * @generated
 	 */
-	EReference getDataSourceRole_EventGroup();
+	EReference getDataRole_EventGroup();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -243,14 +270,6 @@ public interface RepositoryPackage extends EPackage {
 		EClass DATA_SINK_ROLE = eINSTANCE.getDataSinkRole();
 
 		/**
-		 * The meta object literal for the '<em><b>Event Group</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DATA_SINK_ROLE__EVENT_GROUP = eINSTANCE.getDataSinkRole_EventGroup();
-
-		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.indirections.repository.impl.DataSourceRoleImpl <em>Data Source Role</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -261,12 +280,22 @@ public interface RepositoryPackage extends EPackage {
 		EClass DATA_SOURCE_ROLE = eINSTANCE.getDataSourceRole();
 
 		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.indirections.repository.impl.DataRoleImpl <em>Data Role</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.indirections.repository.impl.DataRoleImpl
+		 * @see org.palladiosimulator.indirections.repository.impl.RepositoryPackageImpl#getDataRole()
+		 * @generated
+		 */
+		EClass DATA_ROLE = eINSTANCE.getDataRole();
+
+		/**
 		 * The meta object literal for the '<em><b>Event Group</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_SOURCE_ROLE__EVENT_GROUP = eINSTANCE.getDataSourceRole_EventGroup();
+		EReference DATA_ROLE__EVENT_GROUP = eINSTANCE.getDataRole_EventGroup();
 
 	}
 

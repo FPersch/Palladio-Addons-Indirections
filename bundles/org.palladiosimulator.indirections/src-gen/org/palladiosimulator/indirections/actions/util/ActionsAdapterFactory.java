@@ -94,6 +94,11 @@ public class ActionsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseSpinOnceAction(SpinOnceAction object) {
+			return createSpinOnceActionAdapter();
+		}
+
+		@Override
 		public Adapter caseIdentifier(Identifier object) {
 			return createIdentifierAdapter();
 		}
@@ -185,6 +190,20 @@ public class ActionsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPutDataOnStackActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.indirections.actions.SpinOnceAction <em>Spin Once Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.indirections.actions.SpinOnceAction
+	 * @generated
+	 */
+	public Adapter createSpinOnceActionAdapter() {
 		return null;
 	}
 

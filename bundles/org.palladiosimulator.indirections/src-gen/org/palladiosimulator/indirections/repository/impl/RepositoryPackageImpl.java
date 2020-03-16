@@ -28,6 +28,7 @@ import org.palladiosimulator.indirections.datatypes.DatatypesPackage;
 
 import org.palladiosimulator.indirections.datatypes.impl.DatatypesPackageImpl;
 
+import org.palladiosimulator.indirections.repository.DataRole;
 import org.palladiosimulator.indirections.repository.DataSinkRole;
 import org.palladiosimulator.indirections.repository.DataSourceRole;
 import org.palladiosimulator.indirections.repository.RepositoryFactory;
@@ -59,6 +60,13 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * @generated
 	 */
 	private EClass dataSourceRoleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataRoleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -173,16 +181,6 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * @generated
 	 */
 	@Override
-	public EReference getDataSinkRole_EventGroup() {
-		return (EReference) dataSinkRoleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getDataSourceRole() {
 		return dataSourceRoleEClass;
 	}
@@ -193,8 +191,18 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 	 * @generated
 	 */
 	@Override
-	public EReference getDataSourceRole_EventGroup() {
-		return (EReference) dataSourceRoleEClass.getEStructuralFeatures().get(0);
+	public EClass getDataRole() {
+		return dataRoleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDataRole_EventGroup() {
+		return (EReference) dataRoleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -228,10 +236,11 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
 		// Create classes and their features
 		dataSinkRoleEClass = createEClass(DATA_SINK_ROLE);
-		createEReference(dataSinkRoleEClass, DATA_SINK_ROLE__EVENT_GROUP);
 
 		dataSourceRoleEClass = createEClass(DATA_SOURCE_ROLE);
-		createEReference(dataSourceRoleEClass, DATA_SOURCE_ROLE__EVENT_GROUP);
+
+		dataRoleEClass = createEClass(DATA_ROLE);
+		createEReference(dataRoleEClass, DATA_ROLE__EVENT_GROUP);
 	}
 
 	/**
@@ -268,20 +277,21 @@ public class RepositoryPackageImpl extends EPackageImpl implements RepositoryPac
 
 		// Add supertypes to classes
 		dataSinkRoleEClass.getESuperTypes().add(theRepositoryPackage_1.getProvidedRole());
+		dataSinkRoleEClass.getESuperTypes().add(this.getDataRole());
 		dataSourceRoleEClass.getESuperTypes().add(theRepositoryPackage_1.getRequiredRole());
+		dataSourceRoleEClass.getESuperTypes().add(this.getDataRole());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(dataSinkRoleEClass, DataSinkRole.class, "DataSinkRole", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataSinkRole_EventGroup(), theRepositoryPackage_1.getEventGroup(), null, "eventGroup", null,
-				0, 1, DataSinkRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataSourceRoleEClass, DataSourceRole.class, "DataSourceRole", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataSourceRole_EventGroup(), theRepositoryPackage_1.getEventGroup(), null, "eventGroup", null,
-				0, 1, DataSourceRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dataRoleEClass, DataRole.class, "DataRole", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDataRole_EventGroup(), theRepositoryPackage_1.getEventGroup(), null, "eventGroup", null, 0, 1,
+				DataRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

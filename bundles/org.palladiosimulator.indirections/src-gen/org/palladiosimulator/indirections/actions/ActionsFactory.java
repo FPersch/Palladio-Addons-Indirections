@@ -58,6 +58,15 @@ public interface ActionsFactory extends EFactory {
 	PutDataOnStackAction createPutDataOnStackAction();
 
 	/**
+	 * Returns a new object of class '<em>Spin Once Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Spin Once Action</em>'.
+	 * @generated
+	 */
+	SpinOnceAction createSpinOnceAction();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

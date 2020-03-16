@@ -97,6 +97,10 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
     @Override
     public Object caseCreateDataAction(CreateDataAction action) {
         LOGGER.trace("Creating birth date: " + action.getEntityName());
+        
+        if (action.getVariableReference() == null) {
+        	throw new PCMModelInterpreterException("No variable reference found for creating data (" + action.toString() + ")");
+        }
 
         String referenceName = action.getVariableReference().getReferenceName();
         double currentSimulationTime = context.getModel().getSimulationControl().getCurrentSimulationTime();

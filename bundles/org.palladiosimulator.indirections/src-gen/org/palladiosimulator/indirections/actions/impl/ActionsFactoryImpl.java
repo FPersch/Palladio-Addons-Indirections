@@ -64,6 +64,8 @@ public class ActionsFactoryImpl extends EFactoryImpl implements ActionsFactory {
 			return createCreateDataAction();
 		case ActionsPackage.PUT_DATA_ON_STACK_ACTION:
 			return createPutDataOnStackAction();
+		case ActionsPackage.SPIN_ONCE_ACTION:
+			return createSpinOnceAction();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -111,6 +113,17 @@ public class ActionsFactoryImpl extends EFactoryImpl implements ActionsFactory {
 	public PutDataOnStackAction createPutDataOnStackAction() {
 		PutDataOnStackActionImpl putDataOnStackAction = new PutDataOnStackActionImpl();
 		return putDataOnStackAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public SpinOnceAction createSpinOnceAction() {
+		SpinOnceActionImpl spinOnceAction = new SpinOnceActionImpl();
+		return spinOnceAction;
 	}
 
 	/**
