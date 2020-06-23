@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../bundles">
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.edit/src-gen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.editor/src-gen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.util/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.interfaces/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.monitoring/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.monitoring/src-gen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.scheduler/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.simulizar/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections/src-gen" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.edit" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.editor" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.interfaces" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.monitoring" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.scheduler" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.simulizar" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/org.palladiosimulator.indirections.util" />
+      <excludeFolder url="file://$MODULE_DIR$/../bundles/target" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="jdk" jdkName="JavaSE-11" jdkType="JavaSDK" />
+    <orderEntry type="library" name="ECLIPSE" level="application" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="plugins" level="project" />
+  </component>
+</module>

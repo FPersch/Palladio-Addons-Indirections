@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections/org.palladiosimulator.indirections.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections/org.palladiosimulator.indirections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.edit/org.palladiosimulator.indirections.edit.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.edit/org.palladiosimulator.indirections.edit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.editor/org.palladiosimulator.indirections.editor.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.editor/org.palladiosimulator.indirections.editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.interfaces/org.palladiosimulator.indirections.interfaces.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.interfaces/org.palladiosimulator.indirections.interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.monitoring/org.palladiosimulator.indirections.monitoring.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.monitoring/org.palladiosimulator.indirections.monitoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.scheduler/org.palladiosimulator.indirections.scheduler.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.scheduler/org.palladiosimulator.indirections.scheduler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.simulizar/org.palladiosimulator.indirections.simulizar.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.simulizar/org.palladiosimulator.indirections.simulizar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.util/org.palladiosimulator.indirections.util.iml" filepath="$PROJECT_DIR$/../bundles/org.palladiosimulator.indirections.util/org.palladiosimulator.indirections.util.iml" />
+    </modules>
+  </component>
+</project>

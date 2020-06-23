@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="plugins">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../eclipse/eclipse-modeling-2020-06-R-data-channels/plugins" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../../eclipse/eclipse-modeling-2020-06-R-data-channels/plugins" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../eclipse/eclipse-modeling-2020-06-R-data-channels/plugins" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../eclipse/eclipse-modeling-2020-06-R-data-channels/plugins" recursive="false" type="SOURCES" />
+  </library>
+</component>

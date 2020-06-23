@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/AdoptOpenJDK/jdk-13.0.2.8-hotspot" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+    <option name="MAIN_CLASS_NAME" value="org.eclipse.equinox.launcher.Main" />
+    <module name="org.palladiosimulator.indirections" />
+    <option name="PROGRAM_PARAMETERS" value="-launcher &quot;C:\Work\eclipse\eclipse-modeling-2020-06-R-data-channels\eclipse.exe&quot; -name Eclipse -product org.eclipse.platform.ide -data &quot;C:\Work\eclipse\workspaces\eclipse-modeling-2020-06-R-data-channels/../runtime-New_configuration(1)&quot; -configuration &quot;file:$PROJECT_DIR$/../../../../eclipse/workspaces/eclipse-modeling-2020-06-R-data-channels/.metadata/.plugins/org.eclipse.pde.core/New_configuration (1)/&quot; -dev &quot;file:$PROJECT_DIR$/../../../../eclipse/workspaces/eclipse-modeling-2020-06-R-data-channels/.metadata/.plugins/org.eclipse.pde.core/New_configuration (1)/dev.properties&quot; -os win32 -ws win32 -arch x86_64 -nl en_US -consoleLog" />
+    <shortenClasspath name="ARGS_FILE" />
+    <option name="VM_PARAMETERS" value="-Declipse.pde.launch=true --add-modules=ALL-SYSTEM -Dfile.encoding=Cp1252" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../eclipse/eclipse-modeling-2020-06-R-data-channels" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

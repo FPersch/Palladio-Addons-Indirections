@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e978eaf8-1a92-4002-a35d-ac086bf108ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.interfaces/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../org.palladiosimulator.indirections.interfaces/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.interfaces/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../org.palladiosimulator.indirections.interfaces/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.interfaces/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../org.palladiosimulator.indirections.interfaces/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.simulizar/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../org.palladiosimulator.indirections.simulizar/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.simulizar/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../org.palladiosimulator.indirections.simulizar/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.simulizar/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../org.palladiosimulator.indirections.simulizar/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.simulizar/src/org/palladiosimulator/indirections/simulizar/rdseffswitch/IndirectionsAwareRDSeffSwitch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../org.palladiosimulator.indirections.util/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../org.palladiosimulator.indirections.util/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/SimuLizar launch.launch" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/SimuLizar launch.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/baseline.monitorrepository" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/baseline.monitorrepository" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/baseline.repository" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/baseline.repository" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/representations.aird" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model.baseline/representations.aird" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model/representations.aird" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/edu.kit.ipd.are.smarthomedata.model/representations.aird" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/001_minimum/001_minimum.launch" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/001_minimum/001_minimum.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/003_datachannel_windowing/003_datachannel_windowing.launch" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/003_datachannel_windowing/003_datachannel_windowing.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/003_datachannel_windowing/003_datachannel_windowing.repository" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/003_datachannel_windowing/003_datachannel_windowing.repository" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/003_datachannel_windowing/003_datachannel_windowing.system" beforeDir="false" afterPath="$PROJECT_DIR$/../../examples/org.palladiosimulator.indirections.minimumindirectionexample/003_datachannel_windowing/003_datachannel_windowing.system" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1dh7wnezg3SPnOMone3dCoqamD8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../org.palladiosimulator.indirections" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e978eaf8-1a92-4002-a35d-ac086bf108ff" name="Default Changelist" comment="" />
+      <created>1592865712209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592865712209</updated>
+      <workItem from="1592865713296" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3300" y="335" key="FileChooserDialogImpl" timestamp="1592865722869">
+      <screen x="2560" y="0" width="1920" height="1160" />
+    </state>
+    <state x="3300" y="335" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1160@2560.0.1920.1160" timestamp="1592865722869" />
+  </component>
+</project>
