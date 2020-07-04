@@ -31,5 +31,10 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.simulation.abstractsimengine,
  org.palladiosimulator.edp2.util,
  org.palladiosimulator.indirections.util,
- org.palladiosimulator.measurementframework
+ org.palladiosimulator.measurementframework,
+ org.palladiosimulator.monitorrepository,
+ de.uka.ipd.sdq.simucomframework.variables;bundle-version="4.2.0",
+ org.palladiosimulator.edp2.datastream,
+ org.eclipse.ui;bundle-version="3.114.0",
+ org.palladiosimulator.edp2.visualization
 Bundle-ActivationPolicy: lazy

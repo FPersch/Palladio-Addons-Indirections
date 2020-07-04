@@ -1,5 +1,6 @@
 package org.palladiosimulator.indirections.simulizar.rdseffswitch;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -101,6 +102,15 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
 		String referenceName = action.getVariableReference().getReferenceName();
 		IndirectionDate date = IndirectionSimulationUtil.claimDataFromStack(context.getStack(), referenceName);
 
+		//adds current DCID
+		long dcid = -1L;
+        try {
+        	dcid = (long) this.context.getStack().currentStackFrame().getValue("_dcid");
+		} catch (ValueNotInFrameException e) {
+			LOGGER.info("Could not find _dcid in stackframe", e);
+		}
+        date.addDate("_dcid", dcid);
+		
 		LOGGER.trace("Trying to emit data " + date + " to " + dataChannelResource.getName() + " - "
 				+ dataChannelResource.getId());
 
@@ -126,6 +136,27 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
 		final boolean result = dataChannelResource.get(this.context.getThread(), dataChannelSinkConnector, (date) -> {
 			context.getStack().currentStackFrame().addValue(action.getVariableReference().getReferenceName(), date);
 			IndirectionSimulationUtil.makeDateInformationAvailableOnStack(context.getStack(), action.getVariableReference().getReferenceName());
+		
+			if (date instanceof ConcreteIndirectionDate && date.getData().containsKey("_dcid")) {
+				long currentDcid = -1L;
+	            long dateDcid = -1L;
+	            try {
+	            	currentDcid = (long) this.context.getStack().currentStackFrame().getValue("_dcid");
+				} catch (ValueNotInFrameException e) {
+					LOGGER.info("Could not find _dcid in stackframe", e);
+				}
+	            dateDcid = (long) date.getData().get("_dcid");
+	            if (currentDcid != -1L && dateDcid != -1L && dateDcid != currentDcid) {
+	            	this.context.getStack().currentStackFrame().addValue("_dcid", this.context.getRuntimeState().getDCIDProvider().getNextId());
+	            	List<Long> dependendDcids = new ArrayList<>();
+	            	dependendDcids.add(currentDcid);
+	            	dependendDcids.add(dateDcid);
+	            	this.context.getStack().currentStackFrame().addValue("_dependenddcid", dependendDcids);
+	            }
+			} else {
+				// either empty message or error
+			}
+			
 		});
 
 		LOGGER.trace("Continuing with " + this.context.getStack().currentStackFrame() + " (" + threadName + ")");
@@ -179,6 +210,29 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
 		GroupingIndirectionDate<IndirectionDate> groupingDate = (GroupingIndirectionDate<IndirectionDate>) date;
 		for (IndirectionDate iterationDate : groupingDate.getDataInGroup()) {
 			LOGGER.debug("Iterating for " + iterationDate);
+			
+			// handle dates with different dcids
+			List<Long> dependendDcids = new ArrayList<>();
+			long newDcid = -1L;
+			if (iterationDate.getData().containsKey("_dcid")) {
+				long currentDcid = -1L;
+			    long dateDcid = -1L;
+			    try {
+			    	currentDcid = (long) this.context.getStack().currentStackFrame().getValue("_dcid");
+				} catch (ValueNotInFrameException e) {
+					LOGGER.info("Could not find _dcid in stackframe", e);
+				}
+				dateDcid = (long) iterationDate.getData().get("_dcid");
+				if (currentDcid != -1L && dateDcid != -1L && dateDcid != currentDcid) {
+					newDcid = this.context.getRuntimeState().getDCIDProvider().getNextId();
+					this.context.getStack().currentStackFrame().addValue("_dcid", newDcid);
+					dependendDcids.add(currentDcid);
+					dependendDcids.add(dateDcid);
+					this.context.getStack().currentStackFrame().addValue("_dependenddcid", dependendDcids);
+				}
+			} else {
+				// either empty message or error
+			}
 
 			final SimulatedStackframe<Object> innerVariableStackFrame = this.context.getStack()
 					.createAndPushNewStackFrame(this.context.getStack().currentStackFrame());
@@ -186,6 +240,11 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
 			innerVariableStackFrame.addValue(referenceName + ".INNER", iterationDate);
 			IndirectionSimulationUtil.makeDateInformationAvailableOnStack(this.context.getStack(), referenceName + ".INNER");
 
+			if (newDcid != -1L) {
+				this.context.getStack().currentStackFrame().addValue("_dcid", newDcid);
+				this.context.getStack().currentStackFrame().addValue("_dependenddcid", dependendDcids);
+			}
+			
 			this.getParentSwitch().doSwitch(action.getBodyBehaviour_Loop());
 
 			if (this.context.getStack().currentStackFrame() != innerVariableStackFrame) {
@@ -196,7 +255,28 @@ public class IndirectionsAwareRDSeffSwitch extends ActionsSwitch<Object> {
 			if (LOGGER.isDebugEnabled()) {
 				LOGGER.debug("Remove stack frame: " + innerVariableStackFrame);
 			}
+			
+			long returningDCID = -1L;
+			try {
+				returningDCID = (long) this.context.getStack().currentStackFrame().getValue("_dcid");
+			} catch (ValueNotInFrameException e) {
+				LOGGER.info("Could not find _dcid in stackframe", e);
+			}
+			
 			this.context.getStack().removeStackFrame();
+			
+			if (returningDCID != -1L && newDcid != -1L && newDcid != returningDCID) {
+				List<Long> newDepDCIDS = new ArrayList<>();
+            	newDcid = this.context.getRuntimeState().getDCIDProvider().getNextId();
+            	this.context.getStack().currentStackFrame().addValue("_dcid", newDcid);
+            	newDepDCIDS.add(returningDCID);
+            	newDepDCIDS.add(newDcid);
+            	this.context.getStack().currentStackFrame().addValue("_dependenddcid", newDepDCIDS);
+            } else if (newDcid != -1L) {
+				this.context.getStack().currentStackFrame().addValue("_dcid", newDcid);
+				this.context.getStack().currentStackFrame().addValue("_dependenddcid", dependendDcids);
+			}
+			
 			if (LOGGER.isDebugEnabled()) {
 				LOGGER.debug("Finished iteration on " + iterationDate + " (" + action + ")");
 			}

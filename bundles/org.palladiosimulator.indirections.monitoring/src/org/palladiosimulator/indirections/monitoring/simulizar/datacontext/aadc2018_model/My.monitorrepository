@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monitorrepository:MonitorRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metricspec="http://palladiosimulator.org/MetricSpec/1.0" xmlns:monitorrepository="http://palladiosimulator.org/MonitorRepository/1.0" xmlns:pcmmeasuringpoint="http://palladiosimulator.org/PCM/MeasuringPoint/1.0" id="_hu-YAI3-EeqKRIReiJV40g" entityName="Monitor Sensor - Planning">
+  <monitors id="_HZ8ngLFJEeqYQdL2fbKF5A" entityName="Sensor">
+    <measurementSpecifications id="_JQQo4LFJEeqYQdL2fbKF5A" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="../../plugin/org.palladiosimulator.indirections.monitoring/model/indirectionMetrics.metricspec#_JFQgEk2vEeqnyuK4Vs7QRQ"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_KTx7YLFJEeqYQdL2fbKF5A"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="pcmmeasuringpoint:AssemblyActionMeasuringPoint" href="My.measuringpoint#//@measuringPoints.0"/>
+  </monitors>
+  <monitors id="_RpHKMbFJEeqYQdL2fbKF5A" entityName="Planning">
+    <measurementSpecifications id="_S4l1ELFJEeqYQdL2fbKF5A" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="../../plugin/org.palladiosimulator.indirections.monitoring/model/indirectionMetrics.metricspec#_JFQgEk2vEeqnyuK4Vs7QRQ"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_UQJd4LFJEeqYQdL2fbKF5A"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="pcmmeasuringpoint:AssemblyActionMeasuringPoint" href="My.measuringpoint#//@measuringPoints.2"/>
+  </monitors>
+  <monitors id="_UgIaobFJEeqYQdL2fbKF5A" entityName="Dependencies">
+    <measurementSpecifications id="_WJtnkLFJEeqYQdL2fbKF5A" triggersSelfAdaptations="false">
+      <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="../../plugin/org.palladiosimulator.indirections.monitoring/model/indirectionMetrics.metricspec#_7ZGApVPFEeq-ur3HyS2rPg"/>
+      <processingType xsi:type="monitorrepository:FeedThrough" id="_YZjjQLFJEeqYQdL2fbKF5A"/>
+    </measurementSpecifications>
+    <measuringPoint xsi:type="pcmmeasuringpoint:SystemMeasuringPoint" href="My.measuringpoint#//@measuringPoints.1"/>
+  </monitors>
+</monitorrepository:MonitorRepository>

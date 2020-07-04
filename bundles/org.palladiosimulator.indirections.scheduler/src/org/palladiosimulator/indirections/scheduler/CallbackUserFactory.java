@@ -118,6 +118,8 @@ public class CallbackUserFactory extends AbstractWorkloadUserFactory {
 						Objects.requireNonNull(currentDate));
 				IndirectionSimulationUtil.flattenDataOnStack(this.context.getStack(), parameterName, currentDate);
 
+				this.context.getStack().currentStackFrame().addValue("_dcid", currentDate.getData().get("_dcid"));
+				
 				simulateComponentCall(context, sinkConnector);
 			}
 		}
@@ -139,6 +141,8 @@ public class CallbackUserFactory extends AbstractWorkloadUserFactory {
 					Objects.requireNonNull(date));
 			IndirectionSimulationUtil.flattenDataOnStack(this.context.getStack(), parameterName, date);
 
+			this.context.getStack().currentStackFrame().addValue("_dcid", date.getData().get("_dcid"));
+			
 			simulateComponentCall(context, sinkConnector);
 		}
 	}

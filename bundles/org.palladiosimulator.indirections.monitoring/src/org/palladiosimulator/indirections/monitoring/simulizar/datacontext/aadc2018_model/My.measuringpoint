@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.palladiosimulator.edp2.models:MeasuringPointRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.palladiosimulator.edp2.models="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0" xmlns:pcmmeasuringpoint="http://palladiosimulator.org/PCM/MeasuringPoint/1.0" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_fImLoI3-EeqKRIReiJV40g">
+  <measuringPoints xsi:type="pcmmeasuringpoint:AssemblyActionMeasuringPoint" stringRepresentation="Action: Assembly_AdtfRosImagePublisher.start_ImagePub" resourceURIRepresentation="platform:/resource/ros2palladio/newRepository.repository#_7Kce0Ta0Eeqk_rBydJk-EA">
+    <assembly href="newAssembly.system#_UVO_5IlVEequbua1yKnjYw"/>
+    <action xsi:type="seff:StartAction" href="newRepository.repository#_7Kce0Ta0Eeqk_rBydJk-EA"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="pcmmeasuringpoint:SystemMeasuringPoint" stringRepresentation="Evaluation" resourceURIRepresentation="platform:/resource/ros2palladio/newAssembly.system#_Qtat8Ik8EeqA55W4KQkOWg">
+    <system href="newAssembly.system#_Qtat8Ik8EeqA55W4KQkOWg"/>
+  </measuringPoints>
+  <measuringPoints xsi:type="pcmmeasuringpoint:AssemblyActionMeasuringPoint" stringRepresentation="Action: Assembly_PlanningNode.PNMeasurementStop" resourceURIRepresentation="platform:/resource/ros2palladio/newRepository.repository#_xfXKHrFJEeqYQdL2fbKF5A">
+    <assembly href="newAssembly.system#_UVNxuolVEequbua1yKnjYw"/>
+    <action xsi:type="seff:InternalAction" href="newRepository.repository#_xfXKHrFJEeqYQdL2fbKF5A"/>
+  </measuringPoints>
+</org.palladiosimulator.edp2.models:MeasuringPointRepository>

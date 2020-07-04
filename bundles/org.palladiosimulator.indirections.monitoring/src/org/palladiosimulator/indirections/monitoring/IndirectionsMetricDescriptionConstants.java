@@ -28,6 +28,18 @@ public class IndirectionsMetricDescriptionConstants {
     public final static MetricSetDescription NUMBER_OF_DISCARDED_ELEMENTS_METRIC_TUPLE;
     public final static MetricSetDescription TOTAL_NUMBER_OF_DISCARDED_ELEMENTS_METRIC_TUPLE;
 
+    public final static BaseMetricDescription DATA_CONTEXT_ID_METRIC;
+    public final static MetricSetDescription DATA_CONTEXT_METRIC_TUPLE;
+
+    public final static BaseMetricDescription DEPENDENT_DATA_CONTEXT_ID_METRIC;
+    public final static MetricSetDescription DEPENDENT_DATA_CONTEXT_METRIC_TUPLE;
+    
+    public final static BaseMetricDescription EXPECTED_WORST_CASE_REACTION_TIME_METRIC;
+    public final static MetricSetDescription EXPECTED_WORST_CASE_REACTION_TIME_METRIC_TUPLE;
+    
+    public final static BaseMetricDescription PROCESSING_TIME_METRIC;
+    public final static MetricSetDescription PROCESSING_TIME_METRIC_TUPLE;
+    
     static {
         final ResourceSet resourceSet = new ResourceSetImpl();
         final Resource resource = resourceSet.createResource(URI.createURI(INDIRECTIONS_METRICSPEC_URI, true));
@@ -51,6 +63,18 @@ public class IndirectionsMetricDescriptionConstants {
         NUMBER_OF_DISCARDED_ELEMENTS_METRIC = (BaseMetricDescription) resource.getEObject("_6zV-AloBEeqic-uc8rDY3Q");
         NUMBER_OF_DISCARDED_ELEMENTS_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_jSXxkVoCEeqic-uc8rDY3Q");
         TOTAL_NUMBER_OF_DISCARDED_ELEMENTS_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_rVWwkVoCEeqic-uc8rDY3Q");
+        
+        DATA_CONTEXT_ID_METRIC = (BaseMetricDescription) resource.getEObject("_JFQgEk2vEeqnyuK4Vs7QRQ");
+        DATA_CONTEXT_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_lKLjYU2vEeqnyuK4Vs7QRQ");
+        
+        DEPENDENT_DATA_CONTEXT_ID_METRIC = (BaseMetricDescription) resource.getEObject("_7ZGApVPFEeq-ur3HyS2rPg");
+        DEPENDENT_DATA_CONTEXT_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_FX2IwVPGEeq-ur3HyS2rPg");
+        
+        EXPECTED_WORST_CASE_REACTION_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_RQMMElxTEeqYrZdyuHpidg");
+        EXPECTED_WORST_CASE_REACTION_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_08IrIVxTEeqYrZdyuHpidg");
+        
+        PROCESSING_TIME_METRIC = (BaseMetricDescription) resource.getEObject("_uyHBomLREeq06dDnV8MppA");
+        PROCESSING_TIME_METRIC_TUPLE = (MetricSetDescription) resource.getEObject("_tg7toWLREeq06dDnV8MppA");
     }
 
     /**

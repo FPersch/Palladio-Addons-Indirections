@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="ASCII"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_uRyQQLFIEeqYQdL2fbKF5A" entityName="New Allocation">
+  <targetResourceEnvironment_Allocation href="newResourceEnvironment.resourceenvironment#/"/>
+  <system_Allocation href="newAssembly.system#_Qtat8Ik8EeqA55W4KQkOWg"/>
+  <allocationContexts_Allocation id="_0bW2k7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_ObjectTrackerNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_UVNxzIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bbvELFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/ultrasonic">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FiH0BolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bjD0LFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/nav_obstructions">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fh804IlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bmHILFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/object_tracking/tracked_objects">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FhgI8IlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bpKdLFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_ObjectDetectorNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_UVOYx4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bpxg7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_EmergencyBrakeNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_nKRX0LFEEeqYQdL2fbKF5A"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bsNwLFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/planning/event">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FhxOsYlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bs007FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/planning/patch_occupancy">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FiBGUIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bv4ILFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/jury/current_maneuver">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fh6YqIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bxtULFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/statemachine/emergency_brake">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fh-qFolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0byUYLFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/alpaka_map">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fh2uQIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0by7cbFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/marker_position">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FiC7kolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bzigbFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_YoloObjectDetector">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_UVO_7olVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b0Jk7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/control/car">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fhm2polZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b96kLFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/object_detection/detected_objects">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fh4jcYlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cAW0LFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_RoadPerceptionNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_UVNxsYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cAW1LFIEeqYQdL2fbKF5A" entityName="Allocation_PositionPublisher">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fzr_sKADEeqbMrPzqDaSHA"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cFPU7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/statemachine/state">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FhrIH4lZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cF2Y7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_AdtfRosImagePublisher">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_UVO_5IlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cGdc7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_SirenDetectorNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_gKxPELFEEeqYQdL2fbKF5A"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cI5s7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/darknet_ros/bounding_boxes">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FiGl4IlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cKu5LFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/jury/event">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_FhuydolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cL9A7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_Distributor_DataChannel_/aadc/perception/patches">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_Fh0SAIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cNLI7FIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_PlanningNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_UVNxuolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cOZQLFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_LightControlNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_q4OQQLFEEeqYQdL2fbKF5A"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cSqsLFIEeqYQdL2fbKF5A" entityName="Allocation_Assembly_ControllerNode">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <assemblyContext_AllocationContext href="newAssembly.system#_UVOZBIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bQv8LFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/statemachine/targetspeed">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc8IlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bR-ELFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/jury/event">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVF144lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bTzQLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/visualization/bus_stops">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHECIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bUaULFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/object_detection/US_objects">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEAYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bVBYbFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/planning/event.SinkRole6">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FhxOuYlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bVocbFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/laser">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrE4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bWPg7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/pose_world">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrHolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bYEsLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/planning/event">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc8olVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bYrwLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/control/car_tele">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc8YlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bZS0LFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/perception/debug">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc-YlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bZ54LFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/statemachine/state">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVF14olVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bag8LFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ObjectDetectorNode./aadc/marker_position.SinkRole2">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiDikolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bbIALFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/planning/trajectory">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc_IlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bcWILFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/objects/traffic_sign">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrFIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bc9M7FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_RoadPerceptionNode./aadc/object_tracking/tracked_objects.SinkRole3">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FhgwAIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bdkQ7FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ObjectTrackerNode./aadc/statemachine/emergency_brake.SinkRole3">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fh-qG4lZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0beLU7FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_SirenDetectorNode./darknet_ros/bounding_boxes.SinkRole1">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_I9F2JqACEeqbMrPzqDaSHA"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0beyY7FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/alpaka_map.SinkRole7">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fh2uRYlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bfZc7FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_RoadPerceptionNode./aadc/statemachine/state.SinkRole5">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FhrIJIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bgAgbFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ControllerNode./aadc/object_tracking/tracked_objects.SinkRole4">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FhjMQolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bgnkLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/darknet_ros/bounding_boxes">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrEolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bhOoLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ObjectTrackerNode./aadc/planning/event.SinkRole5">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FhxOvIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bh1sLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/perception/patches.SinkRole2">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fh0SAolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bicwLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/planning/patch_occupancy">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEC4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bjq4LFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/siren/norm">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc9olVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bkR8LFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/ultrasonic">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrGolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bk5ALFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/external_marker_position">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEDYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0blgELFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/jury/status">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc-4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bmuMLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/DriverModule/LocalCarPose">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEDIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bnVQLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/driver_module/command">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVF15IlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bn8ULFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ObjectDetectorNode./darknet_ros/bounding_boxes.SinkRole1">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiGl5YlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bojYLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/planning/event_region">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc-olVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bpKcLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/visualization/path">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEBolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bqYk7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/visualization_street">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc_YlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bq_o7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/control/car_autonomous">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrGIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bsNxLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/front/birdview">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEDolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0btb47FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/move_base_simple/goal">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEBYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0buC87FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/object_detection/detected_objects">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEA4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bvRELFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/alpaka_map">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEAIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bwfMLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ControllerNode./aadc/ultrasonic.SinkRole6">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiIbEolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0bxGQLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/nav_obstructions">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHECYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b1XsLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_RoadPerceptionNode./aadc/jury/current_maneuver.SinkRole4">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fh6YrYlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b1-wLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/visualization/detected_objects">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEAolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b2l0LFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/marker_position.SinkRole1">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiC7lIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b3M4LFIEeqYQdL2fbKF5A" entityName="Allocation_YoloStore">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_P3530KAdEeqLR6BXqDu6SQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b3z8LFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ObjectTrackerNode./aadc/marker_position.SinkRole2">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiC7l4lZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b4bALFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/siren/detect_region">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc84lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b5CELFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_aadc/image_raw">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrHYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b5pILFIEeqYQdL2fbKF5A" entityName="Allocation_SharedMemory">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_gPBtS6VtEeqOJdu7bF9luw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b63QLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/control/light_status">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVEnwIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b7eULFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/perception/patches">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc-IlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b8FYLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/planning/patch_occupancy.SinkRole8">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiBGUolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b8scLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/siren/bigest_bounding">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc94lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b9TgLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/marker_position">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrEYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b-hoLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_EventTriggerNode./aadc/object_tracking/tracked_objects.SinkRole4">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_91cTpp_-EeqQ4-TYpaq3Aw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b_IsLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/imagepos/image">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrFYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0b_vwLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/clicked_point">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrG4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cA947FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/statemachine/emergency_brake">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEColVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cBk87FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/opendrive_map">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrHIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cCzELFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/jury/current_maneuver">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEBIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cDaILFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_RoadPerceptionNode./aadc/alpaka_map.SinkRole6">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fh2uQolZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cEBMbFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/ultrasonic.SinkRole5">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiH0CIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cEoQ7FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ObjectTrackerNode./aadc/object_detection/detected_objects.SinkRole1">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fh4jc4lZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cHEg7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/control/car">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVF14YlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cHrk7FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ControllerNode./aadc/statemachine/state.SinkRole5">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fhs9RYlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cISo7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/front_cam">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrF4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cJgw7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/visualization/obstructions">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHEB4lVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cKu4LFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/object_tracking/tracked_objects">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVF14IlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cLV87FIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/object_tracking/tracked_objects.SinkRole3">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_Fhh-IIlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cMkE7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/siren">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc9IlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cPAULFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/audio/audio">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrFolVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cPnYLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_PlanningNode./aadc/statemachine/state.SinkRole4">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FhrIJ4lZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cQOcLFIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/siren/blue_region">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVGc9YlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cQOdLFIEeqYQdL2fbKF5A" entityName="Allocation_Channel_SinkConnector_ControllerNode./aadc/marker_position.SinkRole2">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_FiEwtYlZEeqCYN5UOWjwyQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cQ1g7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/pose_2d">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVISIIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cRck7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/birdview">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrEIlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_0cSDo7FIEeqYQdL2fbKF5A" entityName="Allocation_DataChannel_/aadc/net">
+    <resourceContainer_AllocationContext href="newResourceEnvironment.resourceenvironment#_tEnDoIlVEeqI7p6UUf_W9A"/>
+    <eventChannel__AllocationContext href="newAssembly.system#_UVHrGYlVEequbua1yKnjYw"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

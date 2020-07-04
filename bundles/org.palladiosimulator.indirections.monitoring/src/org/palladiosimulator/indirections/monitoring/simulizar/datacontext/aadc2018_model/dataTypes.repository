@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="ASCII"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" id="_aR2hYohnEeq23sePNL24sg" entityName="repoName">
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRxo4IhnEeq23sePNL24sg" entityName="LightStatus">
+    <innerDeclaration_CompositeDataType entityName="headLightsOn">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="breakingLightsOn">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="reverseLightsOn">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="turnLeftLightsOn">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="turnRightLightsOn">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="hazardLightsOn">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRsJUIhnEeq23sePNL24sg" entityName="TrackedObject">
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="poseErrorCovariance" datatype_InnerDeclaration="_aRoe8IhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="width" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="widthErrorCovariance" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="filterID" datatype_InnerDeclaration="_aRptEohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="numberOfMeasurements" datatype_InnerDeclaration="_aRptEohnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aR1TQohnEeq23sePNL24sg" entityName="TrackedPerson[]" innerType_CollectionDataType="_aR1TQ4hnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRt-gIhnEeq23sePNL24sg" entityName="Image">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="height" datatype_InnerDeclaration="_aRptEohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="width" datatype_InnerDeclaration="_aRptEohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="encoding">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="is_bigendian" datatype_InnerDeclaration="_aRwawIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="step" datatype_InnerDeclaration="_aRptEohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="data" datatype_InnerDeclaration="_aRwawYhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR16UYhnEeq23sePNL24sg" entityName="Int16">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte1">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRy3AIhnEeq23sePNL24sg" entityName="ExtendedPose2d[]" innerType_CollectionDataType="_aRswYIhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRc4wIhnEeq23sePNL24sg" entityName="Float32">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte1">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte2">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte3">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRhKMYhnEeq23sePNL24sg" entityName="Pose2D">
+    <innerDeclaration_CompositeDataType entityName="x" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="y" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="theta" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRgjIYhnEeq23sePNL24sg" entityName="DetectedCar">
+    <innerDeclaration_CompositeDataType entityName="object" datatype_InnerDeclaration="_aRhKMIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aQB8cIhnEeq23sePNL24sg" entityName="ControllerCommand">
+    <innerDeclaration_CompositeDataType entityName="drive">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="active_brake">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="reset">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="target_speed" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRnQ0IhnEeq23sePNL24sg" entityName="EmergencyBrake">
+    <innerDeclaration_CompositeDataType entityName="emergency_brake">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="obstacle_on_right_side">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="obstacle_on_left_side">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="obstacle_behind">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="US_id"/>
+    <innerDeclaration_CompositeDataType entityName="LIDAR_id"/>
+    <innerDeclaration_CompositeDataType entityName="US_distance"/>
+    <innerDeclaration_CompositeDataType entityName="LIDAR_distance" datatype_InnerDeclaration="_aRoe8IhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRwawIhnEeq23sePNL24sg" entityName="Uint8">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRzeEIhnEeq23sePNL24sg" entityName="Pose2DStamped">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="x" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="y" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="theta" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRtXcYhnEeq23sePNL24sg" entityName="ImagePosition">
+    <innerDeclaration_CompositeDataType entityName="image" datatype_InnerDeclaration="_aRt-gIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR16UohnEeq23sePNL24sg" entityName="TrafficSignToBackend">
+    <innerDeclaration_CompositeDataType entityName="id" datatype_InnerDeclaration="_aRgjIIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="x" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="y" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="angle_degree" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRwawYhnEeq23sePNL24sg" entityName="uint8[]" innerType_CollectionDataType="_aRwawIhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRlboIhnEeq23sePNL24sg" entityName="DetectedObjects">
+    <innerDeclaration_CompositeDataType entityName="cars" datatype_InnerDeclaration="_aRmCsIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="persons" datatype_InnerDeclaration="_aRmpwIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="external_observations">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRyP8IhnEeq23sePNL24sg" entityName="MultiTrajectory">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="trajectories" datatype_InnerDeclaration="_aRyP8YhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR0sMIhnEeq23sePNL24sg" entityName="TrackedCar">
+    <innerDeclaration_CompositeDataType entityName="object" datatype_InnerDeclaration="_aRsJUIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="speed" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR2hYYhnEeq23sePNL24sg" entityName="USStatus">
+    <innerDeclaration_CompositeDataType entityName="USStruct" datatype_InnerDeclaration="_aRoe8IhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRswYIhnEeq23sePNL24sg" entityName="ExtendedPose2d">
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="curvature" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="velocity" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aR1TRIhnEeq23sePNL24sg" entityName="TrackedObject[]" innerType_CollectionDataType="_aRsJUIhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aR1TQYhnEeq23sePNL24sg" entityName="TrackedCar[]" innerType_CollectionDataType="_aR0sMIhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR1TQ4hnEeq23sePNL24sg" entityName="TrackedPerson">
+    <innerDeclaration_CompositeDataType entityName="object" datatype_InnerDeclaration="_aRsJUIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="speed" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="height" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="heightErrorCovariance" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRriQIhnEeq23sePNL24sg" entityName="EventRegion">
+    <innerDeclaration_CompositeDataType entityName="uid" datatype_InnerDeclaration="_aRoe8ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="type">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="width" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="length" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="parking_take_off" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="one_time">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRptEYhnEeq23sePNL24sg" entityName="Header">
+    <innerDeclaration_CompositeDataType entityName="seq" datatype_InnerDeclaration="_aRptEohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="frame_id">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRxB0IhnEeq23sePNL24sg" entityName="JuryManeuver">
+    <innerDeclaration_CompositeDataType entityName="id" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="action">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="extra" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRyP8ohnEeq23sePNL24sg" entityName="Trajectory2d">
+    <innerDeclaration_CompositeDataType entityName="curvature_available">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="velocity_available">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="is_forward_trajectory">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="trajectory" datatype_InnerDeclaration="_aRy3AIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRn34IhnEeq23sePNL24sg" entityName="int8[]" innerType_CollectionDataType="_aRgjIIhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRoe8ohnEeq23sePNL24sg" entityName="Uint64">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte1">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte2">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte3">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte4">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte5">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte6">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte7">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRoe8IhnEeq23sePNL24sg" entityName="float32[]" innerType_CollectionDataType="_aRc4wIhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRqUIIhnEeq23sePNL24sg" entityName="Time">
+    <innerDeclaration_CompositeDataType entityName="sec" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="nsec" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR0FIIhnEeq23sePNL24sg" entityName="StreetPatchList">
+    <innerDeclaration_CompositeDataType entityName="streetpatch" datatype_InnerDeclaration="_aR0FIYhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRyP8YhnEeq23sePNL24sg" entityName="Trajectory2d[]" innerType_CollectionDataType="_aRyP8ohnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRswYYhnEeq23sePNL24sg" entityName="ExternalMarkerPosition">
+    <innerDeclaration_CompositeDataType entityName="marker_position" datatype_InnerDeclaration="_aRtXcIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="host">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRtXcIhnEeq23sePNL24sg" entityName="MarkerPosition">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="speed" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="radius" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRn34ohnEeq23sePNL24sg" entityName="Int32"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aR0FIYhnEeq23sePNL24sg" entityName="StreetPatch[]" innerType_CollectionDataType="_aRzeEohnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRmpwYhnEeq23sePNL24sg" entityName="DetectedPerson">
+    <innerDeclaration_CompositeDataType entityName="object" datatype_InnerDeclaration="_aRhKMIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="height" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="heightVariance" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aR1TRYhnEeq23sePNL24sg" entityName="TrafficSign[]" innerType_CollectionDataType="_aR16UIhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR16UIhnEeq23sePNL24sg" entityName="TrafficSign">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="object" datatype_InnerDeclaration="_aRoe8YhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="type">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRptEohnEeq23sePNL24sg" entityName="Uint32">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte1">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte2">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte3">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRmCsIhnEeq23sePNL24sg" entityName="DetectedCar[]" innerType_CollectionDataType="_aRgjIYhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRoe8YhnEeq23sePNL24sg" entityName="EnvironmentObject">
+    <innerDeclaration_CompositeDataType entityName="id" datatype_InnerDeclaration="_aRoe8ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="width" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="length" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aReG4IhnEeq23sePNL24sg" entityName="ControllerStatus">
+    <innerDeclaration_CompositeDataType entityName="trajectory_end_reached">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="number_of_remaining_trajectory_points" datatype_InnerDeclaration="_aRgjIIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRhKMIhnEeq23sePNL24sg" entityName="DetectedObject">
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="poseVariance" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="width" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="widthVariance" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRgjIIhnEeq23sePNL24sg" entityName="Int8">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRn34YhnEeq23sePNL24sg" entityName="int32[]" innerType_CollectionDataType="_aRn34ohnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRhxQIhnEeq23sePNL24sg" entityName="Float64">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte1">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte2">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte3">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte4">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte5">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte6">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte7">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRy3AYhnEeq23sePNL24sg" entityName="NavObstruction">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="world_pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="obstructed">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="external_observations">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRzeEYhnEeq23sePNL24sg" entityName="StateChange">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="prevState" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="newState" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aRmpwIhnEeq23sePNL24sg" entityName="DetectedPerson[]" innerType_CollectionDataType="_aRmpwYhnEeq23sePNL24sg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRptEIhnEeq23sePNL24sg" entityName="Event">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="type">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="event_region" datatype_InnerDeclaration="_aRriQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="tracked_object" datatype_InnerDeclaration="_aRsJUIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR1TQIhnEeq23sePNL24sg" entityName="TrackedObjects">
+    <innerDeclaration_CompositeDataType entityName="cars" datatype_InnerDeclaration="_aR1TQYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="persons" datatype_InnerDeclaration="_aR1TQohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="obstacles" datatype_InnerDeclaration="_aR1TRIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="trafficSigns" datatype_InnerDeclaration="_aR1TRYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="follow_car_id" datatype_InnerDeclaration="_aR16UYhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR0FIohnEeq23sePNL24sg" entityName="StreetPatchOccupancy">
+    <innerDeclaration_CompositeDataType entityName="patch_id" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="external_observations">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="left">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="left_for_nav">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="right">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="switch_possible">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="strong_switch">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="x" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="y" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aR2hYIhnEeq23sePNL24sg" entityName="Ultrasonic">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="sideLeft" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="sideRight" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="rearLeft" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="rearCenter" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="rearRight" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_aRzeEohnEeq23sePNL24sg" entityName="StreetPatch">
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_aRhKMYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="patch_type">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="ID" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="direction">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_IvuJzYibEeq7X49yv8sNww" entityName="AckermannDrive">
+    <innerDeclaration_CompositeDataType entityName="steering_angle" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="steering_angle_velocity" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="speed" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="acceleration" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="jerk" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_ClvMaIieEeq7X49yv8sNww" entityName="Marker">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="ns">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="id" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="type" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="action" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_fnfrbYieEeq7X49yv8sNww"/>
+    <innerDeclaration_CompositeDataType entityName="scale" datatype_InnerDeclaration="_-o1cjIieEeq7X49yv8sNww"/>
+    <innerDeclaration_CompositeDataType entityName="color" datatype_InnerDeclaration="_YR9y3YifEeq7X49yv8sNww"/>
+    <innerDeclaration_CompositeDataType entityName="lifetime" datatype_InnerDeclaration="_pBMJPYifEeq7X49yv8sNww"/>
+    <innerDeclaration_CompositeDataType entityName="frame_locked">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="points" datatype_InnerDeclaration="_ZjyKnIigEeq7X49yv8sNww"/>
+    <innerDeclaration_CompositeDataType entityName="colors" datatype_InnerDeclaration="_aPMfHIigEeq7X49yv8sNww"/>
+    <innerDeclaration_CompositeDataType entityName="text">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="mesh_resource">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="mesh_use_embedded_materials">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_fnfrbYieEeq7X49yv8sNww" entityName="Pose">
+    <innerDeclaration_CompositeDataType entityName="position" datatype_InnerDeclaration="_jkfsfYieEeq7X49yv8sNww"/>
+    <innerDeclaration_CompositeDataType entityName="orientation" datatype_InnerDeclaration="_veKpLYieEeq7X49yv8sNww"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_jkfsfYieEeq7X49yv8sNww" entityName="Point">
+    <innerDeclaration_CompositeDataType entityName="x" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="y" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="z" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_veKpLYieEeq7X49yv8sNww" entityName="Quaternion">
+    <innerDeclaration_CompositeDataType entityName="x" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="y" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="z" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="w" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_-o1cjIieEeq7X49yv8sNww" entityName="Vector3">
+    <innerDeclaration_CompositeDataType entityName="x" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="y" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="z" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_YR9y3YifEeq7X49yv8sNww" entityName="ColorRGBA">
+    <innerDeclaration_CompositeDataType entityName="r" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="g" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="b" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="a" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_pBMJPYifEeq7X49yv8sNww" entityName="Duration">
+    <innerDeclaration_CompositeDataType entityName="sec" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="nsec" datatype_InnerDeclaration="_aRn34ohnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_ZjyKnIigEeq7X49yv8sNww" entityName="Point[]" innerType_CollectionDataType="_jkfsfYieEeq7X49yv8sNww"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_aPMfHIigEeq7X49yv8sNww" entityName="ColorRGBA[]" innerType_CollectionDataType="_YR9y3YifEeq7X49yv8sNww"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="__FA63YihEeq7X49yv8sNww" entityName="PoseArray">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="poses" datatype_InnerDeclaration="_MjTr_IiiEeq7X49yv8sNww"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_MjTr_IiiEeq7X49yv8sNww" entityName="Poses[]" innerType_CollectionDataType="_fnfrbYieEeq7X49yv8sNww"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_LEtAjYkREeqA55W4KQkOWg" entityName="PoseStamped">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="pose" datatype_InnerDeclaration="_fnfrbYieEeq7X49yv8sNww"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_TxhNbYkWEeqA55W4KQkOWg" entityName="LaserScan">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="angle_min" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="angle_max" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="angle_increment" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="time_increment" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="scan_time" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="range_min" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="range_max" datatype_InnerDeclaration="_aRc4wIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="ranges" datatype_InnerDeclaration="_aRoe8IhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="intensities" datatype_InnerDeclaration="_aRoe8IhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_E7OSHYkXEeqA55W4KQkOWg" entityName="AudioData">
+    <innerDeclaration_CompositeDataType entityName="data" datatype_InnerDeclaration="_aRwawYhnEeq23sePNL24sg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="__duSLYkXEeqA55W4KQkOWg" entityName="PointStamped">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="point" datatype_InnerDeclaration="_jkfsfYieEeq7X49yv8sNww"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_6kM6TYkeEeqA55W4KQkOWg" entityName="BoundingBoxes">
+    <innerDeclaration_CompositeDataType entityName="header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="image_header" datatype_InnerDeclaration="_aRptEYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="bounding_boxes" datatype_InnerDeclaration="_rSJQDIkfEeqA55W4KQkOWg"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_EtKuXYkfEeqA55W4KQkOWg" entityName="BoundingBox">
+    <innerDeclaration_CompositeDataType entityName="probability" datatype_InnerDeclaration="_aRhxQIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="xmin" datatype_InnerDeclaration="_PL2TvYkfEeqA55W4KQkOWg"/>
+    <innerDeclaration_CompositeDataType entityName="ymin" datatype_InnerDeclaration="_PL2TvYkfEeqA55W4KQkOWg"/>
+    <innerDeclaration_CompositeDataType entityName="xmax" datatype_InnerDeclaration="_PL2TvYkfEeqA55W4KQkOWg"/>
+    <innerDeclaration_CompositeDataType entityName="ymax" datatype_InnerDeclaration="_PL2TvYkfEeqA55W4KQkOWg"/>
+    <innerDeclaration_CompositeDataType entityName="id" datatype_InnerDeclaration="_aR16UYhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="Class">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_rSJQDIkfEeqA55W4KQkOWg" entityName="BoundingBox[]" innerType_CollectionDataType="_EtKuXYkfEeqA55W4KQkOWg"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_PL2TvYkfEeqA55W4KQkOWg" entityName="Int64">
+    <innerDeclaration_CompositeDataType entityName="byte0">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte1">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte2">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte3">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte4">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte5">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte6">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+    <innerDeclaration_CompositeDataType entityName="byte7">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_ubXgTZ5TEeqSSvX8kgrBaQ" entityName="ImageAnotated">
+    <innerDeclaration_CompositeDataType entityName="image" datatype_InnerDeclaration="_aRt-gIhnEeq23sePNL24sg"/>
+    <innerDeclaration_CompositeDataType entityName="numberBoundingBoxes">
+      <datatype_InnerDeclaration xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </innerDeclaration_CompositeDataType>
+  </dataTypes__Repository>
+</repository:Repository>

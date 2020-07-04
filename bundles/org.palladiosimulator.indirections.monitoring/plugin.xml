@@ -9,5 +9,20 @@
             class="org.palladiosimulator.indirectionsmeasuringpoint.IndirectionsmeasuringpointPackage"
             genModel="model/indirectionsmeasuringpoint.genmodel"/>
    </extension>
-
+   <extension point="org.palladiosimulator.edp2.visualization.derivedmetric">
+      <derivedmetric
+            class="org.palladiosimulator.indirections.monitoring.simulizar.datacontext.ExpectedWorstCaseReactionTimeDerivedMetric"
+            id="org.palladiosimulator.indirections.monitoring.simulizar.datacontext.WorstCaseReactionTimeDerivedMetric">
+      </derivedmetric>
+      <derivedmetric
+            class="org.palladiosimulator.indirections.monitoring.simulizar.datacontext.ProcessingTimeDerivedMetric"
+            id="org.palladiosimulator.indirections.monitoring.simulizar.datacontext.ProcessingTimeDerivedMetric">
+      </derivedmetric>
+   </extension>  
+   <extension
+         point="org.palladiosimulator.simulizar.runtimestate.runtimestateaccessor">
+      <runtimeStateAccessor
+            accessor="org.palladiosimulator.indirections.monitoring.simulizar.datacontext.DataContextRuntimeStateAccessor">
+      </runtimeStateAccessor>
+   </extension>
 </plugin>

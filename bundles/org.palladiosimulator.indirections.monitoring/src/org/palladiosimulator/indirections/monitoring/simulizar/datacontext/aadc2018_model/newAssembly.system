@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="ASCII"?>
+<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:org.palladiosimulator.indirections.composition="http://palladiosimulator.org/Indirections/Composition/1.0" xmlns:org.palladiosimulator.indirections.system="http://palladiosimulator.org/Indirections/System/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_Qtat8Ik8EeqA55W4KQkOWg" entityName="Evaluation">
+  <assemblyContexts__ComposedStructure id="_UVO_7olVEequbua1yKnjYw" entityName="Assembly_YoloObjectDetector">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_QdVqIDa0Eeqk_rBydJk-EA"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_UVNxsYlVEequbua1yKnjYw" entityName="Assembly_RoadPerceptionNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#__TgY8CidEeqRG9-IT3beqw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_UVNxuolVEequbua1yKnjYw" entityName="Assembly_PlanningNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_d7H7ICihEeqRG9-IT3beqw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_UVNxzIlVEequbua1yKnjYw" entityName="Assembly_ObjectTrackerNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_cN5WYCroEeq_c-Auu1u1Cw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_UVOYx4lVEequbua1yKnjYw" entityName="Assembly_ObjectDetectorNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_aNCccCrpEeq_c-Auu1u1Cw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_UVOZBIlVEequbua1yKnjYw" entityName="Assembly_ControllerNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Ilu_0CrvEeq_c-Auu1u1Cw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_UVO_5IlVEequbua1yKnjYw" entityName="Assembly_AdtfRosImagePublisher">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_VZBhADa0Eeqk_rBydJk-EA"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_gKxPELFEEeqYQdL2fbKF5A" entityName="Assembly_SirenDetectorNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_1vStMCicEeqRG9-IT3beqw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_nKRX0LFEEeqYQdL2fbKF5A" entityName="Assembly_EmergencyBrakeNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_XVCiUCruEeq_c-Auu1u1Cw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_q4OQQLFEEeqYQdL2fbKF5A" entityName="Assembly_LightControlNode">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_KGXGQCiYEeqRG9-IT3beqw"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fzr_sKADEeqbMrPzqDaSHA" entityName="PositionPublisher">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_SRuq0DayEeqk_rBydJk-EA"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FhrIH4lZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/statemachine/state">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fhp58IlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FhuydolZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/jury/event">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_FhuLYIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FhxOsYlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/planning/event">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_FhwAkIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fh0SAIlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/perception/patches">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_FhzD4IlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fh2uQIlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/alpaka_map">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fh1gIIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fh4jcYlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/object_detection/detected_objects">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fh3VUIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fh6YqIlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/jury/current_maneuver">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fh5xkIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fh804IlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/nav_obstructions">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fh7mwIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fh-qFolZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/statemachine/emergency_brake">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fh-DAIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FiBGUIlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/planning/patch_occupancy">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fh_4MIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FiC7kolZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/marker_position">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_FiCUcIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FiGl4IlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/darknet_ros/bounding_boxes">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_FiF-0IlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FiH0BolZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/ultrasonic">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_FiHM8IlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_FhgI8IlZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/object_tracking/tracked_objects">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_Fhb3gIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_Fhm2polZEeqCYN5UOWjwyQ" entityName="Assembly_Distributor_DataChannel_/aadc/control/car">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="newRepository.repository#_FhlogIlZEeqCYN5UOWjwyQ"/>
+  </assemblyContexts__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVEnwIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/control/light_status" capacity="1" dataChannelSourceConnector="_dGrfJ7FcEeql3aSZ-_n3cg" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_trhA0CiYEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_trhA0CiYEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_trhA0CiYEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVF14IlVEequbua1yKnjYw" entityName="DataChannel_/aadc/object_tracking/tracked_objects" dataChannelSourceConnector="_UVNxzYlVEequbua1yKnjYw" dataChannelSinkConnector="_FhkaYolZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVF14YlVEequbua1yKnjYw" entityName="DataChannel_/aadc/control/car" dataChannelSourceConnector="_UVOZBYlVEequbua1yKnjYw" dataChannelSinkConnector="_Fhor0olZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVF14olVEequbua1yKnjYw" entityName="DataChannel_/aadc/statemachine/state" dataChannelSinkConnector="_FhtkUolZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVF144lVEequbua1yKnjYw" entityName="DataChannel_/aadc/jury/event" dataChannelSinkConnector="_FhvZhYlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_wZ6EQCiZEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_wZ6EQCiZEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_wZ6EQCiZEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVF15IlVEequbua1yKnjYw" entityName="DataChannel_/aadc/driver_module/command" capacity="1" dataChannelSinkConnector="_UVOZCIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_AS1EwCiaEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_AS1EwCiaEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_AS1EwCiaEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc8IlVEequbua1yKnjYw" entityName="DataChannel_/aadc/statemachine/targetspeed" capacity="10" dataChannelSourceConnector="_UVNxv4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_kFbhQCihEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_kFbhQCihEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_kFbhQCihEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc8YlVEequbua1yKnjYw" entityName="DataChannel_/aadc/control/car_tele" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_yo2yoCiaEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_yo2yoCiaEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_yo2yoCiaEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc8olVEequbua1yKnjYw" entityName="DataChannel_/aadc/planning/event" dataChannelSourceConnector="_UVNxvYlVEequbua1yKnjYw _UVOZB4lVEequbua1yKnjYw" dataChannelSinkConnector="_Fhyc1YlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc84lVEequbua1yKnjYw" entityName="DataChannel_/aadc/siren/detect_region" capacity="1" dataChannelSourceConnector="_qwzFx7FcEeql3aSZ-_n3cg" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_5jsy8CicEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_5jsy8CicEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_5jsy8CicEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc9IlVEequbua1yKnjYw" entityName="DataChannel_/aadc/siren" capacity="1" dataChannelSourceConnector="_gvnfR7FdEeqf69byPli92w" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_51r60CicEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_51r60CicEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_51r60CicEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc9YlVEequbua1yKnjYw" entityName="DataChannel_/aadc/siren/blue_region" capacity="1" dataChannelSourceConnector="_4LHV17FcEeql3aSZ-_n3cg" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_6GbFgCicEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_6GbFgCicEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_6GbFgCicEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc9olVEequbua1yKnjYw" entityName="DataChannel_/aadc/siren/norm" capacity="1" dataChannelSourceConnector="__MGFR7FcEeql3aSZ-_n3cg" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_9dDqICicEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_9dDqICicEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_9dDqICicEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc94lVEequbua1yKnjYw" entityName="DataChannel_/aadc/siren/bigest_bounding" capacity="1" dataChannelSourceConnector="_Wr2UMbFdEeqf69byPli92w" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_-iF_kCicEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_-iF_kCicEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_-iF_kCicEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc-IlVEequbua1yKnjYw" entityName="DataChannel_/aadc/perception/patches" dataChannelSourceConnector="_UVNxsolVEequbua1yKnjYw" dataChannelSinkConnector="_Fh05EolZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc-YlVEequbua1yKnjYw" entityName="DataChannel_/aadc/perception/debug" capacity="1" dataChannelSourceConnector="_UVNxs4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_C2GV8CieEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_C2GV8CieEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_C2GV8CieEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc-olVEequbua1yKnjYw" entityName="DataChannel_/aadc/planning/event_region" capacity="1000" dataChannelSourceConnector="_UVNxvIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_hp56ACihEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_hp56ACihEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_hp56ACihEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc-4lVEequbua1yKnjYw" entityName="DataChannel_/aadc/jury/status" capacity="10" dataChannelSourceConnector="_UVNxvolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne">
+    <eventGroup__EventChannel href="newRepository.repository#_j3xfwCihEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_j3xfwCihEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_j3xfwCihEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc_IlVEequbua1yKnjYw" entityName="DataChannel_/aadc/planning/trajectory" capacity="1" dataChannelSourceConnector="_UVNxu4lVEequbua1yKnjYw" dataChannelSinkConnector="_UVOZColVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_jWfXoCihEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_jWfXoCihEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_jWfXoCihEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVGc_YlVEequbua1yKnjYw" entityName="DataChannel_/aadc/visualization_street" capacity="1" dataChannelSourceConnector="_UVNxwIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_HqBfJSrnEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_HqBfJSrnEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_HqBfJSrnEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEAIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/alpaka_map" dataChannelSinkConnector="_Fh2uS4lZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEAYlVEequbua1yKnjYw" entityName="DataChannel_/aadc/object_detection/US_objects" capacity="1" dataChannelSourceConnector="_UVNxzolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_wXHudiroEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_wXHudiroEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_wXHudiroEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEAolVEequbua1yKnjYw" entityName="DataChannel_/aadc/visualization/detected_objects" capacity="1" dataChannelSourceConnector="_UVOYyIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_cNq3dSrpEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_cNq3dSrpEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_cNq3dSrpEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEA4lVEequbua1yKnjYw" entityName="DataChannel_/aadc/object_detection/detected_objects" dataChannelSourceConnector="_UVOYyYlVEequbua1yKnjYw" dataChannelSinkConnector="_Fh5KgolZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_pGmRtSrpEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_pGmRtSrpEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_pGmRtSrpEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEBIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/jury/current_maneuver" dataChannelSinkConnector="_Fh6_uIlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_H7W_ZSrqEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_H7W_ZSrqEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_H7W_ZSrqEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEBYlVEequbua1yKnjYw" entityName="DataChannel_/move_base_simple/goal" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_ghavJSrqEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_ghavJSrqEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_ghavJSrqEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEBolVEequbua1yKnjYw" entityName="DataChannel_/aadc/visualization/path" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_55EedSrrEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_55EedSrrEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_55EedSrrEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEB4lVEequbua1yKnjYw" entityName="DataChannel_/aadc/visualization/obstructions" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_MhVaFSrsEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_MhVaFSrsEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_MhVaFSrsEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHECIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/visualization/bus_stops" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_U9vltSrsEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_U9vltSrsEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_U9vltSrsEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHECYlVEequbua1yKnjYw" entityName="DataChannel_/aadc/nav_obstructions" dataChannelSinkConnector="_Fh9b8olZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_c0vXJSrsEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_c0vXJSrsEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_c0vXJSrsEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEColVEequbua1yKnjYw" entityName="DataChannel_/aadc/statemachine/emergency_brake" dataChannelSinkConnector="_Fh_RJYlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_bC7wZSruEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_bC7wZSruEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_bC7wZSruEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEC4lVEequbua1yKnjYw" entityName="DataChannel_/aadc/planning/patch_occupancy" dataChannelSinkConnector="_FiBGWIlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_oSF5VSruEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_oSF5VSruEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_oSF5VSruEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEDIlVEequbua1yKnjYw" entityName="DataChannel_/DriverModule/LocalCarPose" dataChannelSourceConnector="_UVOZBolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_RtufFSrvEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_RtufFSrvEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_RtufFSrvEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEDYlVEequbua1yKnjYw" entityName="DataChannel_/aadc/external_marker_position" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_1cY69SrvEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_1cY69SrvEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_1cY69SrvEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHEDolVEequbua1yKnjYw" entityName="DataChannel_/aadc/front/birdview" capacity="1" dataChannelSinkConnector="_UVNxtIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne">
+    <eventGroup__EventChannel href="newRepository.repository#_hDf5xSrwEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_hDf5xSrwEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_hDf5xSrwEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrEIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/birdview" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_u-vFlSrwEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_u-vFlSrwEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_u-vFlSrwEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrEYlVEequbua1yKnjYw" entityName="DataChannel_/aadc/marker_position" dataChannelSourceConnector="_KwBW56ADEeqbMrPzqDaSHA" dataChannelSinkConnector="_FiFXxYlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrEolVEequbua1yKnjYw" entityName="DataChannel_/darknet_ros/bounding_boxes" capacity="1" dataChannelSourceConnector="_UVO_74lVEequbua1yKnjYw" dataChannelSinkConnector="_FiGl6IlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrE4lVEequbua1yKnjYw" entityName="DataChannel_/aadc/laser" capacity="1" dataChannelSinkConnector="_fsNX-LFREeqj7Met_O4wHw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_fkYPZSr7Eeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_fkYPZSr7Eeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_fkYPZSr7Eeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrFIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/objects/traffic_sign" capacity="1" dataChannelSinkConnector="_UVOYw4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_cpG7pSr8Eeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_cpG7pSr8Eeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_cpG7pSr8Eeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrFYlVEequbua1yKnjYw" entityName="DataChannel_/aadc/imagepos/image" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_W5swNTE7Eeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_W5swNTE7Eeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_W5swNTE7Eeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrFolVEequbua1yKnjYw" entityName="DataChannel_/audio/audio" capacity="20" dataChannelSinkConnector="_tggSeLFKEeqYQdL2fbKF5A" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_xiVpdTFAEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_xiVpdTFAEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_xiVpdTFAEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrF4lVEequbua1yKnjYw" entityName="DataChannel_/aadc/front_cam" capacity="1" dataChannelSinkConnector="_3CNSOLFKEeqYQdL2fbKF5A" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_YcoT1TFBEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_YcoT1TFBEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_YcoT1TFBEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrGIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/control/car_autonomous" capacity="1" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_JltsdTFNEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_JltsdTFNEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_JltsdTFNEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrGYlVEequbua1yKnjYw" entityName="DataChannel_/aadc/net" capacity="1" dataChannelSinkConnector="_UVNxtYlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="OneOrNone">
+    <eventGroup__EventChannel href="newRepository.repository#_ZT8btTFUEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_ZT8btTFUEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_ZT8btTFUEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrGolVEequbua1yKnjYw" entityName="DataChannel_/aadc/ultrasonic" dataChannelSinkConnector="_FiIbFYlZEeqCYN5UOWjwyQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrG4lVEequbua1yKnjYw" entityName="DataChannel_/clicked_point" capacity="25" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_AEHi9TFkEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_AEHi9TFkEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_AEHi9TFkEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrHIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/opendrive_map" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_a8JrVTLjEeqITsj-Ow3w3A"/>
+    <sourceEventGroup href="newRepository.repository#_a8JrVTLjEeqITsj-Ow3w3A"/>
+    <sinkEventGroup href="newRepository.repository#_a8JrVTLjEeqITsj-Ow3w3A"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrHYlVEequbua1yKnjYw" entityName="DataChannel_aadc/image_raw" capacity="1" dataChannelSourceConnector="_UVO_5YlVEequbua1yKnjYw" dataChannelSinkConnector="_UVO_8IlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+    <sourceEventGroup href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+    <sinkEventGroup href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVHrHolVEequbua1yKnjYw" entityName="DataChannel_/aadc/pose_world" capacity="1" dataChannelSourceConnector="_aEqwN6AEEeqbMrPzqDaSHA" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_aFiMVokaEeqA55W4KQkOWg"/>
+    <sourceEventGroup href="newRepository.repository#_aFiMVokaEeqA55W4KQkOWg"/>
+    <sinkEventGroup href="newRepository.repository#_aFiMVokaEeqA55W4KQkOWg"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_UVISIIlVEequbua1yKnjYw" entityName="DataChannel_/aadc/pose_2d" capacity="1" dataChannelSourceConnector="_UehnF6AEEeqbMrPzqDaSHA" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_r7x1JokaEeqA55W4KQkOWg"/>
+    <sourceEventGroup href="newRepository.repository#_r7x1JokaEeqA55W4KQkOWg"/>
+    <sinkEventGroup href="newRepository.repository#_r7x1JokaEeqA55W4KQkOWg"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FhgwAIlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_RoadPerceptionNode./aadc/object_tracking/tracked_objects.SinkRole3" capacity="1" dataChannelSourceConnector="_FhhXEIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxtolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="OneOrNone">
+    <eventGroup__EventChannel href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fhh-IIlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/object_tracking/tracked_objects.SinkRole3" capacity="1" dataChannelSourceConnector="_Fhh-IYlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxw4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_gPBtS6VtEeqOJdu7bF9luw" entityName="SharedMemory" capacity="1" dataChannelSourceConnector="_mFejV6VtEeqOJdu7bF9luw" dataChannelSinkConnector="_wzrLaKVtEeqOJdu7bF9luw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="OneOrNone" consumeFromChannelPolicy="Peek">
+    <eventGroup__EventChannel href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+    <sourceEventGroup href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+    <sinkEventGroup href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FhjMQolZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ControllerNode./aadc/object_tracking/tracked_objects.SinkRole4" capacity="1" dataChannelSourceConnector="_FhkaYIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOZC4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_91cTpp_-EeqQ4-TYpaq3Aw" entityName="Channel_SinkConnector_EventTriggerNode./aadc/object_tracking/tracked_objects.SinkRole4" capacity="1" dataChannelSourceConnector="_jpNa15__EeqQ4-TYpaq3Aw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fh2uQolZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_RoadPerceptionNode./aadc/alpaka_map.SinkRole6" capacity="1000" dataChannelSourceConnector="_Fh2uQ4lZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxuYlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="OneOrNone">
+    <eventGroup__EventChannel href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fh2uRYlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/alpaka_map.SinkRole7" capacity="1000" dataChannelSourceConnector="_Fh2uRolZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxxolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_pKAc9SrnEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiC7lIlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/marker_position.SinkRole1" capacity="1" dataChannelSourceConnector="_FiC7lYlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxwYlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fh4jc4lZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ObjectTrackerNode./aadc/object_detection/detected_objects.SinkRole1" capacity="1" dataChannelSourceConnector="_Fh4jdIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOYwIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_pGmRtSrpEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_pGmRtSrpEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_pGmRtSrpEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiC7l4lZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ObjectTrackerNode./aadc/marker_position.SinkRole2" capacity="1" dataChannelSourceConnector="_FiDikIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOYwYlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FhrIJIlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_RoadPerceptionNode./aadc/statemachine/state.SinkRole5" capacity="10" dataChannelSourceConnector="_FhrIJYlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxuIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="OneOrNone">
+    <eventGroup__EventChannel href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FhrIJ4lZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/statemachine/state.SinkRole4" capacity="10" dataChannelSourceConnector="_FhrvIIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxxIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fh0SAolZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/perception/patches.SinkRole2" capacity="1" dataChannelSourceConnector="_Fh0SA4lZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxwolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiDikolZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ObjectDetectorNode./aadc/marker_position.SinkRole2" capacity="1" dataChannelSourceConnector="_FiDik4lZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOYy4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_1CDmFrFPEeqj7Met_O4wHw" entityName="markerDistribToEBN" capacity="1" dataChannelSourceConnector="_cLDa17FQEeqj7Met_O4wHw" dataChannelSinkConnector="_AXJPCLFQEeqj7Met_O4wHw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fh6YrYlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_RoadPerceptionNode./aadc/jury/current_maneuver.SinkRole4" capacity="1" dataChannelSourceConnector="_Fh6_sIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxt4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="OneOrNone">
+    <eventGroup__EventChannel href="newRepository.repository#_H7W_ZSrqEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_H7W_ZSrqEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_H7W_ZSrqEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_P3530KAdEeqLR6BXqDu6SQ" entityName="YoloStore" capacity="1" dataChannelSourceConnector="_7DdjJ6AdEeqLR6BXqDu6SQ" dataChannelSinkConnector="_BnXVCKAeEeqLR6BXqDu6SQ" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="OneOrNone" consumeFromChannelPolicy="Peek">
+    <eventGroup__EventChannel href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+    <sourceEventGroup href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+    <sinkEventGroup href="newRepository.repository#_dc9iQDa0Eeqk_rBydJk-EA"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiH0CIlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/ultrasonic.SinkRole5" capacity="5" dataChannelSourceConnector="_FiH0CYlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxyIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="__5q6xrFNEeqj7Met_O4wHw" entityName="Channel_SinkConnector_EmergencyBrakeNode./aadc/ultrasonic" capacity="1" dataChannelSourceConnector="_eQ0fZ7FOEeqj7Met_O4wHw" dataChannelSinkConnector="_NvmQKLFLEeqYQdL2fbKF5A" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fhs9RYlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ControllerNode./aadc/statemachine/state.SinkRole5" capacity="10" dataChannelSourceConnector="_FhtkUIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOZDIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiEwtYlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ControllerNode./aadc/marker_position.SinkRole2" capacity="1" dataChannelSourceConnector="_FiFXwIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOZCYlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_aDaa1SrzEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiBGUolZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/planning/patch_occupancy.SinkRole8" capacity="100" dataChannelSourceConnector="_FiBGU4lZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxx4lVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_oSF5VSruEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_oSF5VSruEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_oSF5VSruEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiIbEolZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ControllerNode./aadc/ultrasonic.SinkRole6" capacity="10" dataChannelSourceConnector="_FiIbE4lZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOZDYlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sourceEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+    <sinkEventGroup href="newRepository.repository#_uKIRVTFdEeq4LIFshmvO-Q"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FiGl5YlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ObjectDetectorNode./darknet_ros/bounding_boxes.SinkRole1" capacity="1" dataChannelSourceConnector="_FiGl5olZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOYyolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_I9F2JqACEeqbMrPzqDaSHA" entityName="Channel_SinkConnector_SirenDetectorNode./darknet_ros/bounding_boxes.SinkRole1" capacity="1" dataChannelSourceConnector="_XHI6B6ACEeqbMrPzqDaSHA" dataChannelSinkConnector="_AwsJuLFLEeqYQdL2fbKF5A" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_INI4pSr6Eeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_Fh-qG4lZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ObjectTrackerNode./aadc/statemachine/emergency_brake.SinkRole3" capacity="1" dataChannelSourceConnector="_Fh_RIIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOYwolVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_bC7wZSruEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_bC7wZSruEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_bC7wZSruEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FhxOuYlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_PlanningNode./aadc/planning/event.SinkRole6" capacity="100" dataChannelSourceConnector="_FhxOuolZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVNxxYlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_FhxOvIlZEeqCYN5UOWjwyQ" entityName="Channel_SinkConnector_ObjectTrackerNode./aadc/planning/event.SinkRole5" capacity="1" dataChannelSourceConnector="_Fhx1wIlZEeqCYN5UOWjwyQ" dataChannelSinkConnector="_UVOYxIlVEequbua1yKnjYw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_2yCZECibEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_5kmZprFOEeqj7Met_O4wHw" entityName="controlCarDistribToEBN" capacity="1" dataChannelSourceConnector="_R-_r97FPEeqj7Met_O4wHw" dataChannelSinkConnector="_KXa2mLFPEeqj7Met_O4wHw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_ZWsSRrFPEeqj7Met_O4wHw" entityName="controlCarDistribToLCN" capacity="1" dataChannelSourceConnector="_pv6jd7FPEeqj7Met_O4wHw" dataChannelSinkConnector="_kOwoCLFPEeqj7Met_O4wHw" emitToChannelPolicy="DiscardOldestIfFull" numberOfElementsToEmit="ExactlyOne" consumeFromChannelPolicy="Pushing">
+    <eventGroup__EventChannel href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#__Rt7ICibEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_rYfOVrFQEeqj7Met_O4wHw" entityName="patchesDistribToEBN" capacity="1" dataChannelSourceConnector="_y60-Z7FQEeqj7Met_O4wHw" dataChannelSinkConnector="_zw2AaLFQEeqj7Met_O4wHw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_CiMigCieEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_EWY2VrFREeqj7Met_O4wHw" entityName="stateDistribToEBN" capacity="10" dataChannelSourceConnector="_PJnIV7FREeqj7Met_O4wHw" dataChannelSinkConnector="_L1KVCLFREeqj7Met_O4wHw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sourceEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+    <sinkEventGroup href="newRepository.repository#_XLhwQCiZEeqRG9-IT3beqw"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.indirections.system:DataChannel" id="_fTvQxrFVEeqj7Met_O4wHw" entityName="trackedDistribToNN" dataChannelSourceConnector="_94ZF57FVEeqj7Met_O4wHw" emitToChannelPolicy="DiscardOldestIfFull">
+    <eventGroup__EventChannel href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sourceEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+    <sinkEventGroup href="newRepository.repository#_eWhPxSroEeq_c-Auu1u1Cw"/>
+  </eventChannel__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_mFejV6VtEeqOJdu7bF9luw" entityName="DetectionToYoloConnector" assemblyContext="_UVO_7olVEequbua1yKnjYw" dataChannel="_gPBtS6VtEeqOJdu7bF9luw">
+    <dataSourceRole href="newRepository.repository#_fXvK1qVrEeqOJdu7bF9luw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_wzrLaKVtEeqOJdu7bF9luw" entityName="YoloToDetectionConnector" assemblyContext="_UVO_7olVEequbua1yKnjYw" dataChannel="_gPBtS6VtEeqOJdu7bF9luw">
+    <dataSinkRole href="newRepository.repository#_gXuBIKVrEeqOJdu7bF9luw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_YHMaMLFEEeqYQdL2fbKF5A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_WvXroLFEEeqYQdL2fbKF5A" assemblyContext_ProvidedDelegationConnector="_UVNxsYlVEequbua1yKnjYw">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_hVl1sbE_EeqYQdL2fbKF5A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_KwBW56ADEeqbMrPzqDaSHA" entityName="PositionToDistrib" assemblyContext="_Fzr_sKADEeqbMrPzqDaSHA" dataChannel="_UVHrEYlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_d5HksDayEeqk_rBydJk-EA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_E0v1wKAEEeqbMrPzqDaSHA" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_DpVLgKAEEeqbMrPzqDaSHA" assemblyContext_ProvidedDelegationConnector="_Fzr_sKADEeqbMrPzqDaSHA">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_NJUxIDazEeqk_rBydJk-EA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_aEqwN6AEEeqbMrPzqDaSHA" assemblyContext="_Fzr_sKADEeqbMrPzqDaSHA" dataChannel="_UVHrHolVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_Or0iFokaEeqA55W4KQkOWg"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UehnF6AEEeqbMrPzqDaSHA" assemblyContext="_Fzr_sKADEeqbMrPzqDaSHA" dataChannel="_UVISIIlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_lYXyhokaEeqA55W4KQkOWg"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_H09DIKAfEeqLR6BXqDu6SQ" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_Gtj9QKAfEeqLR6BXqDu6SQ" assemblyContext_ProvidedDelegationConnector="_UVO_7olVEequbua1yKnjYw">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_D6HXgaAaEeqLR6BXqDu6SQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_7DdjJ6AdEeqLR6BXqDu6SQ" entityName="YoloStoreSource" assemblyContext="_UVO_7olVEequbua1yKnjYw" dataChannel="_P3530KAdEeqLR6BXqDu6SQ">
+    <dataSourceRole href="newRepository.repository#_gqcdZqAcEeqLR6BXqDu6SQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_BnXVCKAeEeqLR6BXqDu6SQ" entityName="YoloStoreSink" assemblyContext="_UVO_7olVEequbua1yKnjYw" dataChannel="_P3530KAdEeqLR6BXqDu6SQ">
+    <dataSinkRole href="newRepository.repository#_hIB70KAdEeqLR6BXqDu6SQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_XHI6B6ACEeqbMrPzqDaSHA" entityName="YoloToSiren" assemblyContext="_FiGl4IlZEeqCYN5UOWjwyQ" dataChannel="_I9F2JqACEeqbMrPzqDaSHA">
+    <dataSourceRole href="newRepository.repository#_FiF-1IlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxzolVEequbua1yKnjYw" entityName="SourceConnector_ObjectTrackerNode./aadc/object_detection/US_objects.SourceRole2" assemblyContext="_UVNxzIlVEequbua1yKnjYw" dataChannel="_UVHEAYlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_3jfOhiroEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_jpNa15__EeqQ4-TYpaq3Aw" entityName="DistribToEventTrigger" assemblyContext="_FhgI8IlZEeqCYN5UOWjwyQ" dataChannel="_91cTpp_-EeqQ4-TYpaq3Aw">
+    <dataSourceRole href="newRepository.repository#_Fhfh5IlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fhor0olZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/control/car" assemblyContext="_Fhm2polZEeqCYN5UOWjwyQ" dataChannel="_UVF14YlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_FhlogYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_FiIbFYlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/ultrasonic" assemblyContext="_FiH0BolZEeqCYN5UOWjwyQ" dataChannel="_UVHrGolVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_FiHM8YlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FhrIJYlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_RoadPerceptionNode" assemblyContext="_FhrIH4lZEeqCYN5UOWjwyQ" dataChannel="_FhrIJIlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FhqhAYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FhrvIIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_FhrIH4lZEeqCYN5UOWjwyQ" dataChannel="_FhrIJ4lZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FhrIEIlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_UVOYzYlVEequbua1yKnjYw" entityName="ProvidedDelegationConnector_ObjectDetectorNode.Interface6.OperationProvidedRole1" outerProvidedRole_ProvidedDelegationConnector="_UVOYzIlVEequbua1yKnjYw" assemblyContext_ProvidedDelegationConnector="_UVOYx4lVEequbua1yKnjYw">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_Z0nesDLnEeqITsj-Ow3w3A"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FhhXEIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_RoadPerceptionNode" assemblyContext="_FhgI8IlZEeqCYN5UOWjwyQ" dataChannel="_FhgwAIlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FhdFoYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fhh-IYlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_FhgI8IlZEeqCYN5UOWjwyQ" dataChannel="_Fhh-IIlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fhfh4IlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_FiGl6IlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/darknet_ros/bounding_boxes" assemblyContext="_FiGl4IlZEeqCYN5UOWjwyQ" dataChannel="_UVHrEolVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_FiF-0YlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVOZBYlVEequbua1yKnjYw" entityName="SourceConnector_ControllerNode./aadc/control/car.SourceRole1" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_UVF14YlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_Kdl5VirvEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FhtkUIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ControllerNode" assemblyContext="_FhrIH4lZEeqCYN5UOWjwyQ" dataChannel="_Fhs9RYlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FhrIHIlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_FhtkUolZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/statemachine/state" assemblyContext="_FhrIH4lZEeqCYN5UOWjwyQ" dataChannel="_UVF14olVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fhp58YlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVOZBolVEequbua1yKnjYw" entityName="SourceConnector_ControllerNode./DriverModule/LocalCarPose.SourceRole2" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_UVHEDIlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_aj0WBirvEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVOZB4lVEequbua1yKnjYw" entityName="SourceConnector_ControllerNode./aadc/planning/event.SourceRole3" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_UVGc8olVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_5LzPJirzEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_FhvZhYlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/jury/event" assemblyContext="_FhuydolZEeqCYN5UOWjwyQ" dataChannel="_UVF144lVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_FhuLYYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOZCIlVEequbua1yKnjYw" entityName="SinkConnector_ControllerNode./aadc/driver_module/command.SinkRole1" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_UVF15IlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_AzkRwCr0Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOZCYlVEequbua1yKnjYw" entityName="SinkConnector_ControllerNode./aadc/marker_position.SinkRole2" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_FiEwtYlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_HByukCr0Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FhxOuolZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_FhxOsYlZEeqCYN5UOWjwyQ" dataChannel="_FhxOuYlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fhwno4lZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fhx1wIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ObjectTrackerNode" assemblyContext="_FhxOsYlZEeqCYN5UOWjwyQ" dataChannel="_FhxOvIlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FhwnpYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOYy4lVEequbua1yKnjYw" entityName="SinkConnector_ObjectDetectorNode./aadc/marker_position.SinkRole2" assemblyContext="_UVOYx4lVEequbua1yKnjYw" dataChannel="_FiDikolZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_VqE-4Cr6Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOZColVEequbua1yKnjYw" entityName="SinkConnector_ControllerNode./aadc/planning/trajectory.SinkRole3" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_UVGc_IlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_NiXfoCr0Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOZC4lVEequbua1yKnjYw" entityName="SinkConnector_ControllerNode./aadc/object_tracking/tracked_objects.SinkRole4" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_FhjMQolZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_SlYtkCr0Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fhyc1YlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/planning/event" assemblyContext="_FhxOsYlZEeqCYN5UOWjwyQ" dataChannel="_UVGc8olVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_FhwAkYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fh0SA4lZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_Fh0SAIlZEeqCYN5UOWjwyQ" dataChannel="_Fh0SAolZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FhzD5IlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOYwYlVEequbua1yKnjYw" entityName="SinkConnector_ObjectTrackerNode./aadc/marker_position.SinkRole2" assemblyContext="_UVNxzIlVEequbua1yKnjYw" dataChannel="_FiC7l4lZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_NMn_gCr8Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOZDIlVEequbua1yKnjYw" entityName="SinkConnector_ControllerNode./aadc/statemachine/state.SinkRole5" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_Fhs9RYlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_YKmpoCr0Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOZDYlVEequbua1yKnjYw" entityName="SinkConnector_ControllerNode./aadc/ultrasonic.SinkRole6" assemblyContext="_UVOZBIlVEequbua1yKnjYw" dataChannel="_FiIbEolZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_B-Hr4DHwEeq0CYJazBmXzg"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fh05EolZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/perception/patches" assemblyContext="_Fh0SAIlZEeqCYN5UOWjwyQ" dataChannel="_UVGc-IlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_FhzD4YlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_UVOZD4lVEequbua1yKnjYw" entityName="ProvidedDelegationConnector_ControllerNode.ControllerInterface.OperationProvidedRole1" outerProvidedRole_ProvidedDelegationConnector="_UVOZDolVEequbua1yKnjYw" assemblyContext_ProvidedDelegationConnector="_UVOZBIlVEequbua1yKnjYw">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_p0c6EDYJEeq63LWn6YA8Ig"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiH0CYlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_FiH0BolZEeqCYN5UOWjwyQ" dataChannel="_FiH0CIlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FiHM9IlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fh6_uIlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/jury/current_maneuver" assemblyContext="_Fh6YqIlZEeqCYN5UOWjwyQ" dataChannel="_UVHEBIlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fh5xkYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fh6_sIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_RoadPerceptionNode" assemblyContext="_Fh6YqIlZEeqCYN5UOWjwyQ" dataChannel="_Fh6YrYlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fh6YoYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOYwolVEequbua1yKnjYw" entityName="SinkConnector_ObjectTrackerNode./aadc/statemachine/emergency_brake.SinkRole3" assemblyContext="_UVNxzIlVEequbua1yKnjYw" dataChannel="_Fh-qG4lZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_SGZx4Cr8Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fh9b8olZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/nav_obstructions" assemblyContext="_Fh804IlZEeqCYN5UOWjwyQ" dataChannel="_UVHECYlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fh7mwYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOYw4lVEequbua1yKnjYw" entityName="SinkConnector_ObjectTrackerNode./aadc/objects/traffic_sign.SinkRole4" assemblyContext="_UVNxzIlVEequbua1yKnjYw" dataChannel="_UVHrFIlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_WLGWYCr8Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fh2uQ4lZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_RoadPerceptionNode" assemblyContext="_Fh2uQIlZEeqCYN5UOWjwyQ" dataChannel="_Fh2uQolZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fh1gJIlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_FhkaYolZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/object_tracking/tracked_objects" assemblyContext="_FhgI8IlZEeqCYN5UOWjwyQ" dataChannel="_UVF14IlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fhb3gYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fh2uRolZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_Fh2uQIlZEeqCYN5UOWjwyQ" dataChannel="_Fh2uRYlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fh2HMYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVO_74lVEequbua1yKnjYw" entityName="SourceConnector_YoloObjectDetector./darknet_ros/bounding_boxes.SourceRole1" assemblyContext="_UVO_7olVEequbua1yKnjYw" dataChannel="_UVHrEolVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_ylwEcDa1Eeqk_rBydJk-EA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOYxIlVEequbua1yKnjYw" entityName="SinkConnector_ObjectTrackerNode./aadc/planning/event.SinkRole5" assemblyContext="_UVNxzIlVEequbua1yKnjYw" dataChannel="_FhxOvIlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_9a9_QCroEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fh2uS4lZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/alpaka_map" assemblyContext="_Fh2uQIlZEeqCYN5UOWjwyQ" dataChannel="_UVHEAIlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fh1gIYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fh4jdIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ObjectTrackerNode" assemblyContext="_Fh4jcYlZEeqCYN5UOWjwyQ" dataChannel="_Fh4jc4lZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fh38YolZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOYwIlVEequbua1yKnjYw" entityName="SinkConnector_ObjectTrackerNode./aadc/object_detection/detected_objects.SinkRole1" assemblyContext="_UVNxzIlVEequbua1yKnjYw" dataChannel="_Fh4jc4lZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_HSrJkCr8Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Fh_RIIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ObjectTrackerNode" assemblyContext="_Fh-qFolZEeqCYN5UOWjwyQ" dataChannel="_Fh-qG4lZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fh-qEYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fh5KgolZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/object_detection/detected_objects" assemblyContext="_Fh4jcYlZEeqCYN5UOWjwyQ" dataChannel="_UVHEA4lVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fh3VUYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_Fh_RJYlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/statemachine/emergency_brake" assemblyContext="_Fh-qFolZEeqCYN5UOWjwyQ" dataChannel="_UVHEColVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fh-DAYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiBGU4lZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_FiBGUIlZEeqCYN5UOWjwyQ" dataChannel="_FiBGUolZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fh_4NIlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_UVOYxolVEequbua1yKnjYw" entityName="ProvidedDelegationConnector_ObjectTrackerNode.Interface3.OperationProvidedRole1" outerProvidedRole_ProvidedDelegationConnector="_UVOYxYlVEequbua1yKnjYw" assemblyContext_ProvidedDelegationConnector="_UVNxzIlVEequbua1yKnjYw">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_2a9fADIhEeqbFpz_ltmLMg"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_FiBGWIlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/planning/patch_occupancy" assemblyContext="_FiBGUIlZEeqCYN5UOWjwyQ" dataChannel="_UVHEC4lVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_Fh_4MYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiC7lYlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_PlanningNode" assemblyContext="_FiC7kolZEeqCYN5UOWjwyQ" dataChannel="_FiC7lIlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FiCUdIlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiDikIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ObjectTrackerNode" assemblyContext="_FiC7kolZEeqCYN5UOWjwyQ" dataChannel="_FiC7l4lZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FiC7gYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiDik4lZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ObjectDetectorNode" assemblyContext="_FiC7kolZEeqCYN5UOWjwyQ" dataChannel="_FiDikolZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FiC7g4lZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVOYyIlVEequbua1yKnjYw" entityName="SourceConnector_ObjectDetectorNode./aadc/visualization/detected_objects.SourceRole1" assemblyContext="_UVOYx4lVEequbua1yKnjYw" dataChannel="_UVHEAolVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_ivha5irpEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiIbE4lZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ControllerNode" assemblyContext="_FiH0BolZEeqCYN5UOWjwyQ" dataChannel="_FiIbEolZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FiH0A4lZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVO_8IlVEequbua1yKnjYw" entityName="SinkConnector_YoloObjectDetector.aadc/image_raw.SinkRole1" assemblyContext="_UVO_7olVEequbua1yKnjYw" dataChannel="_UVHrHYlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_wWVcADa0Eeqk_rBydJk-EA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FhkaYIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ControllerNode" assemblyContext="_FhgI8IlZEeqCYN5UOWjwyQ" dataChannel="_FhjMQolZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_Fhfh5olZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiFXwIlZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ControllerNode" assemblyContext="_FiC7kolZEeqCYN5UOWjwyQ" dataChannel="_FiEwtYlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FiC7jYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVO_5YlVEequbua1yKnjYw" entityName="SourceConnector_AdtfRosImagePublisher./aadc/image_raw.SourceRole1" assemblyContext="_UVO_5IlVEequbua1yKnjYw" dataChannel="_UVHrHYlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_vuQIUDa0Eeqk_rBydJk-EA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_FiFXxYlZEeqCYN5UOWjwyQ" entityName="SinkConnector_Distributor_DataChannel_/aadc/marker_position" assemblyContext="_FiC7kolZEeqCYN5UOWjwyQ" dataChannel="_UVHrEYlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_FiCUcYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_UVO_54lVEequbua1yKnjYw" entityName="ProvidedDelegationConnector_AdtfRosImagePublisher.ImagePublisher.OperationProvidedRole1" outerProvidedRole_ProvidedDelegationConnector="_UVO_5olVEequbua1yKnjYw" assemblyContext_ProvidedDelegationConnector="_UVO_5IlVEequbua1yKnjYw">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_7KTU4Da0Eeqk_rBydJk-EA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_FiGl5olZEeqCYN5UOWjwyQ" entityName="SourceConnectorTo_Assembly_ObjectDetectorNode" assemblyContext="_FiGl4IlZEeqCYN5UOWjwyQ" dataChannel="_FiGl5YlZEeqCYN5UOWjwyQ">
+    <dataSourceRole href="newRepository.repository#_FiF-1olZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxsolVEequbua1yKnjYw" entityName="SourceConnector_RoadPerceptionNode./aadc/perception/patches.SourceRole1" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_UVGc-IlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_P2UrACieEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxs4lVEequbua1yKnjYw" entityName="SourceConnector_RoadPerceptionNode./aadc/perception/debug.SourceRole2" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_UVGc-YlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_WH3hkCieEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxtIlVEequbua1yKnjYw" entityName="SinkConnector_RoadPerceptionNode./aadc/front/birdview.SinkRole1" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_UVHEDolVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_XlNugCr9Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxtYlVEequbua1yKnjYw" entityName="SinkConnector_RoadPerceptionNode./aadc/net.SinkRole2" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_UVHrGYlVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_g-rSwDFUEeq4LIFshmvO-Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxtolVEequbua1yKnjYw" entityName="SinkConnector_RoadPerceptionNode./aadc/object_tracking/tracked_objects.SinkRole3" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_FhgwAIlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_fJR84Cr9Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxt4lVEequbua1yKnjYw" entityName="SinkConnector_RoadPerceptionNode./aadc/jury/current_maneuver.SinkRole4" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_Fh6YrYlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_khvPUCr9Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxuIlVEequbua1yKnjYw" entityName="SinkConnector_RoadPerceptionNode./aadc/statemachine/state.SinkRole5" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_FhrIJIlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_vhGasCieEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxuYlVEequbua1yKnjYw" entityName="SinkConnector_RoadPerceptionNode./aadc/alpaka_map.SinkRole6" assemblyContext="_UVNxsYlVEequbua1yKnjYw" dataChannel="_Fh2uQolZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_pYaqYCr9Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxu4lVEequbua1yKnjYw" entityName="SourceConnector_PlanningNode./aadc/planning/trajectory.SourceRole1" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_UVGc_IlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_U_BuMCrjEeqF2fqvmIx-8Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxvIlVEequbua1yKnjYw" entityName="SourceConnector_PlanningNode./aadc/planning/event_region.SourceRole2" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_UVGc-olVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_VfmrsCrjEeqF2fqvmIx-8Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxvYlVEequbua1yKnjYw" entityName="SourceConnector_PlanningNode./aadc/planning/event.SourceRole3" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_UVGc8olVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_Z4mFMCrjEeqF2fqvmIx-8Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxvolVEequbua1yKnjYw" entityName="SourceConnector_PlanningNode./aadc/jury/status.SourceRole4" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_UVGc-4lVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_tELB4SrmEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxv4lVEequbua1yKnjYw" entityName="SourceConnector_PlanningNode./aadc/statemachine/targetspeed.SourceRole5" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_UVGc8IlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#__DQdpirmEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxwIlVEequbua1yKnjYw" entityName="SourceConnector_PlanningNode./aadc/visualization_street.SourceRole6" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_UVGc_YlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_OaiwtirnEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxwYlVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/marker_position.SinkRole1" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_FiC7lIlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_zIO0ECr8Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxwolVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/perception/patches.SinkRole2" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_Fh0SAolZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_ZLOFACrnEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxw4lVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/object_tracking/tracked_objects.SinkRole3" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_Fhh-IIlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_6uRYYCr8Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxxIlVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/statemachine/state.SinkRole4" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_FhrIJ4lZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#__Q3Z0Cr8Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxxYlVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/planning/event.SinkRole6" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_FhxOuYlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_g5tasCrnEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxxolVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/alpaka_map.SinkRole7" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_Fh2uRYlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_x2x_0CrnEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxx4lVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/planning/patch_occupancy.SinkRole8" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_FiBGUolZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_DtrjYCr9Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVNxyIlVEequbua1yKnjYw" entityName="SinkConnector_PlanningNode./aadc/ultrasonic.SinkRole5" assemblyContext="_UVNxuolVEequbua1yKnjYw" dataChannel="_FiH0CIlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_8ChkgDFdEeq4LIFshmvO-Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVOYyYlVEequbua1yKnjYw" entityName="SourceConnector_ObjectDetectorNode./aadc/object_detection/detected_objects.SourceRole2" assemblyContext="_UVOYx4lVEequbua1yKnjYw" dataChannel="_UVHEA4lVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_wtB3lirpEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_UVOYyolVEequbua1yKnjYw" entityName="SinkConnector_ObjectDetectorNode./darknet_ros/bounding_boxes.SinkRole1" assemblyContext="_UVOYx4lVEequbua1yKnjYw" dataChannel="_FiGl5YlZEeqCYN5UOWjwyQ">
+    <dataSinkRole href="newRepository.repository#_an5ZMCr5Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_UVNxzYlVEequbua1yKnjYw" entityName="SourceConnector_ObjectTrackerNode./aadc/object_tracking/tracked_objects.SourceRole1" assemblyContext="_UVNxzIlVEequbua1yKnjYw" dataChannel="_UVF14IlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_oC51hiroEeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_tggSeLFKEeqYQdL2fbKF5A" entityName="audioToSDN" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_UVHrFolVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_HJq-QDFBEeq4LIFshmvO-Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_3CNSOLFKEeqYQdL2fbKF5A" entityName="camToSDN" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_UVHrF4lVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_A2OYUDFDEeq4LIFshmvO-Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_AwsJuLFLEeqYQdL2fbKF5A" entityName="boxesToSDN" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_I9F2JqACEeqbMrPzqDaSHA">
+    <dataSinkRole href="newRepository.repository#_LoGm0Cr-Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_NvmQKLFLEeqYQdL2fbKF5A" entityName="usToEBN" assemblyContext="_nKRX0LFEEeqYQdL2fbKF5A" dataChannel="__5q6xrFNEeqj7Met_O4wHw">
+    <dataSinkRole href="newRepository.repository#_uv0MwDFnEeq4LIFshmvO-Q"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_eQ0fZ7FOEeqj7Met_O4wHw" entityName="US_DistribToEBN" assemblyContext="_FiH0BolZEeqCYN5UOWjwyQ" dataChannel="__5q6xrFNEeqj7Met_O4wHw">
+    <dataSourceRole href="newRepository.repository#_FiH0AYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_KXa2mLFPEeqj7Met_O4wHw" entityName="carToEBN" assemblyContext="_nKRX0LFEEeqYQdL2fbKF5A" dataChannel="_5kmZprFOEeqj7Met_O4wHw">
+    <dataSinkRole href="newRepository.repository#_9uuLQCr0Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_R-_r97FPEeqj7Met_O4wHw" entityName="Car_DistribToEBN" assemblyContext="_Fhm2polZEeqCYN5UOWjwyQ" dataChannel="_5kmZprFOEeqj7Met_O4wHw">
+    <dataSourceRole href="newRepository.repository#_Fhm2oYlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_kOwoCLFPEeqj7Met_O4wHw" entityName="carToLCN" assemblyContext="_q4OQQLFEEeqYQdL2fbKF5A" dataChannel="_ZWsSRrFPEeqj7Met_O4wHw">
+    <dataSinkRole href="newRepository.repository#_mD56wCr_Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_pv6jd7FPEeqj7Met_O4wHw" entityName="Car_DistribToLCN" assemblyContext="_Fhm2polZEeqCYN5UOWjwyQ" dataChannel="_ZWsSRrFPEeqj7Met_O4wHw">
+    <dataSourceRole href="newRepository.repository#_FhlohIlZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_AXJPCLFQEeqj7Met_O4wHw" entityName="markerToEBN" assemblyContext="_nKRX0LFEEeqYQdL2fbKF5A" dataChannel="_1CDmFrFPEeqj7Met_O4wHw">
+    <dataSinkRole href="newRepository.repository#_G71bECr1Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_cLDa17FQEeqj7Met_O4wHw" entityName="Marker_DistribToEBN" assemblyContext="_FiC7kolZEeqCYN5UOWjwyQ" dataChannel="_1CDmFrFPEeqj7Met_O4wHw">
+    <dataSourceRole href="newRepository.repository#_ODMvRrFQEeqj7Met_O4wHw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_y60-Z7FQEeqj7Met_O4wHw" entityName="Patches_DistribToEBN" assemblyContext="_Fh0SAIlZEeqCYN5UOWjwyQ" dataChannel="_rYfOVrFQEeqj7Met_O4wHw">
+    <dataSourceRole href="newRepository.repository#_Fhzq84lZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_zw2AaLFQEeqj7Met_O4wHw" entityName="patchesToEBN" assemblyContext="_nKRX0LFEEeqYQdL2fbKF5A" dataChannel="_rYfOVrFQEeqj7Met_O4wHw">
+    <dataSinkRole href="newRepository.repository#_MNdFsCr1Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_L1KVCLFREeqj7Met_O4wHw" entityName="stateToEBN" assemblyContext="_nKRX0LFEEeqYQdL2fbKF5A" dataChannel="_EWY2VrFREeqj7Met_O4wHw">
+    <dataSinkRole href="newRepository.repository#_SBruICr1Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_PJnIV7FREeqj7Met_O4wHw" entityName="State_DistribToEBN" assemblyContext="_FhrIH4lZEeqCYN5UOWjwyQ" dataChannel="_EWY2VrFREeqj7Met_O4wHw">
+    <dataSourceRole href="newRepository.repository#_FhrIGolZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSinkConnector" id="_fsNX-LFREeqj7Met_O4wHw" entityName="laserToEBN" assemblyContext="_nKRX0LFEEeqYQdL2fbKF5A" dataChannel="_UVHrE4lVEequbua1yKnjYw">
+    <dataSinkRole href="newRepository.repository#_lfx20Cr7Eeq_c-Auu1u1Cw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_94ZF57FVEeqj7Met_O4wHw" entityName="Tracked_DistribToNN" assemblyContext="_FhgI8IlZEeqCYN5UOWjwyQ" dataChannel="_fTvQxrFVEeqj7Met_O4wHw">
+    <dataSourceRole href="newRepository.repository#_Fhfh4olZEeqCYN5UOWjwyQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_dGrfJ7FcEeql3aSZ-_n3cg" entityName="light_statusToDistrib" assemblyContext="_q4OQQLFEEeqYQdL2fbKF5A" dataChannel="_UVEnwIlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_F_2HYCiZEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_qwzFx7FcEeql3aSZ-_n3cg" entityName="detectRegionToChannel" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_UVGc84lVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_qJnOECidEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_4LHV17FcEeql3aSZ-_n3cg" entityName="blueRegionToChannel" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_UVGc9YlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_qyWCACidEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="__MGFR7FcEeql3aSZ-_n3cg" entityName="normToChannel" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_UVGc9olVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_rmPkICidEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_Wr2UMbFdEeqf69byPli92w" entityName="biggestBBToChannel" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_UVGc94lVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_suygkCidEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.indirections.composition:DataChannelSourceConnector" id="_gvnfR7FdEeqf69byPli92w" entityName="sirenToChannel" assemblyContext="_gKxPELFEEeqYQdL2fbKF5A" dataChannel="_UVGc9IlVEequbua1yKnjYw">
+    <dataSourceRole href="newRepository.repository#_plAFICidEeqRG9-IT3beqw"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_14QH0LFHEeqYQdL2fbKF5A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_0XDa0LFHEeqYQdL2fbKF5A" assemblyContext_ProvidedDelegationConnector="_nKRX0LFEEeqYQdL2fbKF5A">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_SXTlIDLSEeqz8-I_i-LPtQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_zwPScLFHEeqYQdL2fbKF5A" entityName="newProvidedDelegationConnector" outerProvidedRole_ProvidedDelegationConnector="_y5B9oLFHEeqYQdL2fbKF5A" assemblyContext_ProvidedDelegationConnector="_gKxPELFEEeqYQdL2fbKF5A">
+    <innerProvidedRole_ProvidedDelegationConnector href="newRepository.repository#_sXezcDIXEeqbFpz_ltmLMg"/>
+  </connectors__ComposedStructure>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_UVOZDolVEequbua1yKnjYw" entityName="ControllerInterface">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_nFjD0DYJEeq63LWn6YA8Ig"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_UVO_5olVEequbua1yKnjYw" entityName="ImagePublisherInterface">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_zdPikDa0Eeqk_rBydJk-EA"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_UVOYxYlVEequbua1yKnjYw" entityName="ObjectTrackerInterface">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_zrFYYDIhEeqbFpz_ltmLMg"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_UVOYzIlVEequbua1yKnjYw" entityName="ObjectDetectorInterface">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_XCVkUDLnEeqITsj-Ow3w3A"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DpVLgKAEEeqbMrPzqDaSHA" entityName="PositionPublisherInterface">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_JluHgDazEeqk_rBydJk-EA"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Gtj9QKAfEeqLR6BXqDu6SQ" entityName="YoloInterface">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_FLLWx6AaEeqLR6BXqDu6SQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_WvXroLFEEeqYQdL2fbKF5A" entityName="RoadPerceptionInterfaceProvidedRole">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_V6oOR7E_EeqYQdL2fbKF5A"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_y5B9oLFHEeqYQdL2fbKF5A" entityName="SirenDetectorIntefaceProvidedRole">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_mhOKsDIXEeqbFpz_ltmLMg"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_0XDa0LFHEeqYQdL2fbKF5A" entityName="EmergencyBrakeInterfaceProvidedRole">
+    <providedInterface__OperationProvidedRole href="newRepository.repository#_P2jfoDLSEeqz8-I_i-LPtQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+</system:System>
